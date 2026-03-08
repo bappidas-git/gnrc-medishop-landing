@@ -1,6 +1,6 @@
 /* ============================================
    HighlightsSection Component - Results & Achievements
-   Showcases Narayana's NEET results and testing ecosystem
+   Showcases GNRC Medishop Franchise performance and support ecosystem
    ============================================ */
 
 import React, { useRef } from "react";
@@ -41,30 +41,30 @@ const resultsData = [
     id: 1,
     icon: "mdi:trophy-award",
     iconColor: "#FFD700",
-    title: "NEET 2024",
-    stat: 5,
-    statSuffix: "",
-    statLabel: "out of Top 10 AIR (All Categories)",
-    subStats: "3,128 Students Became Doctors in 2024",
+    title: "Business Performance",
+    stat: 50,
+    statSuffix: "+",
+    statLabel: "Franchise stores across North East India",
+    subStats: "Growing network with proven profitability",
   },
   {
     id: 2,
-    icon: "mdi:earth",
+    icon: "mdi:store",
     iconColor: "#42A5F5",
-    title: "International Recognition",
+    title: "Product Range",
     stat: null,
     statLabel:
-      "Students regularly achieve top ranks in International Science Olympiads",
+      "50,000+ products across pharmacy, wellness, FMCG, and daily essentials categories",
     subStats: null,
   },
   {
     id: 3,
     icon: "mdi:account-group",
     iconColor: "#66BB6A",
-    title: "Overall Selections",
+    title: "Franchise Partners",
     stat: null,
     statLabel:
-      "Thousands of students selected in NEET every year, making their MBBS dreams a reality",
+      "Successful franchise partners earning 20-22% gross margins consistently",
     subStats: null,
   },
 ];
@@ -72,40 +72,40 @@ const resultsData = [
 // Test types data
 const testTypes = [
   {
-    icon: "mdi:calendar-week",
-    name: "Weekly Test",
-    tag: "CPT",
-    description: "Common Practice Test to track weekly progress",
+    icon: "mdi:point-of-sale",
+    name: "POS System",
+    tag: "Tech",
+    description: "Advanced point-of-sale system for seamless billing and inventory",
   },
   {
-    icon: "mdi:calendar-range",
-    name: "Fortnightly Test",
+    icon: "mdi:truck-delivery",
+    name: "Supply Chain",
     tag: null,
-    description: "Bi-weekly assessment for concept reinforcement",
+    description: "Centralized procurement and logistics for consistent stock availability",
+  },
+  {
+    icon: "mdi:bullhorn",
+    name: "Marketing Support",
+    tag: null,
+    description: "Brand-level marketing campaigns and local area promotion",
   },
   {
     icon: "mdi:school-outline",
-    name: "Term Exams",
+    name: "Training Programme",
     tag: null,
-    description: "Comprehensive end-of-term evaluation",
+    description: "Comprehensive training for store staff and franchise owners",
   },
   {
-    icon: "mdi:pencil-ruler",
-    name: "Subjective Test",
+    icon: "mdi:chart-line",
+    name: "Business Analytics",
     tag: null,
-    description: "In-depth descriptive answer evaluation",
+    description: "Real-time dashboard for sales, inventory, and profit tracking",
   },
   {
-    icon: "mdi:map-marker-multiple",
-    name: "All India Test Series",
+    icon: "mdi:headset",
+    name: "Dedicated Support",
     tag: null,
-    description: "Pan-India ranking and benchmarking",
-  },
-  {
-    icon: "mdi:star-circle-outline",
-    name: "Grand Test",
-    tag: null,
-    description: "Full-length simulated NEET exam experience",
+    description: "On-ground and remote support from the GNRC Medishop team",
   },
 ];
 
@@ -132,7 +132,7 @@ const HighlightsSection = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className={styles.sectionHeader}>
-            <span className={styles.sectionBadge}>RESULTS & ACHIEVEMENTS</span>
+            <span className={styles.sectionBadge}>PERFORMANCE & SUPPORT</span>
             <Typography
               variant="h2"
               className={styles.sectionTitle}
@@ -140,7 +140,7 @@ const HighlightsSection = () => {
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 700,
                 fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.25rem" },
-                color: "#1A237E",
+                color: "#2D3561",
                 marginTop: "0.75rem",
                 textAlign: "center",
                 lineHeight: 1.2,
@@ -153,7 +153,7 @@ const HighlightsSection = () => {
               <span className={styles.underlineBar} />
             </div>
             <Typography className={styles.sectionSubtitle}>
-              Narayana's Consistent Track Record in NEET
+              GNRC Medishop's Proven Track Record
             </Typography>
           </motion.div>
 
@@ -211,12 +211,12 @@ const HighlightsSection = () => {
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 700,
                 fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.75rem" },
-                color: "#1A237E",
+                color: "#2D3561",
                 textAlign: "center",
                 marginBottom: "1.5rem",
               }}
             >
-              Our Comprehensive Testing Ecosystem
+              Our Comprehensive Franchise Support System
             </Typography>
             <div className={styles.testTypesGrid}>
               {testTypes.map((test, index) => (
@@ -251,29 +251,29 @@ const HighlightsSection = () => {
             </div>
           </motion.div>
 
-          {/* NACST Scholarship Banner */}
+          {/* Franchise CTA Banner */}
           <motion.div
             variants={itemVariants}
             className={styles.scholarshipBanner}
           >
             <div className={styles.scholarshipContent}>
               <div className={styles.scholarshipIconWrap}>
-                <Icon icon="mdi:school" />
+                <Icon icon="mdi:store" />
               </div>
               <div className={styles.scholarshipTextBlock}>
                 <Typography
                   className={styles.scholarshipHeading}
                   sx={{ color: "#fff", fontWeight: "bold" }}
                 >
-                  Get Up to 90% Scholarship via NACST & NSAT!
+                  Start Your Own GNRC Medishop Today!
                 </Typography>
                 <Typography
                   className={styles.scholarshipDesc}
                   sx={{ color: "#fff" }}
                 >
-                  Register for NACST (Narayana Admission cum Scholarship Test)
-                  or NSAT (Narayana Scholastic Aptitude Test) and avail
-                  scholarships up to 90% on course fees.
+                  Investment starting from ₹12 Lakh. Get a turnkey pharmacy &
+                  essentials retail store with complete setup, training, and
+                  ongoing support from GNRC Medishop.
                 </Typography>
               </div>
               <motion.button
@@ -282,7 +282,7 @@ const HighlightsSection = () => {
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <span>Register for NACST / NSAT</span>
+                <span>Apply for Franchise</span>
                 <Icon icon="mdi:arrow-right" />
               </motion.button>
             </div>
@@ -291,7 +291,7 @@ const HighlightsSection = () => {
           {/* Bottom CTA */}
           <motion.div variants={itemVariants} className={styles.bottomCta}>
             <Typography className={styles.bottomCtaText}>
-              Want to know more about our results?
+              Want to know more about our franchise opportunity?
             </Typography>
             <motion.button
               className={styles.brochureBtn}

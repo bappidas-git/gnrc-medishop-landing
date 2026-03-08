@@ -1,5 +1,5 @@
 /* ============================================
-   Card Component - Narayana NEET
+   Card Component - GNRC Medishop
    Reusable card with multiple variants and animations
    ============================================ */
 

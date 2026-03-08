@@ -1,67 +1,72 @@
 /* ============================================
-   CSS Variables - Narayana Coaching Centers
-   IIT-JEE Landing Page
+   CSS Variables - GNRC Medishop Franchise
+   Landing Page
    ============================================ */
 
 :root {
   /* ========== Primary Colors ========== */
-  --primary-dark: #1A237E;
-  --primary-dark-alt: #283593;
-  --primary-dark-light: #3949AB;
-  --primary-dark-lighter: #3F51B5;
+  --primary-dark: #2D3561;
+  --primary-dark-alt: #3A4578;
+  --primary-dark-light: #4A5888;
+  --primary-dark-lighter: #6B7AB0;
 
-  /* ========== Accent Colors - Orange ========== */
-  --accent-gold: #FF6D00;
-  --accent-gold-light: #FF9100;
-  --accent-gold-dark: #E65100;
-  --accent-gold-hover: #FF8F00;
-  --accent-gold-gradient: linear-gradient(135deg, #FF6D00 0%, #FF9100 100%);
-  --accent-gold-gradient-reverse: linear-gradient(135deg, #FF9100 0%, #FF6D00 100%);
-  --accent-gold-gradient-horizontal: linear-gradient(90deg, #FF6D00 0%, #FF9100 50%, #FF6D00 100%);
+  /* ========== Accent Colors - Teal ========== */
+  --accent-gold: #2EC4B6;
+  --accent-gold-light: #5DD9CE;
+  --accent-gold-dark: #1FA89B;
+  --accent-gold-hover: #3DD0C3;
+  --accent-gold-gradient: linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%);
+  --accent-gold-gradient-reverse: linear-gradient(135deg, #5DD9CE 0%, #2EC4B6 100%);
+  --accent-gold-gradient-horizontal: linear-gradient(90deg, #2EC4B6 0%, #5DD9CE 50%, #2EC4B6 100%);
+
+  /* ========== Accent Orange - CTAs Only ========== */
+  --accent-orange: #FF6B35;
+  --accent-orange-light: #FF8F66;
+  --accent-orange-dark: #E55A25;
 
   /* ========== Neutral Colors ========== */
   --white: #FFFFFF;
-  --off-white: #F8F9FA;
-  --light-gray: #F5F7FA;
+  --off-white: #FAFBFC;
+  --light-gray: #F8FAFC;
   --medium-gray: #E8EDF2;
   --border-gray: #D1D9E6;
   --text-gray: #546E7A;
-  --text-dark-gray: #1A237E;
+  --text-dark-gray: #1B2A4A;
   --dark-gray: #455A64;
 
   /* ========== Icon Background Colors ========== */
-  --icon-gold: #FF6D00;
-  --icon-gold-bg: rgba(255, 109, 0, 0.15);
+  --icon-gold: #2EC4B6;
+  --icon-gold-bg: rgba(46, 196, 182, 0.15);
   --icon-green: #4CAF50;
   --icon-green-bg: rgba(76, 175, 80, 0.15);
   --icon-purple: #9C27B0;
   --icon-purple-bg: rgba(156, 39, 176, 0.15);
-  --icon-orange: #FF9800;
-  --icon-orange-bg: rgba(255, 152, 0, 0.15);
+  --icon-orange: #FF6B35;
+  --icon-orange-bg: rgba(255, 107, 53, 0.15);
   --icon-pink: #E91E63;
   --icon-pink-bg: rgba(233, 30, 99, 0.15);
   --icon-red: #F44336;
   --icon-red-bg: rgba(244, 67, 54, 0.15);
-  --icon-teal: #009688;
-  --icon-teal-bg: rgba(0, 150, 136, 0.15);
+  --icon-teal: #2EC4B6;
+  --icon-teal-bg: rgba(46, 196, 182, 0.15);
   --icon-blue: #2196F3;
   --icon-blue-bg: rgba(33, 150, 243, 0.15);
 
   /* ========== Card Backgrounds ========== */
-  --card-yellow: #FFF3E0;
+  --card-yellow: #E0F7F5;
   --card-green: #E8F5E9;
   --card-pink: #FCE4EC;
   --card-purple: #F3E5F5;
   --card-orange: #FFF3E0;
   --card-blue: #E3F2FD;
-  --card-gold-gradient: linear-gradient(135deg, #FF6D00 0%, #E65100 100%);
-  --card-dark-gradient: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+  --card-gold-gradient: linear-gradient(135deg, #2EC4B6 0%, #1FA89B 100%);
+  --card-dark-gradient: linear-gradient(135deg, #2D3561 0%, #4A5888 100%);
 
   /* ========== Semantic Colors ========== */
   --success: #2E7D32;
   --success-light: #66BB6A;
-  --warning: #FF6D00;
-  --warning-light: #FF9100;
+  --warning: #F57C00;
+  --warning-light: #FFB74D;
   --error: #D32F2F;
   --error-light: #EF5350;
   --info: #2196F3;
@@ -71,15 +76,16 @@
   --shadow-light: rgba(0, 0, 0, 0.05);
   --shadow-medium: rgba(0, 0, 0, 0.1);
   --shadow-dark: rgba(0, 0, 0, 0.15);
-  --shadow-gold: rgba(255, 109, 0, 0.3);
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
-  --shadow-button: 0 4px 15px rgba(255, 109, 0, 0.4);
-  --shadow-button-hover: 0 6px 20px rgba(255, 109, 0, 0.5);
+  --shadow-gold: rgba(46, 196, 182, 0.3);
+  --shadow-card: 0 2px 12px rgba(45, 53, 97, 0.08);
+  --shadow-card-hover: 0 8px 30px rgba(45, 53, 97, 0.12);
+  --shadow-button: 0 4px 14px rgba(46, 196, 182, 0.25);
+  --shadow-button-hover: 0 6px 20px rgba(46, 196, 182, 0.35);
 
   /* ========== Typography ========== */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-  --font-heading: 'Poppins', sans-serif;
+  --font-heading: 'Poppins', 'Inter', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
 
   /* Font Weights */
@@ -204,10 +210,10 @@
 
   /* ========== Overlays ========== */
   --overlay-light: rgba(255, 255, 255, 0.8);
-  --overlay-dark: rgba(26, 35, 126, 0.7);
-  --overlay-darker: rgba(26, 35, 126, 0.85);
-  --overlay-gradient: linear-gradient(180deg, rgba(26, 35, 126, 0.9) 0%, rgba(26, 35, 126, 0.4) 100%);
-  --overlay-gradient-reverse: linear-gradient(0deg, rgba(26, 35, 126, 0.9) 0%, rgba(26, 35, 126, 0.2) 100%);
+  --overlay-dark: rgba(45, 53, 97, 0.7);
+  --overlay-darker: rgba(45, 53, 97, 0.85);
+  --overlay-gradient: linear-gradient(180deg, rgba(45, 53, 97, 0.9) 0%, rgba(45, 53, 97, 0.4) 100%);
+  --overlay-gradient-reverse: linear-gradient(0deg, rgba(45, 53, 97, 0.9) 0%, rgba(45, 53, 97, 0.2) 100%);
 
   /* ========== Aspect Ratios ========== */
   --aspect-square: 1 / 1;

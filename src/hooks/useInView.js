@@ -1,5 +1,5 @@
 /* ============================================
-   useInView Hook - Narayana NEET
+   useInView Hook - GNRC Medishop
    Custom hook for detecting element visibility
    ============================================ */
 

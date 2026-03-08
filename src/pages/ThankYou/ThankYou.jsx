@@ -1,5 +1,5 @@
 /* ============================================
-   ThankYou Page - Narayana NEET
+   ThankYou Page - GNRC Medishop
    Post lead submission confirmation page
    ============================================ */
 
@@ -13,7 +13,7 @@ import styles from './ThankYou.module.css';
 
 // Programme highlights for display
 const projectHighlights = [
-  { icon: 'mdi:school', label: 'Expert NEET Faculty', color: '#FF6D00' },
+  { icon: 'mdi:store-check-outline', label: 'Proven Business Model', color: '#2EC4B6' },
   { icon: 'mdi:trophy-award', label: 'Top JEE Results', color: '#4CAF50' },
   { icon: 'mdi:book-open-page-variant', label: 'Comprehensive Study Material', color: '#2196F3' },
   { icon: 'mdi:account-group', label: 'Small Batch Sizes', color: '#9C27B0' },
@@ -21,11 +21,11 @@ const projectHighlights = [
 
 // Contact details
 const contactInfo = {
-  companyName: 'Narayana Coaching Centers',
-  designation: 'NEET Coaching Excellence',
-  phone: '+91-6002500672',
-  altPhone: '+91-6002500672',
-  email: 'bm.guwahati@narayanagroup.com',
+  companyName: 'GNRC Medishop Pvt. Ltd.',
+  designation: 'Franchise Excellence',
+  phone: '+91-7086036887',
+  altPhone: '+91-8638604899',
+  email: 'info@gnrcmedishop.com',
   address: 'Guwahati Centre, Assam',
   workingHours: 'Mon - Sat: 8:00 AM - 7:00 PM',
 };
@@ -91,7 +91,7 @@ const ThankYou = () => {
         ...defaults,
         particleCount,
         origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-        colors: ['#FF6D00', '#FF9100', '#FFD700', '#FFA500'],
+        colors: ['#2EC4B6', '#5DD9CE', '#FFD700', '#FFA500'],
       });
 
       // Right side confetti
@@ -99,7 +99,7 @@ const ThankYou = () => {
         ...defaults,
         particleCount,
         origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-        colors: ['#FF6D00', '#FF9100', '#FFD700', '#FFA500'],
+        colors: ['#2EC4B6', '#5DD9CE', '#FFD700', '#FFA500'],
       });
     }, 250);
 
@@ -108,7 +108,7 @@ const ThankYou = () => {
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 },
-      colors: ['#FF6D00', '#FF9100', '#FFD700', '#4CAF50', '#2196F3'],
+      colors: ['#2EC4B6', '#5DD9CE', '#FFD700', '#4CAF50', '#2196F3'],
     });
   }, []);
 
@@ -189,7 +189,7 @@ const ThankYou = () => {
               Thank You for Your Interest! 🎓
             </Typography>
             <Typography className={styles.subtitle} sx={{ color: '#FFFFFFB3 !important' }}>
-              Your enquiry has been received. Our academic counsellor from Narayana Coaching Centers will contact you within 24 hours.
+              Your franchise enquiry has been received. Our franchise team from GNRC Medishop will contact you within 24 hours.
             </Typography>
           </motion.div>
 
@@ -203,14 +203,14 @@ const ThankYou = () => {
                 What happens next?
               </Typography>
               <Typography className={styles.noticeDesc} sx={{ color: '#FFFFFFA6 !important' }}>
-                Our academic counsellor will reach out to discuss the best NEET programme for you
+                Our franchise team will reach out to discuss the best investment plan for you
               </Typography>
             </div>
           </motion.div>
 
           {/* Project Highlights */}
           <motion.div variants={itemVariants} className={styles.highlightsSection}>
-            <Typography className={styles.sectionLabel} sx={{ color: '#FFFFFF80 !important' }}>Why Narayana?</Typography>
+            <Typography className={styles.sectionLabel} sx={{ color: '#FFFFFF80 !important' }}>Why GNRC Medishop?</Typography>
             <div className={styles.highlightsGrid}>
               {projectHighlights.map((item, index) => (
                 <motion.div

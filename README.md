@@ -1,15 +1,12 @@
-# Narayana NEET Coaching — Google Ads Landing Page
+# GNRC Medishop — Franchise Landing Page
 
-High-converting landing page for Narayana Coaching Centers' NEET (Medical) coaching programme, targeting students and parents in Guwahati, Assam, and North-East India.
-
-## Cloned From
-narayana-landing-iit (IIT-JEE version) — same structure, different content.
+High-converting landing page for GNRC Medishop Pvt. Ltd. franchise opportunity, targeting entrepreneurs and business investors in Assam and North-East India.
 
 ## Tech Stack
 - React 18, Material UI v5, Framer Motion, CSS Modules, Swiper, SweetAlert2, Iconify
 
 ## Target Audience
-Students & parents in Assam and neighbouring North-East Indian states preparing for NEET (Medical entrance).
+Entrepreneurs, business owners, and investors in Assam and neighbouring North-East Indian states interested in owning a GNRC Medishop pharmacy & essentials franchise.
 
 ## Setup
 npm install && npm start
@@ -18,6 +15,7 @@ npm install && npm start
 npm run build
 
 ## Key Contacts
-- Phone: 6002500672
-- Email: bm.guwahati@narayanagroup.com
-- Toll Free: 1800-102-3344
+- Phone: 7086036887
+- Alternate: 8638604899
+- Email: info@gnrcmedishop.com
+- Website: https://www.gnrcmedishop.com

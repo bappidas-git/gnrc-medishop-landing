@@ -1,6 +1,6 @@
 /* ============================================
-   HeroSection Component - Narayana NEET
-   Premium coaching hero section with animations
+   HeroSection Component - GNRC Medishop
+   Franchise opportunity hero section with animations
    ============================================ */
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -81,12 +81,12 @@ const buttonVariants = {
 
 // Trust indicators data
 const trustIndicators = [
-  { icon: 'mdi:trophy-outline', text: '47+ Years' },
-  { icon: 'mdi:star-outline', text: '5 in Top 10 AIR (NEET 2024)' },
-  { icon: 'mdi:domain', text: '950+ Schools' },
-  { icon: 'mdi:map-marker-multiple-outline', text: '350+ Centres' },
-  { icon: 'mdi:percent-outline', text: '90% Scholarship' },
-  { icon: 'mdi:stethoscope', text: '3128 Doctors in 2024' },
+  { icon: 'mdi:trophy-outline', text: '20+ Years Legacy' },
+  { icon: 'mdi:currency-inr', text: '₹80Cr+ Turnover' },
+  { icon: 'mdi:store-outline', text: '9 Stores & Growing' },
+  { icon: 'mdi:package-variant-closed', text: '50,000+ Products' },
+  { icon: 'mdi:tag-outline', text: '1,200+ Brands' },
+  { icon: 'mdi:percent-outline', text: '20-22% Gross Margin' },
 ];
 
 const HeroSection = () => {
@@ -223,10 +223,10 @@ const HeroSection = () => {
               <motion.div variants={badgeVariants}>
                 <Chip
                   icon={<span className={styles.pulseDot} />}
-                  label="🏆 #1 NEET Coaching in India"
+                  label="🏪 North East India's #1 Pharmacy Chain"
                   className={styles.launchBadge}
                   sx={{
-                    backgroundColor: '#FF6D00',
+                    backgroundColor: '#2EC4B6',
                     color: '#FFFFFF',
                     fontWeight: 600,
                     fontSize: '0.875rem',
@@ -253,8 +253,8 @@ const HeroSection = () => {
                     marginTop: '1.5rem',
                   }}
                 >
-                  Crack NEET with
-                  <span className={styles.orangeText}> Narayana Coaching Centers</span>
+                  Own a
+                  <span className={styles.orangeText}> GNRC Medishop Franchise</span>
                 </Typography>
               </motion.div>
 
@@ -272,7 +272,7 @@ const HeroSection = () => {
                     lineHeight: 1.6,
                   }}
                 >
-                  5 out of Top 10 All India Rankers in NEET 2024 | 3,128 Students Became Doctors | 47+ Years of Excellence | Up to 90% Scholarship via NACST & NSAT
+                  20+ Years Legacy | ₹80 Cr Turnover | 9 Stores | 50,000+ Products | 20-22% Gross Margin
                 </Typography>
               </motion.div>
 
@@ -284,7 +284,7 @@ const HeroSection = () => {
                   className={styles.primaryCta}
                   onClick={() => openLeadDrawer('enroll-now')}
                   sx={{
-                    backgroundColor: '#FF6D00',
+                    backgroundColor: '#2EC4B6',
                     color: '#FFFFFF',
                     fontWeight: 700,
                     fontSize: '1rem',
@@ -292,16 +292,16 @@ const HeroSection = () => {
                     borderRadius: '12px',
                     textTransform: 'none',
                     fontFamily: "'Poppins', sans-serif",
-                    boxShadow: '0 4px 20px rgba(255, 109, 0, 0.4)',
+                    boxShadow: '0 4px 20px rgba(46, 196, 182, 0.4)',
                     '&:hover': {
-                      backgroundColor: '#FF9100',
-                      boxShadow: '0 6px 24px rgba(255, 109, 0, 0.5)',
+                      backgroundColor: '#5DD9CE',
+                      boxShadow: '0 6px 24px rgba(46, 196, 182, 0.5)',
                       transform: 'translateY(-2px)',
                     },
                     transition: 'all 0.3s ease',
                   }}
                 >
-                  Enroll Now →
+                  Apply for Franchise →
                 </Button>
                 <Button
                   variant="outlined"
@@ -319,14 +319,14 @@ const HeroSection = () => {
                     fontFamily: "'Poppins', sans-serif",
                     borderWidth: '2px',
                     '&:hover': {
-                      borderColor: '#FF9100',
+                      borderColor: '#5DD9CE',
                       backgroundColor: 'rgba(255, 145, 0, 0.1)',
                       borderWidth: '2px',
                     },
                     transition: 'all 0.3s ease',
                   }}
                 >
-                  Book Free Demo Class
+                  Download Franchise Kit
                 </Button>
               </motion.div>
 
@@ -363,7 +363,7 @@ const HeroSection = () => {
                         fontSize: '1.25rem',
                       }}
                     >
-                      Start Your NEET Journey
+                      Apply for Franchise
                     </Typography>
                     <Typography
                       variant="body2"
@@ -374,7 +374,7 @@ const HeroSection = () => {
                         fontSize: '0.875rem',
                       }}
                     >
-                      Register now & get free counselling session
+                      Fill in your details & get a free consultation
                     </Typography>
                   </div>
                   <div className={styles.formBody}>

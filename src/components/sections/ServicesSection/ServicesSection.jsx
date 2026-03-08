@@ -1,6 +1,6 @@
 /* ============================================
-   CoursesSection Component - Narayana NEET
-   Showcases NEET programmes with cards grid
+   CoursesSection Component - GNRC Medishop
+   Showcases franchise plans with cards grid
    and comparison table
    ============================================ */
 
@@ -106,7 +106,7 @@ const ServicesSection = () => {
       variants={isMobile ? undefined : cardVariants}
       initial={isMobile ? undefined : "hidden"}
       animate={isMobile ? undefined : isInView ? "visible" : "hidden"}
-      whileHover={{ y: -6, boxShadow: "0 12px 40px rgba(26, 35, 126, 0.15)" }}
+      whileHover={{ y: -6, boxShadow: "0 12px 40px rgba(45, 53, 97, 0.15)" }}
       transition={{ duration: 0.3 }}
     >
       {/* Badge */}
@@ -196,16 +196,16 @@ const ServicesSection = () => {
           {/* Section Header */}
           <motion.div variants={itemVariants} className={styles.sectionHeader}>
             <Chip
-              label="PROGRAMMES"
+              label="FRANCHISE PLANS"
               sx={{
-                backgroundColor: "rgba(255, 109, 0, 0.12)",
-                color: "#FF6D00",
+                backgroundColor: "rgba(46, 196, 182, 0.12)",
+                color: "#2EC4B6",
                 fontWeight: 700,
                 fontSize: "0.7rem",
                 letterSpacing: "0.1em",
                 height: "28px",
                 borderRadius: "20px",
-                border: "1px solid rgba(255, 109, 0, 0.3)",
+                border: "1px solid rgba(46, 196, 182, 0.3)",
               }}
             />
             <Typography
@@ -215,14 +215,14 @@ const ServicesSection = () => {
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 700,
                 fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.25rem" },
-                color: "#1A237E",
+                color: "#2D3561",
                 marginTop: "0.75rem",
                 textAlign: "center",
                 lineHeight: 1.2,
               }}
             >
-              Our NEET{" "}
-              <span className={styles.accentText}>Programmes</span>
+              Our Franchise{" "}
+              <span className={styles.accentText}>Plans</span>
             </Typography>
             <Typography
               className={styles.sectionSubtitle}
@@ -234,7 +234,7 @@ const ServicesSection = () => {
                 maxWidth: "480px",
               }}
             >
-              Choose the right programme for your NEET preparation
+              Choose the right investment plan for your franchise
             </Typography>
           </motion.div>
 
@@ -358,7 +358,7 @@ const ServicesSection = () => {
                 <Box
                   sx={{
                     width: 56, height: 56, borderRadius: '14px',
-                    background: 'linear-gradient(135deg, #FF6D00, #FF9100)',
+                    background: 'linear-gradient(135deg, #2EC4B6, #5DD9CE)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     flexShrink: 0,
                   }}
@@ -374,7 +374,7 @@ const ServicesSection = () => {
                       fontFamily: 'Poppins, sans-serif',
                     }}
                   >
-                    Foundation Courses for NEET & IIT-JEE
+                    Franchise Investment Plans
                   </Typography>
                   <Typography
                     sx={{
@@ -382,7 +382,7 @@ const ServicesSection = () => {
                       mt: 0.5,
                     }}
                   >
-                    For students in Class 8, 9 & 10 — Start your preparation early!
+                    Flexible plans to suit your investment capacity and location
                   </Typography>
                 </Box>
               </Box>
@@ -397,7 +397,7 @@ const ServicesSection = () => {
                   }
                 }}
                 sx={{
-                  background: 'linear-gradient(135deg, #FF6D00, #FF9100)',
+                  background: 'linear-gradient(135deg, #2EC4B6, #5DD9CE)',
                   color: '#FFF',
                   fontWeight: 600,
                   borderRadius: '12px',
@@ -405,14 +405,14 @@ const ServicesSection = () => {
                   textTransform: 'none',
                   fontSize: '0.95rem',
                   whiteSpace: 'nowrap',
-                  boxShadow: '0 4px 14px rgba(255, 109, 0, 0.3)',
+                  boxShadow: '0 4px 14px rgba(46, 196, 182, 0.3)',
                   '&:hover': {
-                    background: 'linear-gradient(135deg, #E65100, #FF6D00)',
-                    boxShadow: '0 6px 20px rgba(255, 109, 0, 0.4)',
+                    background: 'linear-gradient(135deg, #1FA89B, #2EC4B6)',
+                    boxShadow: '0 6px 20px rgba(46, 196, 182, 0.4)',
                   },
                 }}
               >
-                Explore Foundation Courses →
+                Explore Franchise Plans →
               </Button>
             </Box>
           </motion.div>

@@ -1,5 +1,5 @@
 /* ============================================
-   StatsSection Component - Narayana NEET
+   StatsSection Component - GNRC Medishop
    Project highlights with expand/collapse functionality
    ============================================ */
 
@@ -142,7 +142,7 @@ const StatsSection = () => {
                 <div className={styles.towerImageContainer}>
                   <img
                     src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=800&fit=crop"
-                    alt="Narayana NEET Centre"
+                    alt="GNRC Medishop Store"
                     className={styles.towerImage}
                     loading="lazy"
                   />
@@ -171,7 +171,7 @@ const StatsSection = () => {
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: 700,
                     fontSize: { xs: '1.75rem', sm: '2rem', md: '2.5rem' },
-                    color: '#1A237E',
+                    color: '#2D3561',
                     marginBottom: { xs: '1.5rem', md: '2rem' },
                   }}
                 >
@@ -224,18 +224,18 @@ const StatsSection = () => {
                       />
                     }
                     sx={{
-                      background: 'linear-gradient(135deg, #FF6D00 0%, #FF9100 100%)',
-                      color: '#1A237E',
+                      background: 'linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%)',
+                      color: '#2D3561',
                       fontWeight: 600,
                       fontSize: { xs: '0.875rem', md: '0.9375rem' },
                       padding: { xs: '12px 24px', md: '14px 32px' },
                       borderRadius: '50px',
                       textTransform: 'none',
-                      boxShadow: '0 4px 15px rgba(255, 109, 0, 0.3)',
+                      boxShadow: '0 4px 15px rgba(46, 196, 182, 0.3)',
                       width: '100%',
                       '&:hover': {
-                        background: 'linear-gradient(135deg, #FF9100 0%, #FF6D00 100%)',
-                        boxShadow: '0 6px 20px rgba(255, 109, 0, 0.4)',
+                        background: 'linear-gradient(135deg, #5DD9CE 0%, #2EC4B6 100%)',
+                        boxShadow: '0 6px 20px rgba(46, 196, 182, 0.4)',
                       },
                     }}
                   >
@@ -294,8 +294,8 @@ const StatsSection = () => {
                     className={styles.siteVisitButton}
                     endIcon={<Icon icon="mdi:check" />}
                     sx={{
-                      color: '#1A237E',
-                      borderColor: '#1A237E',
+                      color: '#2D3561',
+                      borderColor: '#2D3561',
                       fontWeight: 600,
                       fontSize: { xs: '0.875rem', md: '0.9375rem' },
                       padding: { xs: '12px 24px', md: '14px 32px' },
@@ -304,9 +304,9 @@ const StatsSection = () => {
                       borderWidth: '2px',
                       width: '100%',
                       '&:hover': {
-                        backgroundColor: '#1A237E',
+                        backgroundColor: '#2D3561',
                         color: '#FFFFFF',
-                        borderColor: '#1A237E',
+                        borderColor: '#2D3561',
                         borderWidth: '2px',
                       },
                     }}

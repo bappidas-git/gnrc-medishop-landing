@@ -1,6 +1,6 @@
 /* ============================================
-   AboutSection Component - About Narayana
-   NEET legacy, stats, content grid & differentiators
+   AboutSection Component - About GNRC Medishop
+   Franchise legacy, stats, content grid & differentiators
    ============================================ */
 
 import React from "react";
@@ -43,39 +43,39 @@ const itemVariants = {
 // Stats data
 const keyStats = [
   {
-    value: "47",
+    value: "20",
     suffix: "+",
-    label: "Years of Excellence",
+    label: "Years of Legacy",
     icon: "mdi:trophy-award",
-    color: "#FF6D00",
+    color: "#2EC4B6",
   },
   {
-    value: "5",
-    suffix: "",
-    label: "out of Top 10 AIR (Every Year)",
-    icon: "mdi:medal",
-    color: "#1A237E",
+    value: "80",
+    suffix: "Cr+",
+    label: "Annual Turnover",
+    icon: "mdi:currency-inr",
+    color: "#2D3561",
   },
   {
-    value: "3128",
-    suffix: "",
-    label: "Doctors in 2024",
-    icon: "mdi:star-circle",
-    color: "#FF6D00",
-  },
-  {
-    value: "950",
+    value: "50000",
     suffix: "+",
-    label: "Schools Pan India",
-    icon: "mdi:domain",
-    color: "#1A237E",
+    label: "Products Available",
+    icon: "mdi:package-variant-closed",
+    color: "#2EC4B6",
   },
   {
-    value: "350",
-    suffix: "+",
-    label: "Coaching Centres",
-    icon: "mdi:map-marker-multiple",
-    color: "#FF6D00",
+    value: "16",
+    suffix: "L+",
+    label: "Happy Customers",
+    icon: "mdi:account-group",
+    color: "#2D3561",
+  },
+  {
+    value: "9",
+    suffix: "",
+    label: "Stores & Growing",
+    icon: "mdi:store",
+    color: "#2EC4B6",
   },
 ];
 
@@ -83,43 +83,43 @@ const keyStats = [
 const gridImages = [
   {
     src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=300&fit=crop",
-    alt: "Narayana Classroom",
+    alt: "GNRC Medishop Store",
   },
   {
     src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&h=300&fit=crop",
-    alt: "Narayana Students",
+    alt: "GNRC Medishop Products",
   },
   {
     src: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=400&h=300&fit=crop",
-    alt: "Narayana Results",
+    alt: "GNRC Medishop Team",
   },
 ];
 
 // Key differentiators data
 const differentiators = [
   {
-    icon: "mdi:calendar-clock",
-    title: "Micro-Schedules & Test Planners",
+    icon: "mdi:store-check",
+    title: "Turnkey Store Setup",
     description:
-      "Structured daily plans and test schedules designed for maximum efficiency and consistent progress.",
+      "Complete store setup support including layout design, inventory stocking, and POS system installation.",
   },
   {
-    icon: "mdi:whatsapp",
-    title: "WhatsApp Query Resolution System (WQRS)",
+    icon: "mdi:truck-delivery",
+    title: "Centralised Supply Chain",
     description:
-      "Instant doubt-clearing via WhatsApp so students never stay stuck on a problem.",
+      "Direct procurement from 1,200+ brands ensuring competitive pricing and 50,000+ product availability.",
   },
   {
-    icon: "mdi:file-document-check",
-    title: "All India Test Series",
+    icon: "mdi:chart-line",
+    title: "20-22% Gross Margin",
     description:
-      "Compete with thousands of aspirants nationwide and benchmark your preparation level.",
+      "Industry-leading margins with proven unit economics and transparent revenue sharing model.",
   },
   {
     icon: "mdi:account-star",
-    title: "Personalised Coaching",
+    title: "Dedicated Franchise Support",
     description:
-      "Tailored guidance and mentoring based on each student's strengths and areas of improvement.",
+      "End-to-end operational guidance, marketing support, and training for you and your staff.",
   },
 ];
 
@@ -137,7 +137,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className={styles.overviewSection} id="why-narayana" ref={ref}>
+    <section className={styles.overviewSection} id="about" ref={ref}>
       {/* Background Elements */}
       <div className={styles.bgGradient} />
       <div className={styles.bgPattern} />
@@ -151,7 +151,7 @@ const AboutSection = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className={styles.sectionHeader}>
-            <span className={styles.badge}>ABOUT NARAYANA</span>
+            <span className={styles.badge}>ABOUT GNRC MEDISHOP</span>
             <Typography
               variant="h2"
               className={styles.sectionTitle}
@@ -159,11 +159,11 @@ const AboutSection = () => {
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 700,
                 fontSize: { xs: "1.75rem", sm: "2rem", md: "2.75rem" },
-                color: "#1A237E",
+                color: "#2D3561",
                 letterSpacing: "-0.01em",
               }}
             >
-              Why Choose Narayana for NEET?
+              Why Choose GNRC Medishop?
             </Typography>
             <Typography
               variant="h3"
@@ -176,7 +176,7 @@ const AboutSection = () => {
                 marginTop: "0.5rem",
               }}
             >
-              India's Most Trusted Name in NEET Coaching Since 1979
+              North East India's Most Trusted Pharmacy & Essentials Retail Chain Since 2004
             </Typography>
           </motion.div>
 
@@ -215,15 +215,15 @@ const AboutSection = () => {
             {/* Left Column - Text */}
             <motion.div variants={itemVariants} className={styles.textColumn}>
               <Typography className={styles.contentParagraph}>
-                For more than forty-seven years, Narayana Group has established
-                unparalleled standards in academic excellence. Consistently
-                producing top performers in NEET since inception, Narayana is
-                now the best coaching center for NEET in India.
+                For over 20 years, GNRC Medishop has been North East India's
+                most trusted pharmacy and essentials retail chain. With ₹80 Cr+
+                annual turnover, 50,000+ products, and 1.6 million+ happy
+                customers, we are the region's leading retail pharmacy brand.
               </Typography>
               <Typography className={styles.contentParagraph}>
-                In NEET 2024, 5 out of the top-10 All India Rankers (All Categories)
-                were from Narayana. A total of 3,128 students achieved their dream of
-                becoming doctors.
+                With 9 company-owned stores, 1,200+ partner brands, and a proven
+                franchise model offering 20-22% gross margins, GNRC Medishop is
+                now expanding across Assam and North East India.
               </Typography>
               <Button
                 variant="contained"
@@ -232,24 +232,24 @@ const AboutSection = () => {
                 endIcon={<Icon icon="mdi:arrow-right" />}
                 sx={{
                   background:
-                    "linear-gradient(135deg, #FF6D00 0%, #FF9100 100%)",
+                    "linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%)",
                   color: "#ffffff",
                   fontWeight: 700,
                   fontSize: { xs: "0.9375rem", md: "1rem" },
                   padding: { xs: "12px 28px", md: "14px 36px" },
                   borderRadius: "50px",
                   textTransform: "none",
-                  boxShadow: "0 8px 30px rgba(255, 109, 0, 0.3)",
+                  boxShadow: "0 8px 30px rgba(46, 196, 182, 0.3)",
                   marginTop: "1.5rem",
                   "&:hover": {
                     background:
-                      "linear-gradient(135deg, #FF9100 0%, #FF6D00 100%)",
-                    boxShadow: "0 12px 40px rgba(255, 109, 0, 0.45)",
+                      "linear-gradient(135deg, #5DD9CE 0%, #2EC4B6 100%)",
+                    boxShadow: "0 12px 40px rgba(46, 196, 182, 0.45)",
                     transform: "translateY(-2px)",
                   },
                 }}
               >
-                Explore Our Courses →
+                Explore Franchise Plans →
               </Button>
             </motion.div>
 
@@ -285,12 +285,12 @@ const AboutSection = () => {
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 700,
                 fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.75rem" },
-                color: "#1A237E",
+                color: "#2D3561",
                 textAlign: "center",
                 marginBottom: { xs: "1.5rem", md: "2rem" },
               }}
             >
-              What Sets Narayana Apart
+              What Sets GNRC Medishop Apart
             </Typography>
             <div className={styles.differentiatorsGrid}>
               {differentiators.map((item, index) => (

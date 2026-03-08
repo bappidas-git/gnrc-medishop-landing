@@ -1,5 +1,5 @@
 /* ============================================
-   SectionTitle Component - Narayana NEET
+   SectionTitle Component - GNRC Medishop
    Reusable section title with badge and animations
    ============================================ */
 

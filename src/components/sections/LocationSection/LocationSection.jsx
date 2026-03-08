@@ -1,6 +1,6 @@
 /* ============================================
-   LocationSection Component - Narayana NEET
-   Our Centre section showing Guwahati centre info
+   LocationSection Component - GNRC Medishop
+   Our Stores section showing Guwahati store info
    ============================================ */
 
 import React from "react";
@@ -52,7 +52,7 @@ const LocationSection = () => {
     },
     hover: {
       y: -5,
-      boxShadow: "0 15px 40px rgba(26, 35, 126, 0.15)",
+      boxShadow: "0 15px 40px rgba(45, 53, 97, 0.15)",
       transition: {
         duration: 0.3,
       },
@@ -61,7 +61,7 @@ const LocationSection = () => {
 
   const handleGetDirections = () => {
     window.open(
-      "https://www.google.com/maps/search/Narayana+Coaching+Center+Guwahati+Assam",
+      "https://www.google.com/maps/search/GNRC+Medishop+Guwahati+Assam",
       "_blank",
       "noopener,noreferrer",
     );
@@ -84,12 +84,12 @@ const LocationSection = () => {
     },
     {
       icon: "mdi:earth",
-      title: "Students from across North-East India can enroll",
+      title: "Franchise opportunities across North-East India",
       color: "#9C27B0",
     },
     {
       icon: "mdi:home-city",
-      title: "Hostel assistance available for outstation students",
+      title: "Complete franchise setup support for all locations",
       color: "#4CAF50",
     },
   ];
@@ -99,10 +99,10 @@ const LocationSection = () => {
       <Container maxWidth="xl">
         {/* Section Title */}
         <SectionTitle
-          badge="OUR CENTRE"
-          title="Narayana Coaching Centre in"
+          badge="OUR STORES"
+          title="GNRC Medishop Stores in"
           highlight="Guwahati"
-          subtitle="Bringing world-class NEET coaching to Assam & North-East India"
+          subtitle="Serving North East India with quality pharmacy & essentials retail"
           align="center"
           variant="light"
           badgeVariant="gold"
@@ -154,7 +154,7 @@ const LocationSection = () => {
                         variant="body2"
                         className={styles.contactValue}
                       >
-                        <a href={`tel:${centreData.phone}`}>+91-6002500672</a>
+                        <a href={`tel:${centreData.phone}`}>+91-7086036887</a>
                       </Typography>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ const LocationSection = () => {
                         variant="caption"
                         className={styles.contactLabel}
                       >
-                        Toll Free
+                        Alternate Phone
                       </Typography>
                       <Typography
                         variant="body2"
@@ -213,7 +213,7 @@ const LocationSection = () => {
                   <div className={styles.mapPlaceholder}>
                     <img
                       src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=400&fit=crop"
-                      alt="Narayana Coaching Centre Guwahati Location Map"
+                      alt="GNRC Medishop Store Guwahati Location Map"
                       className={styles.mapImage}
                     />
                     <div className={styles.mapOverlay}>
@@ -222,7 +222,7 @@ const LocationSection = () => {
                         className={styles.mapPinIcon}
                       />
                       <Typography variant="h6" className={styles.mapTitle}>
-                        Narayana Coaching Centre
+                        GNRC Medishop
                       </Typography>
                       <Typography variant="body2" className={styles.mapAddress}>
                         Guwahati, Assam
@@ -258,7 +258,7 @@ const LocationSection = () => {
               className={styles.areasTitle}
               sx={{ marginBottom: "1.5rem" }}
             >
-              Now Serving Students From
+              Now Serving Customers From
             </Typography>
           </motion.div>
           <motion.div variants={itemVariants} className={styles.areasGrid}>
@@ -331,7 +331,7 @@ const LocationSection = () => {
               className={styles.ctaTitle}
               sx={{ color: "#fff", marginBottom: "2rem" }}
             >
-              Visit our Guwahati centre today!
+              Visit our Guwahati store today!
             </Typography>
           </motion.div>
           <motion.div variants={itemVariants} className={styles.ctaButtons}>

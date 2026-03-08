@@ -1,5 +1,5 @@
 /* ============================================
-   Footer Component - Narayana Coaching Centers
+   Footer Component - GNRC Medishop
    Multi-column footer with links, contact info,
    social media, and legal modals
    ============================================ */
@@ -17,10 +17,10 @@ const PrivacyPolicyContent = () => (
     <section className={styles.legalSection}>
       <h3>Introduction</h3>
       <p>
-        Narayana Group ("we," "our," or "us") respects your privacy and is
-        committed to protecting your personal data. This Privacy Policy explains
-        how we collect, use, disclose, and safeguard your information when you
-        visit our website or engage with our coaching services.
+        GNRC Medishop Pvt. Ltd. ("we," "our," or "us") respects your privacy
+        and is committed to protecting your personal data. This Privacy Policy
+        explains how we collect, use, disclose, and safeguard your information
+        when you visit our website or engage with our franchise services.
       </p>
     </section>
 
@@ -30,13 +30,13 @@ const PrivacyPolicyContent = () => (
       <ul>
         <li>
           <strong>Personal Information:</strong> Name, email address, phone
-          number, and other contact details you provide when filling out inquiry
-          forms or contacting us.
+          number, and other contact details you provide when filling out
+          franchise inquiry forms or contacting us.
         </li>
         <li>
-          <strong>Academic Preferences:</strong> Information about your course
-          preferences, class, and academic requirements shared during
-          consultations.
+          <strong>Business Preferences:</strong> Information about your
+          investment preferences, location interests, and business requirements
+          shared during consultations.
         </li>
         <li>
           <strong>Usage Data:</strong> Information about how you interact with
@@ -55,10 +55,10 @@ const PrivacyPolicyContent = () => (
       <h3>How We Use Your Information</h3>
       <p>We use the collected information for the following purposes:</p>
       <ul>
-        <li>To respond to your inquiries and provide course information</li>
-        <li>To schedule counselling sessions and centre visits</li>
+        <li>To respond to your franchise inquiries and provide investment details</li>
+        <li>To schedule business consultations and store visits</li>
         <li>
-          To send relevant academic updates and promotional communications (with
+          To send relevant business updates and promotional communications (with
           your consent)
         </li>
         <li>To improve our website and services based on user feedback</li>
@@ -101,15 +101,15 @@ const PrivacyPolicyContent = () => (
         data practices, please contact us at:
       </p>
       <p>
-        <strong>Narayana Group</strong>
+        <strong>GNRC Medishop Pvt. Ltd.</strong>
         <br />
-        Email: bm.guwahati@narayanagroup.com
+        Email: info@gnrcmedishop.com
         <br />
-        Phone: 1800-102-3344
+        Phone: +91-7086036887
       </p>
     </section>
 
-    <p className={styles.lastUpdated}>Last Updated: January 2025</p>
+    <p className={styles.lastUpdated}>Last Updated: March 2026</p>
   </div>
 );
 
@@ -121,17 +121,17 @@ const TermsConditionsContent = () => (
       <p>
         By accessing and using this website, you accept and agree to be bound by
         these Terms and Conditions. If you do not agree to these terms, please
-        do not use this website. Narayana Group reserves the right to modify
-        these terms at any time without prior notice.
+        do not use this website. GNRC Medishop Pvt. Ltd. reserves the right to
+        modify these terms at any time without prior notice.
       </p>
     </section>
 
     <section className={styles.legalSection}>
       <h3>About This Website</h3>
       <p>
-        This website is operated by Narayana Group for the purpose of providing
-        information about our coaching programmes, courses, and services. All
-        content is for general informational purposes only.
+        This website is operated by GNRC Medishop Pvt. Ltd. for the purpose of
+        providing information about our franchise opportunity, investment plans,
+        and services. All content is for general informational purposes only.
       </p>
     </section>
 
@@ -143,16 +143,16 @@ const TermsConditionsContent = () => (
       </p>
       <ul>
         <li>
-          All course details, fees, schedules, and offerings are subject to
-          change without prior notice.
+          All franchise details, investment amounts, and offerings are subject
+          to change without prior notice.
         </li>
         <li>
-          Results and rankings mentioned are based on past performance and do
-          not guarantee future outcomes.
+          Revenue projections and margins mentioned are based on existing store
+          performance and do not guarantee future outcomes.
         </li>
         <li>Images and representations are for illustrative purposes only.</li>
         <li>
-          Availability of courses and batches is subject to real-time status.
+          Availability of franchise territories is subject to real-time status.
         </li>
       </ul>
     </section>
@@ -183,18 +183,19 @@ const TermsConditionsContent = () => (
       <h3>Intellectual Property</h3>
       <p>
         All content on this website, including but not limited to text,
-        graphics, logos, images, and software, is the property of Narayana Group
-        and is protected by intellectual property laws. You may not reproduce,
-        distribute, or create derivative works without prior written consent.
+        graphics, logos, images, and software, is the property of GNRC Medishop
+        Pvt. Ltd. and is protected by intellectual property laws. You may not
+        reproduce, distribute, or create derivative works without prior written
+        consent.
       </p>
     </section>
 
     <section className={styles.legalSection}>
       <h3>Limitation of Liability</h3>
       <p>
-        Narayana Group shall not be liable for any direct, indirect, incidental,
-        consequential, or punitive damages arising from your use of this website
-        or reliance on any information provided herein.
+        GNRC Medishop Pvt. Ltd. shall not be liable for any direct, indirect,
+        incidental, consequential, or punitive damages arising from your use of
+        this website or reliance on any information provided herein.
       </p>
     </section>
 
@@ -204,7 +205,7 @@ const TermsConditionsContent = () => (
         These Terms and Conditions shall be governed by and construed in
         accordance with the laws of India. Any disputes arising from or related
         to these terms shall be subject to the exclusive jurisdiction of the
-        courts in Hyderabad, Telangana.
+        courts in Guwahati, Assam.
       </p>
     </section>
 
@@ -215,15 +216,15 @@ const TermsConditionsContent = () => (
         us at:
       </p>
       <p>
-        <strong>Narayana Group</strong>
+        <strong>GNRC Medishop Pvt. Ltd.</strong>
         <br />
-        Email: bm.guwahati@narayanagroup.com
+        Email: info@gnrcmedishop.com
         <br />
-        Phone: 1800-102-3344
+        Phone: +91-7086036887
       </p>
     </section>
 
-    <p className={styles.lastUpdated}>Last Updated: January 2025</p>
+    <p className={styles.lastUpdated}>Last Updated: March 2026</p>
   </div>
 );
 
@@ -243,11 +244,12 @@ const DisclaimerContent = () => (
     </section>
 
     <section className={styles.legalSection}>
-      <h3>Results Disclaimer</h3>
+      <h3>Earnings Disclaimer</h3>
       <p>
-        Past results and rankings are based on historical data and are not
-        indicative of future performance. Individual results may vary based on
-        the student's aptitude, dedication, and other factors.
+        Revenue projections and profit margins mentioned are based on existing
+        store performance data and are not indicative of guaranteed future
+        outcomes. Individual franchise results may vary based on location,
+        market conditions, management, and other factors.
       </p>
     </section>
 
@@ -255,11 +257,11 @@ const DisclaimerContent = () => (
       <h3>Contact</h3>
       <p>
         For any questions or concerns, please contact us at
-        bm.guwahati@narayanagroup.com or call 1800-102-3344.
+        info@gnrcmedishop.com or call +91-7086036887.
       </p>
     </section>
 
-    <p className={styles.lastUpdated}>Last Updated: January 2025</p>
+    <p className={styles.lastUpdated}>Last Updated: March 2026</p>
   </div>
 );
 
@@ -324,34 +326,26 @@ const LegalModal = ({ isOpen, onClose, title, children }) => {
 
 // Quick Links data
 const quickLinks = [
-  { label: "About Narayana", href: "#overview" },
-  { label: "Why Narayana", href: "#amenities" },
-  { label: "Results", href: "#pricing" },
-  { label: "Centres", href: "#location" },
+  { label: "About GNRC", href: "#about" },
+  { label: "Why GNRC", href: "#why-gnrc" },
+  { label: "Investment", href: "#investment" },
+  { label: "Stores", href: "#stores" },
   {
     label: "Careers",
-    href: "https://www.narayanacoachingcenters.in/careers",
+    href: "https://www.gnrcmedishop.com",
     external: true,
   },
 ];
 
-// Courses data
-const courses = [
-  { label: "NEET Coaching", href: "#overview" },
+// Franchise links data
+const franchiseLinks = [
+  { label: "500 Sq Ft Store", href: "#investment" },
+  { label: "700 Sq Ft Store", href: "#investment" },
+  { label: "1000 Sq Ft Store", href: "#investment" },
+  { label: "Support & Training", href: "#support" },
   {
-    label: "IIT-JEE Coaching",
-    href: "https://www.narayanacoachingcenters.in/iit-jee-coaching",
-    external: true,
-  },
-  { label: "Foundation Courses", href: "#overview" },
-  {
-    label: "Crash Courses",
-    href: "https://www.narayanacoachingcenters.in/neet-crash-course",
-    external: true,
-  },
-  {
-    label: "Test Series",
-    href: "https://www.narayanacoachingcenters.in/naits/",
+    label: "GNRC Medishop Website",
+    href: "https://www.gnrcmedishop.com",
     external: true,
   },
 ];
@@ -380,8 +374,8 @@ const Footer = () => {
               <div className={styles.footerBrand}>
                 <div className={styles.logoWrapper}>
                   <img
-                    src="https://www.narayanacoachingcenters.in/images/logo.png"
-                    alt="Narayana Coaching Centers"
+                    src="https://www.gnrcmedishop.com/images/img_logo.png"
+                    alt="GNRC Medishop"
                     style={{
                       height: "36px",
                       width: "auto",
@@ -390,8 +384,8 @@ const Footer = () => {
                   />
                 </div>
                 <p className={styles.tagline}>
-                  One of Asia's largest educational conglomerates inspiring
-                  success since 1979.
+                  Building North East India's Most Trusted Essentials Retail
+                  Chain.
                 </p>
                 {/* Social Icons */}
                 <div className={styles.socialIcons}>
@@ -433,23 +427,23 @@ const Footer = () => {
                 </ul>
               </div>
 
-              {/* Column 3: Courses */}
+              {/* Column 3: Franchise */}
               <div className={styles.footerColumn}>
-                <h4 className={styles.columnTitle}>Courses</h4>
+                <h4 className={styles.columnTitle}>Franchise</h4>
                 <ul className={styles.footerLinks}>
-                  {courses.map((course, index) => (
+                  {franchiseLinks.map((link, index) => (
                     <li key={index}>
                       <a
-                        href={course.href}
+                        href={link.href}
                         className={styles.footerLink}
-                        {...(course.external
+                        {...(link.external
                           ? {
                               target: "_blank",
                               rel: "noopener noreferrer",
                             }
                           : {})}
                       >
-                        {course.label}
+                        {link.label}
                       </a>
                     </li>
                   ))}
@@ -464,11 +458,11 @@ const Footer = () => {
                     <div className={styles.contactLabelRow}>
                       <Icon icon="mdi:phone" className={styles.contactIcon} />
                       <span className={styles.contactLabel}>
-                        Admission Support
+                        Franchise Support
                       </span>
                     </div>
-                    <a href="tel:+916002500672" className={styles.contactValue}>
-                      6002500672
+                    <a href="tel:+917086036887" className={styles.contactValue}>
+                      7086036887
                     </a>
                   </li>
                   <li className={styles.contactItem}>
@@ -477,10 +471,10 @@ const Footer = () => {
                         icon="mdi:phone-in-talk"
                         className={styles.contactIcon}
                       />
-                      <span className={styles.contactLabel}>Toll Free</span>
+                      <span className={styles.contactLabel}>Alternate</span>
                     </div>
-                    <a href="tel:18001023344" className={styles.contactValue}>
-                      1800-102-3344
+                    <a href="tel:+918638604899" className={styles.contactValue}>
+                      8638604899
                     </a>
                   </li>
                   <li className={styles.contactItem}>
@@ -489,10 +483,10 @@ const Footer = () => {
                       <span className={styles.contactLabel}>Email</span>
                     </div>
                     <a
-                      href="mailto:bm.guwahati@narayanagroup.com"
+                      href="mailto:info@gnrcmedishop.com"
                       className={styles.contactValue}
                     >
-                      bm.guwahati@narayanagroup.com
+                      info@gnrcmedishop.com
                     </a>
                   </li>
                   <li className={styles.contactItem}>
@@ -504,11 +498,9 @@ const Footer = () => {
                       <span className={styles.contactLabel}>Address</span>
                     </div>
                     <span className={styles.contactValue}>
-                      Nilomani Phukan Path
+                      GNRC Medishop Pvt. Ltd.
                       <br />
-                      Nearby Tanishq Showroom, Sree Nagar
-                      <br />
-                      Guwahati, Assam 781005
+                      Guwahati, Assam
                     </span>
                   </li>
                 </ul>
@@ -522,7 +514,7 @@ const Footer = () => {
           <Container maxWidth="xl">
             <div className={styles.bottomContent}>
               <p className={styles.copyright}>
-                &copy; 2025 Narayana Group. All Rights Reserved.
+                &copy; 2025 GNRC Medishop Pvt. Ltd. All Rights Reserved.
               </p>
               <div className={styles.legalLinks}>
                 <button

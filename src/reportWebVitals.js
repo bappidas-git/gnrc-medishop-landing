@@ -1,6 +1,6 @@
 /* ============================================
    Web Vitals Performance Monitoring
-   Narayana NEET
+   GNRC Medishop
 
    Measures Core Web Vitals:
    - CLS (Cumulative Layout Shift)

@@ -1,5 +1,5 @@
 /* ============================================
-   Modal Component - Narayana NEET
+   Modal Component - GNRC Medishop
    Animated modal/dialog with multiple variants
    ============================================ */
 
@@ -210,7 +210,7 @@ export const showSuccessModal = (title, message, buttonText = 'OK') => {
     html: message,
     icon: 'success',
     confirmButtonText: buttonText,
-    confirmButtonColor: '#1A237E',
+    confirmButtonColor: '#2D3561',
     showClass: {
       popup: 'animate__animated animate__fadeInUp animate__faster'
     },
@@ -238,7 +238,7 @@ export const showConfirmModal = (title, message, confirmText = 'Yes', cancelText
     showCancelButton: true,
     confirmButtonText: confirmText,
     cancelButtonText: cancelText,
-    confirmButtonColor: '#1A237E',
+    confirmButtonColor: '#2D3561',
     cancelButtonColor: '#6B7280',
   });
 };
@@ -249,7 +249,7 @@ export const showInfoModal = (title, message, buttonText = 'Got it') => {
     html: message,
     icon: 'info',
     confirmButtonText: buttonText,
-    confirmButtonColor: '#1A237E',
+    confirmButtonColor: '#2D3561',
   });
 };
 

@@ -1,6 +1,6 @@
 /* ============================================
-   CTASection Component - Narayana NEET
-   "Your Dream Medical Seat is One Step Away"
+   CTASection Component - GNRC Medishop
+   "Your Dream Franchise is One Step Away"
    Dark indigo CTA with stats and enrollment buttons
    ============================================ */
 
@@ -55,9 +55,9 @@ const CTASection = () => {
   };
 
   const stats = [
-    { value: "47+", label: "Years", icon: "mdi:trophy-award" },
-    { value: "Top 10", label: "AIR", icon: "mdi:star-circle" },
-    { value: "90%", label: "Scholarship", icon: "mdi:percent-circle" },
+    { value: "50+", label: "Stores", icon: "mdi:store" },
+    { value: "50K+", label: "Products", icon: "mdi:package-variant-closed" },
+    { value: "22%", label: "Gross Margin", icon: "mdi:percent-circle" },
   ];
 
   return (
@@ -77,7 +77,7 @@ const CTASection = () => {
           {/* Headline */}
           <motion.div variants={itemVariants}>
             <Typography variant="h3" className={styles.title}>
-              Your Dream Medical Seat is{" "}
+              Your Dream Franchise is{" "}
               <span className={styles.highlight}>One Step Away</span>
             </Typography>
           </motion.div>
@@ -89,8 +89,8 @@ const CTASection = () => {
               className={styles.description}
               sx={{ color: "#fff" }}
             >
-              Join thousands of successful Narayana students who 
-              NEET. Limited seats available for 2025-26 batch in Guwahati.
+              Join our growing network of successful franchise partners across North East India.
+              Limited franchise territories available.
             </Typography>
           </motion.div>
 
@@ -130,10 +130,10 @@ const CTASection = () => {
               variant="outline"
               size="large"
               startIcon="mdi:phone-outline"
-              href="tel:+916002500672"
+              href="tel:+917086036887"
               className={styles.secondaryBtn}
             >
-              Call: 6002-500-672
+              Call: 7086-036-887
             </Button>
           </motion.div>
         </motion.div>

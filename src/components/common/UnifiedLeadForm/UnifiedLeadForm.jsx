@@ -36,25 +36,23 @@ import {
 import styles from "./UnifiedLeadForm.module.css";
 
 // Local storage key for leads
-const LEADS_STORAGE_KEY = "narayana_neet_submitted_leads";
+const LEADS_STORAGE_KEY = "gnrc_franchise_submitted_leads";
 
-// Course interest options
+// Investment interest options
 const COURSE_OPTIONS = [
-  "2-Year Programme (TYCP) for NEET",
-  "1-Year Programme (OYCP) for NEET",
-  "Repeater/Dropper Course for NEET",
-  "Foundation Course (Class 8-10)",
-  "Not Sure - Need Guidance",
+  "500 Sq.Ft. Store (~₹22L)",
+  "700 Sq.Ft. Store (~₹28L)",
+  "1000 Sq.Ft. Store (~₹38L)",
+  "Not Sure — Need Guidance",
 ];
 
-// Student class options
+// Current occupation options
 const CLASS_OPTIONS = [
-  "Class 8",
-  "Class 9",
-  "Class 10",
-  "Class 11",
-  "Class 12",
-  "XII Passed (Dropper)",
+  "Business Owner",
+  "Salaried Professional",
+  "Retired / Looking for New Venture",
+  "First-Time Entrepreneur",
+  "Investor / Partner",
 ];
 
 // Initial form state
@@ -84,17 +82,16 @@ const PrivacyPolicyContent = () => (
           fontSize: "16px",
           fontWeight: 600,
           marginBottom: "12px",
-          color: "#1A237E",
+          color: "#2D3561",
         }}
       >
         Introduction
       </h3>
       <p style={{ fontSize: "14px", lineHeight: 1.6, color: "#374151" }}>
-        Narayana Coaching Centers ("we," "our," or "us") respects your privacy
+        GNRC Medishop Pvt. Ltd. ("we," "our," or "us") respects your privacy
         and is committed to protecting your personal data. This Privacy Policy
         explains how we collect, use, disclose, and safeguard your information
-        when you visit our website or engage with our services for NEET
-        coaching programmes.
+        when you visit our website or engage with our franchise services.
       </p>
     </section>
 
@@ -104,7 +101,7 @@ const PrivacyPolicyContent = () => (
           fontSize: "16px",
           fontWeight: 600,
           marginBottom: "12px",
-          color: "#1A237E",
+          color: "#2D3561",
         }}
       >
         Information We Collect
@@ -157,7 +154,7 @@ const PrivacyPolicyContent = () => (
           fontSize: "16px",
           fontWeight: 600,
           marginBottom: "12px",
-          color: "#1A237E",
+          color: "#2D3561",
         }}
       >
         How We Use Your Information
@@ -207,7 +204,7 @@ const PrivacyPolicyContent = () => (
           fontSize: "16px",
           fontWeight: 600,
           marginBottom: "12px",
-          color: "#1A237E",
+          color: "#2D3561",
         }}
       >
         Information Sharing
@@ -232,8 +229,8 @@ const PrivacyPolicyContent = () => (
         }}
       >
         <li style={{ marginBottom: "6px" }}>
-          <strong>Narayana Group:</strong> We share inquiry details within our
-          group for processing your academic enrolment interests.
+          <strong>GNRC Medishop Pvt. Ltd.:</strong> We share inquiry details within our
+          group for processing your franchise enquiry interests.
         </li>
         <li style={{ marginBottom: "6px" }}>
           <strong>Service Providers:</strong> Third-party vendors who assist us
@@ -262,7 +259,7 @@ const PrivacyPolicyContent = () => (
           fontSize: "16px",
           fontWeight: 600,
           marginBottom: "12px",
-          color: "#1A237E",
+          color: "#2D3561",
         }}
       >
         Data Security
@@ -282,7 +279,7 @@ const PrivacyPolicyContent = () => (
           fontSize: "16px",
           fontWeight: 600,
           marginBottom: "12px",
-          color: "#1A237E",
+          color: "#2D3561",
         }}
       >
         Your Rights
@@ -328,7 +325,7 @@ const PrivacyPolicyContent = () => (
           fontSize: "16px",
           fontWeight: 600,
           marginBottom: "12px",
-          color: "#1A237E",
+          color: "#2D3561",
         }}
       >
         Contact Us
@@ -345,11 +342,11 @@ const PrivacyPolicyContent = () => (
           marginTop: "8px",
         }}
       >
-        <strong>Narayana Coaching Centers</strong>
+        <strong>GNRC Medishop Pvt. Ltd.</strong>
         <br />
-        Email: bm.guwahati@narayanagroup.com
+        Email: info@gnrcmedishop.com
         <br />
-        Phone: +91-6002500672
+        Phone: +91-7086036887
       </p>
     </section>
 
@@ -431,7 +428,7 @@ const PrivacyPolicyModal = ({ isOpen, onClose }) => {
                   fontSize: "18px",
                   fontWeight: 600,
                   margin: 0,
-                  color: "#1A237E",
+                  color: "#2D3561",
                 }}
               >
                 Privacy Policy
@@ -576,12 +573,12 @@ const UnifiedLeadForm = ({
           break;
         case "course_interest":
           if (showCourseFields && !formData.course_interest) {
-            errorMessage = "Please select a course";
+            errorMessage = "Please select an investment plan";
           }
           break;
         case "student_class":
           if (showCourseFields && !formData.student_class) {
-            errorMessage = "Please select your class";
+            errorMessage = "Please select your occupation";
           }
           break;
         default:
@@ -604,11 +601,11 @@ const UnifiedLeadForm = ({
       email: getEmailErrorMessage(formData.email),
       course_interest:
         showCourseFields && !formData.course_interest
-          ? "Please select a course"
+          ? "Please select an investment plan"
           : "",
       student_class:
         showCourseFields && !formData.student_class
-          ? "Please select your class"
+          ? "Please select your occupation"
           : "",
     };
 
@@ -645,7 +642,7 @@ const UnifiedLeadForm = ({
     if (isDuplicateLead(formData.mobile)) {
       await showInfo(
         'Already Registered!',
-        'This mobile number has already been registered. Our counsellor will contact you soon.'
+        'This mobile number has already been registered. Our franchise team will contact you soon.'
       );
       return;
     }
@@ -679,8 +676,8 @@ const UnifiedLeadForm = ({
 
         // Show success alert ON TOP of drawer
         await showSuccess(
-          'Enrollment Request Received!',
-          'Thank you for your interest in Narayana Coaching Centers! Our academic counsellor will contact you within 24 hours.'
+          'Franchise Enquiry Received! \uD83C\uDFEA',
+          'Thank you for your interest in GNRC Medishop Franchise! Our business development team will contact you within 24 hours.'
         );
 
         // THEN reset form
@@ -707,7 +704,7 @@ const UnifiedLeadForm = ({
       console.error('Form submission error:', error);
       await showError(
         'Something went wrong',
-        'Please try again or call us directly at +91-6002500672.'
+        'Please try again or call us directly at +91-7086036887.'
       );
     } finally {
       setIsSubmitting(false);
@@ -784,7 +781,7 @@ const UnifiedLeadForm = ({
           <TextField
             inputRef={nameRef}
             fullWidth
-            placeholder="Student's Full Name"
+            placeholder="Full Name"
             variant="outlined"
             value={formData.name}
             onChange={handleChange("name")}
@@ -825,7 +822,7 @@ const UnifiedLeadForm = ({
           <TextField
             inputRef={mobileRef}
             fullWidth
-            placeholder="Parent's / Student's Mobile"
+            placeholder="Mobile Number"
             variant="outlined"
             value={formData.mobile}
             onChange={handleChange("mobile")}
@@ -937,7 +934,7 @@ const UnifiedLeadForm = ({
                 startAdornment={
                   <InputAdornment position="start">
                     <Icon
-                      icon="mdi:book-education-outline"
+                      icon="mdi:store-outline"
                       className={styles.inputIcon}
                       style={
                         variant === "dark" || variant === "drawer"
@@ -951,7 +948,7 @@ const UnifiedLeadForm = ({
                   if (!selected) {
                     return (
                       <span style={{ color: variant === "dark" || variant === "drawer" ? "#FFFFFF80" : undefined, opacity: variant === "dark" || variant === "drawer" ? 1 : 0.5 }}>
-                        Select Course Interest
+                        Select Investment Plan
                       </span>
                     );
                   }
@@ -1009,7 +1006,7 @@ const UnifiedLeadForm = ({
                 startAdornment={
                   <InputAdornment position="start">
                     <Icon
-                      icon="mdi:school-outline"
+                      icon="mdi:briefcase-outline"
                       className={styles.inputIcon}
                       style={
                         variant === "dark" || variant === "drawer"
@@ -1023,7 +1020,7 @@ const UnifiedLeadForm = ({
                   if (!selected) {
                     return (
                       <span style={{ color: variant === "dark" || variant === "drawer" ? "#FFFFFF80" : undefined, opacity: variant === "dark" || variant === "drawer" ? 1 : 0.5 }}>
-                        Select Student's Class
+                        Select Current Occupation
                       </span>
                     );
                   }
@@ -1105,7 +1102,7 @@ const UnifiedLeadForm = ({
               }
             >
               <Icon icon="mdi:trophy-award" className={styles.trustIcon} />
-              <span>47+ Years Legacy</span>
+              <span>20+ Years Legacy</span>
             </div>
             <div
               className={styles.trustBadge}
@@ -1115,8 +1112,8 @@ const UnifiedLeadForm = ({
                   : undefined
               }
             >
-              <Icon icon="mdi:star-circle" className={styles.trustIcon} />
-              <span>5 in Top 10 AIR Every Year</span>
+              <Icon icon="mdi:currency-inr" className={styles.trustIcon} />
+              <span>₹80 Cr Turnover</span>
             </div>
             <div
               className={styles.trustBadge}
@@ -1127,7 +1124,7 @@ const UnifiedLeadForm = ({
               }
             >
               <Icon icon="mdi:percent-circle" className={styles.trustIcon} />
-              <span>Up to 90% Scholarship</span>
+              <span>20-22% Gross Margin</span>
             </div>
           </motion.div>
         )}
@@ -1163,8 +1160,7 @@ const UnifiedLeadForm = ({
               >
                 Terms & Conditions and Privacy Policy
               </button>
-              , and consent to receive communication via SMS, WhatsApp, and
-              Email from Narayana Coaching Centers.
+              . By submitting this form, I agree to receive communication from GNRC Medishop regarding franchise opportunities.
             </Typography>
           </motion.div>
         )}
@@ -1179,9 +1175,9 @@ const UnifiedLeadForm = ({
           >
             Or call us directly
           </Typography>
-          <a href="tel:+916002500672" className={styles.phoneLink}>
+          <a href="tel:+917086036887" className={styles.phoneLink}>
             <Icon icon="mdi:phone" />
-            <span>+91-6002500672</span>
+            <span>+91-7086036887</span>
           </a>
         </div>
       )}

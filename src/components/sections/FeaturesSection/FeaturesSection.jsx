@@ -1,6 +1,6 @@
 /* ============================================
-   FeaturesSection Component - Benefits of Joining Narayana
-   Tabbed benefits showcase with course highlights and CTA
+   FeaturesSection Component - Benefits of Joining GNRC Medishop
+   Tabbed benefits showcase with franchise highlights and CTA
    ============================================ */
 
 import React, { useState, useRef } from "react";
@@ -27,12 +27,12 @@ const categoryAccentIcons = {
 
 // Course highlights strip items
 const courseHighlights = [
-  { icon: "mdi:book-open-page-variant", label: "Complete Board + NEET Syllabus" },
-  { icon: "mdi:earth", label: "All India Test Series" },
-  { icon: "mdi:account-question", label: "Doubt Clearing Sessions" },
-  { icon: "mdi:calendar-clock", label: "Micro-Schedule & Test Planners" },
-  { icon: "mdi:account-supervisor", label: "Regular Parent Updates" },
-  { icon: "mdi:trophy-award", label: "Up to 90% Scholarship via NACST & NSAT" },
+  { icon: "mdi:package-variant-closed", label: "50,000+ Products Across Categories" },
+  { icon: "mdi:percent-circle", label: "20-22% Gross Margin Guaranteed" },
+  { icon: "mdi:check-decagram", label: "Proven Business Model" },
+  { icon: "mdi:headset", label: "End-to-End Support" },
+  { icon: "mdi:cog-sync", label: "Technology-Driven Operations" },
+  { icon: "mdi:shield-star", label: "Strong Brand Recognition" },
 ];
 
 // Animation variants
@@ -102,13 +102,13 @@ const FeaturesSection = () => {
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 700,
                 fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2.25rem" },
-                color: "#1A237E",
+                color: "#2D3561",
                 textAlign: "center",
                 lineHeight: 1.2,
               }}
             >
-              Benefits of Joining{" "}
-              <span className={styles.accentText}>Narayana</span>
+              Why Join{" "}
+              <span className={styles.accentText}>GNRC Medishop</span>
             </Typography>
             <Typography
               className={styles.sectionSubtitle}
@@ -120,7 +120,7 @@ const FeaturesSection = () => {
                 marginTop: "0.75rem",
               }}
             >
-              A complete ecosystem designed for your NEET success
+              A complete ecosystem designed for your franchise success
             </Typography>
           </motion.div>
 
@@ -166,7 +166,7 @@ const FeaturesSection = () => {
                   <Icon
                     icon={categoryAccentIcons[activeTab]}
                     className={styles.lottiePlayer}
-                    style={{ width: '100%', height: '100%', color: '#FF6D00' }}
+                    style={{ width: '100%', height: '100%', color: '#2EC4B6' }}
                   />
                 </div>
 
@@ -207,7 +207,7 @@ const FeaturesSection = () => {
                   <div className={styles.mobileCategoryLottie}>
                     <Icon
                       icon={categoryAccentIcons[category.id]}
-                      style={{ width: '100%', height: '100%', color: '#FF6D00' }}
+                      style={{ width: '100%', height: '100%', color: '#2EC4B6' }}
                     />
                   </div>
                   <h3 className={styles.mobileCategoryTitle}>
@@ -263,12 +263,12 @@ const FeaturesSection = () => {
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: 600,
                 fontSize: { xs: "1.1rem", md: "1.35rem" },
-                color: "#1A237E",
+                color: "#2D3561",
                 textAlign: "center",
                 marginBottom: "1rem",
               }}
             >
-              Ready to start your NEET journey?
+              Ready to own your franchise?
             </Typography>
             <Button
               variant="contained"
@@ -277,18 +277,18 @@ const FeaturesSection = () => {
               endIcon={<Icon icon="mdi:arrow-right" />}
               sx={{
                 background:
-                  "linear-gradient(135deg, #FF6D00 0%, #FF9100 100%)",
+                  "linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%)",
                 color: "#fff",
                 fontWeight: 700,
                 fontSize: { xs: "0.9rem", md: "1rem" },
                 padding: { xs: "12px 28px", md: "14px 36px" },
                 borderRadius: "50px",
                 textTransform: "none",
-                boxShadow: "0 8px 32px rgba(255, 109, 0, 0.3)",
+                boxShadow: "0 8px 32px rgba(46, 196, 182, 0.3)",
                 "&:hover": {
                   background:
-                    "linear-gradient(135deg, #FF9100 0%, #FF6D00 100%)",
-                  boxShadow: "0 12px 40px rgba(255, 109, 0, 0.4)",
+                    "linear-gradient(135deg, #5DD9CE 0%, #2EC4B6 100%)",
+                  boxShadow: "0 12px 40px rgba(46, 196, 182, 0.4)",
                   transform: "translateY(-2px)",
                 },
               }}

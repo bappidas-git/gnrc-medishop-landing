@@ -29,34 +29,34 @@ const menuItems = [
     href: "#home",
   },
   {
-    id: "why-narayana",
-    label: "Why Narayana",
+    id: "about",
+    label: "About GNRC",
+    icon: "ic:outline-info",
+    href: "#about",
+  },
+  {
+    id: "investment",
+    label: "Investment",
+    icon: "mdi:currency-inr",
+    href: "#investment",
+  },
+  {
+    id: "why-gnrc",
+    label: "Why GNRC",
     icon: "ic:outline-star",
-    href: "#why-narayana",
+    href: "#why-gnrc",
   },
   {
-    id: "courses",
-    label: "Courses",
-    icon: "ic:outline-school",
-    href: "#courses",
-  },
-  {
-    id: "results",
-    label: "Results",
-    icon: "ic:outline-emoji-events",
-    href: "#results",
-  },
-  {
-    id: "benefits",
-    label: "Benefits",
+    id: "support",
+    label: "Support",
     icon: "ic:outline-verified",
-    href: "#benefits",
+    href: "#support",
   },
   {
-    id: "centre",
-    label: "Centre",
-    icon: "ic:outline-location-on",
-    href: "#centre",
+    id: "stores",
+    label: "Stores",
+    icon: "ic:outline-storefront",
+    href: "#stores",
   },
   {
     id: "contact",
@@ -192,8 +192,8 @@ const MobileDrawer = ({ open, onClose, onOpen, activeSection = "home" }) => {
       <Box className={styles.drawerHeader}>
         <Box className={styles.logoSection}>
           <img
-            src="https://www.narayanacoachingcenters.in/images/logo.png"
-            alt="Narayana Coaching Centers"
+            src="https://www.gnrcmedishop.com/images/img_logo.png"
+            alt="GNRC Medishop"
             style={{ height: '28px', width: 'auto' }}
           />
         </Box>
@@ -233,7 +233,7 @@ const MobileDrawer = ({ open, onClose, onOpen, activeSection = "home" }) => {
                         py: 1.5,
                         transition: "all 0.2s ease",
                         "&:hover": {
-                          backgroundColor: "rgba(255, 109, 0, 0.08)",
+                          backgroundColor: "rgba(46, 196, 182, 0.08)",
                         },
                       }}
                     >
@@ -242,7 +242,7 @@ const MobileDrawer = ({ open, onClose, onOpen, activeSection = "home" }) => {
                         sx={{
                           minWidth: 44,
                           color:
-                            activeSection === item.id ? "#FF6D00" : "#6B7280",
+                            activeSection === item.id ? "#2EC4B6" : "#6B7280",
                         }}
                       >
                         <Icon icon={item.icon} style={{ fontSize: 22 }} />
@@ -254,7 +254,7 @@ const MobileDrawer = ({ open, onClose, onOpen, activeSection = "home" }) => {
                           "& .MuiTypography-root": {
                             fontWeight: activeSection === item.id ? 600 : 500,
                             color:
-                              activeSection === item.id ? "#FF6D00" : "#374151",
+                              activeSection === item.id ? "#2EC4B6" : "#374151",
                             fontSize: "0.95rem",
                           },
                         }}
@@ -290,7 +290,7 @@ const MobileDrawer = ({ open, onClose, onOpen, activeSection = "home" }) => {
           </Typography>
           <Box className={styles.contactActions}>
             <motion.a
-              href="tel:+916002500672"
+              href="tel:+917086036887"
               className={styles.contactLink}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -299,7 +299,7 @@ const MobileDrawer = ({ open, onClose, onOpen, activeSection = "home" }) => {
               <span>Call Us</span>
             </motion.a>
             <motion.a
-              href="https://wa.me/916002500672?text=Hi,%20I%20am%20interested%20in%20Narayana%20NEET%20Coaching%20in%20Guwahati"
+              href="https://wa.me/917086036887?text=Hi,%20I%20am%20interested%20in%20GNRC%20Medishop%20Franchise%20Opportunity"
               className={styles.contactLinkWhatsapp}
               target="_blank"
               rel="noopener noreferrer"

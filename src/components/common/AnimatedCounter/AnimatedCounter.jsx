@@ -1,5 +1,5 @@
 /* ============================================
-   AnimatedCounter Component - Narayana NEET
+   AnimatedCounter Component - GNRC Medishop
    Animated number counter with scroll trigger
    ============================================ */
 

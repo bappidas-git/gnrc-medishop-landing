@@ -28,7 +28,7 @@ export const showSuccess = (title, text) => {
     icon: 'success',
     title,
     text,
-    confirmButtonColor: '#1A237E',
+    confirmButtonColor: '#2D3561',
     confirmButtonText: 'Great!',
   });
 };
@@ -38,7 +38,7 @@ export const showError = (title, text) => {
     icon: 'error',
     title,
     text,
-    confirmButtonColor: '#1A237E',
+    confirmButtonColor: '#2D3561',
   });
 };
 
@@ -47,7 +47,7 @@ export const showInfo = (title, text) => {
     icon: 'info',
     title,
     text,
-    confirmButtonColor: '#1A237E',
+    confirmButtonColor: '#2D3561',
   });
 };
 
