@@ -1,7 +1,7 @@
 /* ============================================
    CTASection Component - GNRC Medishop
    "Your Dream Franchise is One Step Away"
-   Dark indigo CTA with stats and enrollment buttons
+   Dark indigo CTA with stats and franchise application buttons
    ============================================ */
 
 import React from "react";
@@ -50,7 +50,7 @@ const CTASection = () => {
     },
   };
 
-  const handleEnrollNow = () => {
+  const handleApplyNow = () => {
     openLeadDrawer("apply-now");
   };
 
@@ -119,7 +119,7 @@ const CTASection = () => {
                 variant="primary"
                 size="large"
                 endIcon="mdi:arrow-right"
-                onClick={handleEnrollNow}
+                onClick={handleApplyNow}
                 className={styles.primaryBtn}
               >
                 Apply for Franchise Now

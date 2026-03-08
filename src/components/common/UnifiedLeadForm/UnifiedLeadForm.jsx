@@ -60,8 +60,8 @@ const initialFormState = {
   name: "",
   mobile: "",
   email: "",
-  course_interest: "",
-  student_class: "",
+  investment_interest: "",
+  current_occupation: "",
 };
 
 // Initial error state
@@ -69,8 +69,8 @@ const initialErrorState = {
   name: "",
   mobile: "",
   email: "",
-  course_interest: "",
-  student_class: "",
+  investment_interest: "",
+  current_occupation: "",
 };
 
 // Privacy Policy Content Component
@@ -131,9 +131,9 @@ const PrivacyPolicyContent = () => (
           forms or contacting us.
         </li>
         <li style={{ marginBottom: "6px" }}>
-          <strong>Academic Preferences:</strong> Information about your course
-          preferences, class/grade, and academic requirements shared during
-          consultations.
+          <strong>Business Preferences:</strong> Information about your
+          investment preferences, occupation, and franchise requirements shared
+          during consultations.
         </li>
         <li style={{ marginBottom: "6px" }}>
           <strong>Usage Data:</strong> Information about how you interact with
@@ -179,14 +179,14 @@ const PrivacyPolicyContent = () => (
         }}
       >
         <li style={{ marginBottom: "6px" }}>
-          To respond to your inquiries and provide course information
+          To respond to your inquiries and provide franchise information
         </li>
         <li style={{ marginBottom: "6px" }}>
-          To schedule demo classes and campus visits
+          To schedule store visits and franchise consultations
         </li>
         <li style={{ marginBottom: "6px" }}>
-          To send relevant course updates and promotional communications (with
-          your consent)
+          To send relevant franchise updates and promotional communications
+          (with your consent)
         </li>
         <li style={{ marginBottom: "6px" }}>
           To improve our website and services based on user feedback
@@ -571,13 +571,13 @@ const UnifiedLeadForm = ({
         case "email":
           errorMessage = getEmailErrorMessage(formData.email);
           break;
-        case "course_interest":
-          if (showCourseFields && !formData.course_interest) {
+        case "investment_interest":
+          if (showCourseFields && !formData.investment_interest) {
             errorMessage = "Please select an investment plan";
           }
           break;
-        case "student_class":
-          if (showCourseFields && !formData.student_class) {
+        case "current_occupation":
+          if (showCourseFields && !formData.current_occupation) {
             errorMessage = "Please select your occupation";
           }
           break;
@@ -599,12 +599,12 @@ const UnifiedLeadForm = ({
       name: getNameErrorMessage(formData.name),
       mobile: getMobileErrorMessage(formData.mobile),
       email: getEmailErrorMessage(formData.email),
-      course_interest:
-        showCourseFields && !formData.course_interest
+      investment_interest:
+        showCourseFields && !formData.investment_interest
           ? "Please select an investment plan"
           : "",
-      student_class:
-        showCourseFields && !formData.student_class
+      current_occupation:
+        showCourseFields && !formData.current_occupation
           ? "Please select your occupation"
           : "",
     };
@@ -614,8 +614,8 @@ const UnifiedLeadForm = ({
       name: true,
       mobile: true,
       email: true,
-      course_interest: true,
-      student_class: true,
+      investment_interest: true,
+      current_occupation: true,
     });
 
     return Object.values(newErrors).every((error) => !error);
@@ -655,8 +655,8 @@ const UnifiedLeadForm = ({
         name: formData.name.trim(),
         mobile: formData.mobile.trim(),
         email: formData.email.trim(),
-        course_interest: formData.course_interest || '',
-        student_class: formData.student_class || '',
+        investment_interest: formData.investment_interest || '',
+        current_occupation: formData.current_occupation || '',
         source: formId || 'general',
       };
 
@@ -921,15 +921,15 @@ const UnifiedLeadForm = ({
           >
             <FormControl
               fullWidth
-              error={touched.course_interest && !!errors.course_interest}
+              error={touched.investment_interest && !!errors.investment_interest}
               className={styles.textField}
             >
               <Select
                 ref={courseRef}
                 displayEmpty
-                value={formData.course_interest}
-                onChange={handleChange("course_interest")}
-                onBlur={handleBlur("course_interest")}
+                value={formData.investment_interest}
+                onChange={handleChange("investment_interest")}
+                onBlur={handleBlur("investment_interest")}
                 disabled={isSubmitting}
                 startAdornment={
                   <InputAdornment position="start">
@@ -962,7 +962,7 @@ const UnifiedLeadForm = ({
                   style: { zIndex: 99999 },
                 }}
                 inputProps={{
-                  "aria-label": "Course interest",
+                  "aria-label": "Investment interest",
                 }}
                 sx={
                   variant === "dark" || variant === "drawer"
@@ -976,8 +976,8 @@ const UnifiedLeadForm = ({
                   </MenuItem>
                 ))}
               </Select>
-              {touched.course_interest && errors.course_interest && (
-                <FormHelperText>{errors.course_interest}</FormHelperText>
+              {touched.investment_interest && errors.investment_interest && (
+                <FormHelperText>{errors.investment_interest}</FormHelperText>
               )}
             </FormControl>
           </motion.div>
@@ -993,15 +993,15 @@ const UnifiedLeadForm = ({
           >
             <FormControl
               fullWidth
-              error={touched.student_class && !!errors.student_class}
+              error={touched.current_occupation && !!errors.current_occupation}
               className={styles.textField}
             >
               <Select
                 ref={classRef}
                 displayEmpty
-                value={formData.student_class}
-                onChange={handleChange("student_class")}
-                onBlur={handleBlur("student_class")}
+                value={formData.current_occupation}
+                onChange={handleChange("current_occupation")}
+                onBlur={handleBlur("current_occupation")}
                 disabled={isSubmitting}
                 startAdornment={
                   <InputAdornment position="start">
@@ -1048,8 +1048,8 @@ const UnifiedLeadForm = ({
                   </MenuItem>
                 ))}
               </Select>
-              {touched.student_class && errors.student_class && (
-                <FormHelperText>{errors.student_class}</FormHelperText>
+              {touched.current_occupation && errors.current_occupation && (
+                <FormHelperText>{errors.current_occupation}</FormHelperText>
               )}
             </FormControl>
           </motion.div>
