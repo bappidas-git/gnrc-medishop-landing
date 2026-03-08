@@ -6,7 +6,7 @@ This guide explains how to replace the dummy lead capture with a live Pabbly Con
 
 1. Log in to [Pabbly Connect](https://www.pabbly.com/connect/)
 2. Click **"Create Workflow"**
-3. Name it: `Narayana IIT-JEE Guwahati — Lead Capture`
+3. Name it: `GNRC Medishop Franchise — Lead Capture`
 
 ## Step 2: Set Up the Trigger (Webhook)
 
@@ -77,7 +77,7 @@ After the webhook trigger, add actions in your Pabbly workflow:
 
 ### Option B: Send Email Notification
 1. Add action → **Email by Pabbly** → **"Send Email"**
-2. To: `bm.guwahati@narayanagroup.com`
+2. To: `info@gnrcmedishop.com`
 3. Subject: `New Lead: {{name}} - {{course_interest}}`
 4. Body: Include all lead fields
 
@@ -108,7 +108,7 @@ Every form submission sends these fields to the webhook:
 | Field | Description | Example |
 |-------|-------------|---------|
 | name | Student's full name | "Rahul Sharma" |
-| mobile | Mobile number | "6002500672" |
+| mobile | Mobile number | "7086036887" |
 | email | Email address | "rahul@example.com" |
 | course_interest | Selected course | "2-Year Programme (TYCP)" |
 | student_class | Current class | "Class 11" |

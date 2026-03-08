@@ -7,7 +7,7 @@
 .section {
   position: relative;
   padding: var(--space-16) 0;
-  background: linear-gradient(135deg, #ff6d00 0%, #e65100 100%);
+  background: linear-gradient(135deg, #2EC4B6 0%, #1FA89B 100%);
   overflow: hidden;
 }
 
@@ -219,7 +219,7 @@
 
 .formHeaderIcon {
   font-size: 2rem;
-  color: #ff6d00;
+  color: #2EC4B6;
 }
 
 .formTitle {
@@ -244,7 +244,7 @@
 
 .submitBtn {
   margin-top: var(--space-2);
-  box-shadow: 0 6px 20px rgba(255, 109, 0, 0.35);
+  box-shadow: 0 6px 20px rgba(46, 196, 182, 0.35);
 }
 
 /* ============================================

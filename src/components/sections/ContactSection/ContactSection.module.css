@@ -1,5 +1,5 @@
 /* ============================================
-   ContactSection Styles - Narayana Coaching Centers
+   ContactSection Styles - GNRC Medishop
    "Get in Touch" contact section
    ============================================ */
 
@@ -98,7 +98,7 @@
 .quickActionCallback:hover {
   background: var(--primary-dark);
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(26, 35, 126, 0.3);
+  box-shadow: 0 4px 15px rgba(45, 53, 97, 0.3);
 }
 
 .quickActionIcon {
@@ -144,8 +144,8 @@
   border-radius: var(--radius-lg);
   background: linear-gradient(
     135deg,
-    rgba(255, 109, 0, 0.15) 0%,
-    rgba(255, 109, 0, 0.08) 100%
+    rgba(46, 196, 182, 0.15) 0%,
+    rgba(46, 196, 182, 0.08) 100%
   );
   display: flex;
   align-items: center;

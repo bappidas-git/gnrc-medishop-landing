@@ -1,5 +1,5 @@
 /* ============================================
-   Card Component Styles - Narayana IIT-JEE
+   Card Component Styles - GNRC Medishop
    ============================================ */
 
 /* Card Base */
@@ -272,7 +272,7 @@
 
 .selected {
   border: 2px solid var(--accent-gold);
-  box-shadow: 0 0 0 4px rgba(255, 109, 0, 0.1);
+  box-shadow: 0 0 0 4px rgba(46, 196, 182, 0.1);
 }
 
 /* Focus State */

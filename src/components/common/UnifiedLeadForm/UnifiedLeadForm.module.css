@@ -96,16 +96,16 @@
 }
 
 .variantHero .textField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
-  border-color: rgba(255, 109, 0, 0.4);
+  border-color: rgba(46, 196, 182, 0.4);
 }
 
 .variantHero .textField :global(.MuiOutlinedInput-root.Mui-focused) {
   background: #FFFFFF;
-  box-shadow: 0 0 0 3px rgba(255, 109, 0, 0.12);
+  box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.12);
 }
 
 .variantHero .textField :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
-  border-color: #FF6D00;
+  border-color: #2EC4B6;
   border-width: 2px;
 }
 
@@ -143,11 +143,11 @@
   border-radius: 10px !important;
   font-weight: 700 !important;
   letter-spacing: 0.3px;
-  box-shadow: 0 4px 16px rgba(255, 109, 0, 0.35) !important;
+  box-shadow: 0 4px 16px rgba(46, 196, 182, 0.35) !important;
 }
 
 .variantHero .submitButton:hover {
-  box-shadow: 0 6px 24px rgba(255, 109, 0, 0.45) !important;
+  box-shadow: 0 6px 24px rgba(46, 196, 182, 0.45) !important;
 }
 
 .variantHero .trustBadges {
@@ -187,7 +187,7 @@
    VARIANT: Dark (Dark background)
    ============================================ */
 .variantDark {
-  background: linear-gradient(180deg, #1A237E 0%, #0D1754 100%);
+  background: linear-gradient(180deg, #2D3561 0%, #1E2440 100%);
   padding: 32px;
   border-radius: var(--radius-2xl);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -210,11 +210,11 @@
 }
 
 .variantDark .textField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
-  border-color: rgba(255, 109, 0, 0.5);
+  border-color: rgba(46, 196, 182, 0.5);
 }
 
 .variantDark .textField :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
-  border-color: #FF6D00;
+  border-color: #2EC4B6;
 }
 
 .variantDark .textField :global(.MuiInputBase-input) {
@@ -230,7 +230,7 @@
 }
 
 .variantDark .textField :global(.MuiOutlinedInput-root.Mui-focused) .inputIcon {
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 .variantDark .countryCode {
@@ -254,7 +254,7 @@
 }
 
 .variantDark .privacyLink {
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 /* ============================================
@@ -289,11 +289,11 @@
 }
 
 .variantDrawer .textField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
-  border-color: rgba(255, 109, 0, 0.5);
+  border-color: rgba(46, 196, 182, 0.5);
 }
 
 .variantDrawer .textField :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
-  border-color: #FF6D00;
+  border-color: #2EC4B6;
   border-width: 2px;
 }
 
@@ -313,7 +313,7 @@
 }
 
 .variantDrawer .textField :global(.MuiOutlinedInput-root.Mui-focused) .inputIcon {
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 .variantDrawer .countryCode {
@@ -353,14 +353,14 @@
 }
 
 .variantDrawer .privacyLink {
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 .variantDrawer .submitButton {
   padding: 14px 28px !important;
   font-size: 1rem !important;
   border-radius: 12px !important;
-  box-shadow: 0 6px 24px rgba(255, 109, 0, 0.4) !important;
+  box-shadow: 0 6px 24px rgba(46, 196, 182, 0.4) !important;
 }
 
 .variantDrawer .messageField :global(.MuiInputBase-input) {
@@ -597,18 +597,18 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #FF6D00;
+  color: #2EC4B6;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   padding: 10px 20px;
-  background: rgba(255, 109, 0, 0.1);
+  background: rgba(46, 196, 182, 0.1);
   border-radius: 10px;
   transition: all 0.2s ease;
 }
 
 .phoneLink:hover {
-  background: rgba(255, 109, 0, 0.2);
+  background: rgba(46, 196, 182, 0.2);
   transform: translateY(-2px);
 }
 

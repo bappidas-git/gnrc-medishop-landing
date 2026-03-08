@@ -1,6 +1,6 @@
 /* ============================================
-   AboutSection Styles - About Narayana
-   IIT-JEE legacy, stats, content grid & differentiators
+   AboutSection Styles - About GNRC Medishop
+   GNRC legacy, stats, content grid & differentiators
    ============================================ */
 
 /* ========== Main Section ========== */
@@ -31,7 +31,7 @@
   height: 100%;
   background-image: radial-gradient(
     circle at 1px 1px,
-    rgba(26, 35, 126, 0.04) 1px,
+    rgba(45, 53, 97, 0.04) 1px,
     transparent 0
   );
   background-size: 28px 28px;
@@ -53,7 +53,7 @@
 
 .badge {
   display: inline-block;
-  background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+  background: linear-gradient(135deg, #2D3561 0%, #2D3561 100%);
   color: #ffffff;
   font-size: 0.6875rem;
   font-weight: 700;
@@ -103,7 +103,7 @@
 }
 
 .statItem:hover {
-  box-shadow: 0 8px 30px rgba(26, 35, 126, 0.1);
+  box-shadow: 0 8px 30px rgba(45, 53, 97, 0.1);
 }
 
 .statIcon {
@@ -123,7 +123,7 @@
   gap: 1px;
   font-size: 1.75rem;
   font-weight: 800;
-  color: #1a237e;
+  color: #2D3561;
   font-family: "Inter", sans-serif;
   line-height: 1.1;
 }
@@ -131,7 +131,7 @@
 .statSuffix {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #ff6d00;
+  color: #2EC4B6;
 }
 
 .statLabel {
@@ -244,8 +244,8 @@
 }
 
 .differentiatorCard:hover {
-  box-shadow: 0 12px 36px rgba(26, 35, 126, 0.1);
-  border-color: rgba(26, 35, 126, 0.08);
+  box-shadow: 0 12px 36px rgba(45, 53, 97, 0.1);
+  border-color: rgba(45, 53, 97, 0.08);
 }
 
 .differentiatorIcon {
@@ -255,7 +255,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+  background: linear-gradient(135deg, #2D3561 0%, #2D3561 100%);
   color: #ffffff;
   font-size: 24px;
   margin: 0 auto 1rem;
@@ -264,7 +264,7 @@
 .differentiatorTitle {
   font-size: 0.9375rem;
   font-weight: 700;
-  color: #1a237e;
+  color: #2D3561;
   margin: 0 0 0.5rem;
   font-family: "Poppins", sans-serif;
   line-height: 1.3;
@@ -597,7 +597,7 @@
 .statItem:focus-visible,
 .ctaButton:focus-visible,
 .differentiatorCard:focus-visible {
-  outline: 2px solid #ff6d00;
+  outline: 2px solid #2EC4B6;
   outline-offset: 2px;
 }
 

@@ -1,6 +1,6 @@
 /* ============================================
-   App-specific Styles - Narayana Coaching Centers
-   IIT-JEE Landing Page
+   App-specific Styles - GNRC Medishop
+   Franchise Landing Page
 
    Performance optimized with:
    - GPU acceleration
@@ -132,8 +132,8 @@ section[id] {
   position: absolute;
   top: -50px;
   left: 0;
-  background: var(--accent-gold, #ff6d00);
-  color: var(--primary-dark, #1a237e);
+  background: var(--accent-gold, #2EC4B6);
+  color: var(--primary-dark, #2D3561);
   padding: 12px 24px;
   z-index: 10000;
   font-weight: 600;
@@ -150,19 +150,19 @@ section[id] {
 
 /* Custom focus outlines */
 *:focus-visible {
-  outline: 2px solid var(--accent-gold, #ff6d00);
+  outline: 2px solid var(--accent-gold, #2EC4B6);
   outline-offset: 2px;
 }
 
 /* Selection highlight */
 ::selection {
-  background-color: var(--accent-gold, #ff6d00);
-  color: var(--primary-dark, #1a237e);
+  background-color: var(--accent-gold, #2EC4B6);
+  color: var(--primary-dark, #2D3561);
 }
 
 ::-moz-selection {
-  background-color: var(--accent-gold, #ff6d00);
-  color: var(--primary-dark, #1a237e);
+  background-color: var(--accent-gold, #2EC4B6);
+  color: var(--primary-dark, #2D3561);
 }
 
 /* ===========================================
@@ -259,9 +259,9 @@ html {
 .skeleton {
   background: linear-gradient(
     90deg,
-    rgba(255, 109, 0, 0.05) 25%,
-    rgba(255, 109, 0, 0.1) 50%,
-    rgba(255, 109, 0, 0.05) 75%
+    rgba(46, 196, 182, 0.05) 25%,
+    rgba(46, 196, 182, 0.1) 50%,
+    rgba(46, 196, 182, 0.05) 75%
   );
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s ease-in-out infinite;
