@@ -127,9 +127,7 @@ const ServicesSection = () => {
         >
           <Icon
             icon={
-              course.badge === "Most Popular"
-                ? "mdi:star"
-                : "mdi:diamond-stone"
+              course.badge === "Most Popular" ? "mdi:star" : "mdi:diamond-stone"
             }
           />
           <span>{course.badge}</span>
@@ -184,7 +182,7 @@ const ServicesSection = () => {
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
-        <span>Get Course Details</span>
+        <span>Get Plan Details</span>
         <Icon icon="mdi:arrow-right" />
       </motion.button>
     </motion.div>
@@ -230,8 +228,7 @@ const ServicesSection = () => {
                 lineHeight: 1.2,
               }}
             >
-              Choose Your{" "}
-              <span className={styles.accentText}>Store Size</span>
+              Choose Your <span className={styles.accentText}>Store Size</span>
             </Typography>
             <Typography
               className={styles.sectionSubtitle}
@@ -268,14 +265,17 @@ const ServicesSection = () => {
             ) : (
               <div className={styles.coursesGrid}>
                 {coursesData.map((course, index) =>
-                  renderCourseCard(course, index)
+                  renderCourseCard(course, index),
                 )}
               </div>
             )}
           </motion.div>
 
           {/* Comparison Table */}
-          <motion.div variants={itemVariants} className={styles.comparisonSection}>
+          <motion.div
+            variants={itemVariants}
+            className={styles.comparisonSection}
+          >
             <Typography className={styles.comparisonTitle}>
               <Icon icon="mdi:compare-horizontal" />
               Quick Comparison
@@ -291,10 +291,21 @@ const ServicesSection = () => {
                 </thead>
                 <tbody>
                   {comparisonData.rows.map((row, rowIdx) => (
-                    <tr key={rowIdx} style={row.isBold ? { fontWeight: 700 } : undefined}>
-                      <td className={styles.comparisonLabel} style={row.isBold ? { fontWeight: 700 } : undefined}>{row.label}</td>
+                    <tr
+                      key={rowIdx}
+                      style={row.isBold ? { fontWeight: 700 } : undefined}
+                    >
+                      <td
+                        className={styles.comparisonLabel}
+                        style={row.isBold ? { fontWeight: 700 } : undefined}
+                      >
+                        {row.label}
+                      </td>
                       {row.values.map((value, valIdx) => (
-                        <td key={valIdx} style={row.isBold ? { fontWeight: 700 } : undefined}>
+                        <td
+                          key={valIdx}
+                          style={row.isBold ? { fontWeight: 700 } : undefined}
+                        >
                           {value}
                         </td>
                       ))}
@@ -339,73 +350,91 @@ const ServicesSection = () => {
           >
             <Box
               sx={{
-                background: 'linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)',
-                borderRadius: '16px',
-                padding: { xs: '24px 20px', md: '32px 40px' },
-                display: 'flex',
-                flexDirection: { xs: 'column', md: 'row' },
-                alignItems: 'center',
-                justifyContent: 'space-between',
+                background: "linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%)",
+                borderRadius: "16px",
+                padding: { xs: "24px 20px", md: "32px 40px" },
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                alignItems: "center",
+                justifyContent: "space-between",
                 gap: { xs: 2, md: 3 },
-                border: '1px solid #FFE0B2',
+                border: "1px solid #FFE0B2",
                 mt: 3,
               }}
             >
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flex: 1 }}>
+              <Box
+                sx={{ display: "flex", alignItems: "center", gap: 2, flex: 1 }}
+              >
                 <Box
                   sx={{
-                    width: 56, height: 56, borderRadius: '14px',
-                    background: 'linear-gradient(135deg, #2EC4B6, #5DD9CE)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    width: 56,
+                    height: 56,
+                    borderRadius: "14px",
+                    background: "linear-gradient(135deg, #2EC4B6, #5DD9CE)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                     flexShrink: 0,
                   }}
                 >
-                  <Icon icon="mdi:account-tie" style={{ fontSize: 28, color: '#FFF' }} />
+                  <Icon
+                    icon="mdi:account-tie"
+                    style={{ fontSize: 28, color: "#FFF" }}
+                  />
                 </Box>
                 <Box>
                   <Typography
                     variant="h6"
                     sx={{
-                      fontWeight: 700, color: '#1B2A4A',
-                      fontSize: { xs: '1rem', md: '1.15rem' },
-                      fontFamily: 'Poppins, sans-serif',
+                      fontWeight: 700,
+                      color: "#1B2A4A",
+                      fontSize: { xs: "1rem", md: "1.15rem" },
+                      fontFamily: "Poppins, sans-serif",
                     }}
                   >
                     A Message from Our Founder
                   </Typography>
                   <Typography
                     sx={{
-                      color: '#546E7A', fontSize: { xs: '0.85rem', md: '0.9rem' },
+                      color: "#546E7A",
+                      fontSize: { xs: "0.85rem", md: "0.9rem" },
                       mt: 0.5,
                     }}
                   >
-                    Every family in Assam and the North East should have access to trustworthy essentials at honest prices, close to their home. — Dr. Nomal Chandra Borah, Founder, GNRC Group
+                    Every family in Assam and the North East should have access
+                    to trustworthy essentials at honest prices, close to their
+                    home. — Dr. Nomal Chandra Borah, Founder, GNRC Group
                   </Typography>
                 </Box>
               </Box>
               <Button
                 onClick={() => {
-                  const aboutSection = document.getElementById('about');
+                  const aboutSection = document.getElementById("about");
                   if (aboutSection) {
                     const headerOffset = 80;
-                    const elementPosition = aboutSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    const elementPosition =
+                      aboutSection.getBoundingClientRect().top;
+                    const offsetPosition =
+                      elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth",
+                    });
                   }
                 }}
                 sx={{
-                  background: 'linear-gradient(135deg, #2EC4B6, #5DD9CE)',
-                  color: '#FFF',
+                  background: "linear-gradient(135deg, #2EC4B6, #5DD9CE)",
+                  color: "#FFF",
                   fontWeight: 600,
-                  borderRadius: '12px',
-                  padding: { xs: '10px 24px', md: '12px 32px' },
-                  textTransform: 'none',
-                  fontSize: '0.95rem',
-                  whiteSpace: 'nowrap',
-                  boxShadow: '0 4px 14px rgba(46, 196, 182, 0.3)',
-                  '&:hover': {
-                    background: 'linear-gradient(135deg, #1FA89B, #2EC4B6)',
-                    boxShadow: '0 6px 20px rgba(46, 196, 182, 0.4)',
+                  borderRadius: "12px",
+                  padding: { xs: "10px 24px", md: "12px 32px" },
+                  textTransform: "none",
+                  fontSize: "0.95rem",
+                  whiteSpace: "nowrap",
+                  boxShadow: "0 4px 14px rgba(46, 196, 182, 0.3)",
+                  "&:hover": {
+                    background: "linear-gradient(135deg, #1FA89B, #2EC4B6)",
+                    boxShadow: "0 6px 20px rgba(46, 196, 182, 0.4)",
                   },
                 }}
               >
