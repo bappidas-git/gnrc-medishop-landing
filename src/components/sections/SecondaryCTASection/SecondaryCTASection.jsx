@@ -59,45 +59,31 @@ const initialErrorState = {
   interested_programme: "",
 };
 
-const courseCards = [
-  {
-    title: "Standard Franchise",
-    eligibility: "Investment from ₹12 Lakh",
-    hours: "200-400 sq ft",
-    frequency: "Full Setup Support",
-    startDate: "Within 30 Days",
-    icon: "mdi:store",
-  },
-  {
-    title: "Premium Franchise",
-    eligibility: "Investment from ₹18 Lakh",
-    hours: "400-800 sq ft",
-    frequency: "Full Setup Support",
-    startDate: "Within 45 Days",
-    icon: "mdi:store-plus",
-  },
-  {
-    title: "Master Franchise",
-    eligibility: "Investment from ₹25 Lakh",
-    hours: "800+ sq ft",
-    frequency: "Full Setup + Territory Rights",
-    startDate: "Within 60 Days",
-    icon: "mdi:star-shooting",
-  },
+const storeOpeningSteps = [
+  { step: 1, title: "Location Finalization", icon: "mdi:map-marker-check" },
+  { step: 2, title: "Signing LOI (Letter of Intent)", icon: "mdi:file-sign" },
+  { step: 3, title: "Property Finalization", icon: "mdi:home-city" },
+  { step: 4, title: "Document Submission", icon: "mdi:file-document-check" },
+  { step: 5, title: "Franchise Agreement", icon: "mdi:handshake" },
+  { step: 6, title: "Interior Design (docket in 5 days)", icon: "mdi:floor-plan" },
+  { step: 7, title: "Interior Work Begins", icon: "mdi:hammer-wrench" },
+  { step: 8, title: "Operations Planning (stock, branding, HR, training)", icon: "mdi:cog-sync" },
+  { step: 9, title: "Stock Payment", icon: "mdi:cash-check" },
+  { step: 10, title: "Grand Store Launch! 🎉", icon: "mdi:party-popper" },
 ];
 
 const highlights = [
-  { text: "Multiple Franchise Plans", icon: "mdi:calendar-clock" },
-  { text: "50,000+ Products Catalog", icon: "mdi:package-variant-closed" },
-  { text: "End-to-End Setup Support", icon: "mdi:headset" },
-  { text: "20-22% Gross Margin", icon: "mdi:percent-circle" },
+  { text: "20+ Years Legacy", icon: "mdi:trophy-award" },
+  { text: "₹80 Cr Turnover", icon: "mdi:currency-inr" },
+  { text: "9 Profitable Stores", icon: "mdi:store" },
+  { text: "1,200+ Brand Partners", icon: "mdi:tag-multiple" },
 ];
 
 const whyStartEarly = [
-  "Proven business model with guaranteed margins",
-  "Complete supply chain and inventory management",
-  "Strong brand recognition in North East India",
-  "Technology-driven operations for franchise success",
+  "20+ years of brand trust and credibility",
+  "Complete turnkey setup in 30-45 days",
+  "Centralized supply chain with 3 warehouses",
+  "Technology-driven operations with Zoho platform",
 ];
 
 const SecondaryCTASection = () => {
@@ -302,7 +288,7 @@ const SecondaryCTASection = () => {
   };
 
   return (
-    <section id="foundation" className={styles.section}>
+    <section id="vision" className={styles.section}>
       <div className={styles.bgPattern} />
 
       <Container maxWidth="xl">
@@ -315,7 +301,7 @@ const SecondaryCTASection = () => {
         >
           {/* Badge */}
           <motion.div variants={itemVariants} className={styles.badgeWrapper}>
-            <span className={styles.badge}>🌟 Start Your Business Journey</span>
+            <span className={styles.badge}>🌟 The Vision Behind GNRC Medishop</span>
           </motion.div>
 
           {/* Headline */}
@@ -325,7 +311,7 @@ const SecondaryCTASection = () => {
               className={styles.title}
               sx={{ color: "#fff" }}
             >
-              Start Your Franchise Journey
+              From Hospital to Every Home
             </Typography>
           </motion.div>
 
@@ -336,9 +322,8 @@ const SecondaryCTASection = () => {
               className={styles.subtitle}
               sx={{ color: "#fff" }}
             >
-              Build a profitable business with GNRC Medishop's proven franchise
-              model — complete setup, training, and ongoing support for your
-              franchise success
+              "My dream has always been simple — every family in Assam and the North East should have access to trustworthy essentials at honest prices, close to their home. GNRC Medishop offers a platform where native entrepreneurs can become Retailpreneurs."
+              {" "}— Dr. Nomal Chandra Borah, Founder, GNRC Group
             </Typography>
           </motion.div>
 
@@ -352,11 +337,26 @@ const SecondaryCTASection = () => {
             ))}
           </motion.div>
 
-          {/* Course Cards */}
+          {/* 10-Step Store Opening Process */}
+          <motion.div variants={itemVariants}>
+            <Typography
+              variant="h5"
+              sx={{
+                color: '#fff',
+                fontWeight: 700,
+                textAlign: 'center',
+                fontFamily: "'Poppins', sans-serif",
+                mb: 3,
+                mt: 2,
+              }}
+            >
+              10-Step Store Opening Process
+            </Typography>
+          </motion.div>
           <div className={styles.cardsGrid}>
-            {courseCards.map((card, index) => (
+            {storeOpeningSteps.map((step, index) => (
               <motion.div
-                key={card.title}
+                key={step.step}
                 className={styles.courseCard}
                 custom={index}
                 variants={cardVariants}
@@ -366,24 +366,10 @@ const SecondaryCTASection = () => {
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
               >
                 <div className={styles.cardIcon}>
-                  <Icon icon={card.icon} />
+                  <Icon icon={step.icon} />
                 </div>
-                <h4 className={styles.cardTitle}>{card.title}</h4>
-                <p className={styles.cardEligibility}>{card.eligibility}</p>
-                <div className={styles.cardDetails}>
-                  <div className={styles.cardDetail}>
-                    <Icon icon="mdi:clock-outline" />
-                    <span>{card.hours}</span>
-                  </div>
-                  <div className={styles.cardDetail}>
-                    <Icon icon="mdi:calendar-week" />
-                    <span>{card.frequency}</span>
-                  </div>
-                  <div className={styles.cardDetail}>
-                    <Icon icon="mdi:calendar-start" />
-                    <span>Starts: {card.startDate}</span>
-                  </div>
-                </div>
+                <h4 className={styles.cardTitle}>Step {step.step}</h4>
+                <p className={styles.cardEligibility}>{step.title}</p>
               </motion.div>
             ))}
           </div>
@@ -396,7 +382,7 @@ const SecondaryCTASection = () => {
                 <Icon icon="mdi:school" className={styles.formHeaderIcon} />
                 <div>
                   <h4 className={styles.formTitle}>
-                    Franchise Enquiry
+                    Start Your Franchise Journey Today
                   </h4>
                   <p className={styles.formSubtitle}>
                     Fill in your details to get started

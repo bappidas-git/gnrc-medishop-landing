@@ -45,13 +45,13 @@ const keyStats = [
   {
     value: "20",
     suffix: "+",
-    label: "Years of Legacy",
+    label: "Years of Trust",
     icon: "mdi:trophy-award",
     color: "#2EC4B6",
   },
   {
     value: "80",
-    suffix: "Cr+",
+    suffix: "Cr",
     label: "Annual Turnover",
     icon: "mdi:currency-inr",
     color: "#2D3561",
@@ -59,21 +59,21 @@ const keyStats = [
   {
     value: "50000",
     suffix: "+",
-    label: "Products Available",
+    label: "Products",
     icon: "mdi:package-variant-closed",
     color: "#2EC4B6",
   },
   {
     value: "16",
     suffix: "L+",
-    label: "Happy Customers",
+    label: "Customers Served",
     icon: "mdi:account-group",
     color: "#2D3561",
   },
   {
     value: "9",
     suffix: "",
-    label: "Stores & Growing",
+    label: "Company-Owned Stores",
     icon: "mdi:store",
     color: "#2EC4B6",
   },
@@ -82,16 +82,16 @@ const keyStats = [
 // Image grid data
 const gridImages = [
   {
-    src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=300&fit=crop",
-    alt: "GNRC Medishop Store",
+    src: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&h=300&fit=crop&q=80",
+    alt: "GNRC Medishop Pharmacy Store",
   },
   {
-    src: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=400&h=300&fit=crop",
-    alt: "GNRC Medishop Products",
+    src: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop&q=80",
+    alt: "GNRC Medishop Retail Shopping",
   },
   {
-    src: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=400&h=300&fit=crop",
-    alt: "GNRC Medishop Team",
+    src: "https://images.unsplash.com/photo-1586880244406-556ebe35f282?w=400&h=300&fit=crop&q=80",
+    alt: "GNRC Medishop Healthcare Products",
   },
 ];
 
@@ -99,27 +99,27 @@ const gridImages = [
 const differentiators = [
   {
     icon: "mdi:store-check",
-    title: "Turnkey Store Setup",
+    title: "Pharmacy + Grocery + FMCG",
     description:
-      "Complete store setup support including layout design, inventory stocking, and POS system installation.",
-  },
-  {
-    icon: "mdi:truck-delivery",
-    title: "Centralised Supply Chain",
-    description:
-      "Direct procurement from 1,200+ brands ensuring competitive pricing and 50,000+ product availability.",
+      "Multi-category model under one roof",
   },
   {
     icon: "mdi:chart-line",
-    title: "20-22% Gross Margin",
+    title: "Profitable Since Day One",
     description:
-      "Industry-leading margins with proven unit economics and transparent revenue sharing model.",
+      "Proven business model across 9 stores",
+  },
+  {
+    icon: "mdi:tag-multiple",
+    title: "1,200+ Brand Partners",
+    description:
+      "HUL, P&G, ITC, Nestlé, Amul, and more",
   },
   {
     icon: "mdi:account-star",
-    title: "Dedicated Franchise Support",
+    title: "End-to-End Support",
     description:
-      "End-to-end operational guidance, marketing support, and training for you and your staff.",
+      "Location, interior, training, technology, marketing",
   },
 ];
 
@@ -129,10 +129,10 @@ const AboutSection = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
-  const handleExploreCourses = () => {
-    const coursesSection = document.getElementById("courses");
-    if (coursesSection) {
-      coursesSection.scrollIntoView({ behavior: "smooth" });
+  const handleViewInvestment = () => {
+    const investmentSection = document.getElementById("investment");
+    if (investmentSection) {
+      investmentSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -151,7 +151,7 @@ const AboutSection = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className={styles.sectionHeader}>
-            <span className={styles.badge}>ABOUT GNRC MEDISHOP</span>
+            <span className={styles.badge}>PROVEN SUCCESS</span>
             <Typography
               variant="h2"
               className={styles.sectionTitle}
@@ -163,7 +163,7 @@ const AboutSection = () => {
                 letterSpacing: "-0.01em",
               }}
             >
-              Why Choose GNRC Medishop?
+              About GNRC Medishop
             </Typography>
             <Typography
               variant="h3"
@@ -176,7 +176,7 @@ const AboutSection = () => {
                 marginTop: "0.5rem",
               }}
             >
-              North East India's Most Trusted Pharmacy & Essentials Retail Chain Since 2004
+              NE India's Most Trusted Essentials Retail Chain Since 2006
             </Typography>
           </motion.div>
 
@@ -215,19 +215,14 @@ const AboutSection = () => {
             {/* Left Column - Text */}
             <motion.div variants={itemVariants} className={styles.textColumn}>
               <Typography className={styles.contentParagraph}>
-                For over 20 years, GNRC Medishop has been North East India's
-                most trusted pharmacy and essentials retail chain. With ₹80 Cr+
-                annual turnover, 50,000+ products, and 1.6 million+ happy
-                customers, we are the region's leading retail pharmacy brand.
+                GNRC Medishop is one of the fastest-growing, multi-category essentials retail chains in North East India, offering Pharmacy, FMCG, Grocery, Personal Care, and high-margin GNRC-branded staples — all under one trusted roof. Built on the strong foundation of GNRC Group's credibility and the legacy of Dr. Nomal Chandra Borah, GNRC Medishop has been profitable since inception with ₹80 Crore annual turnover.
               </Typography>
               <Typography className={styles.contentParagraph}>
-                With 9 company-owned stores, 1,200+ partner brands, and a proven
-                franchise model offering 20-22% gross margins, GNRC Medishop is
-                now expanding across Assam and North East India.
+                With 9 consistently profitable company-owned stores across Guwahati, 30,000+ SKUs across 1,200+ trusted brands, and a dedicated team of 175+ professionals, GNRC Medishop is now expanding through a franchise model — offering aspiring entrepreneurs the opportunity to become Retailpreneurs.
               </Typography>
               <Button
                 variant="contained"
-                onClick={handleExploreCourses}
+                onClick={handleViewInvestment}
                 className={styles.ctaButton}
                 endIcon={<Icon icon="mdi:arrow-right" />}
                 sx={{
@@ -249,7 +244,7 @@ const AboutSection = () => {
                   },
                 }}
               >
-                Explore Franchise Plans →
+                View Investment Plans →
               </Button>
             </motion.div>
 

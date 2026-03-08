@@ -27,12 +27,12 @@ const categoryAccentIcons = {
 
 // Course highlights strip items
 const courseHighlights = [
-  { icon: "mdi:package-variant-closed", label: "50,000+ Products Across Categories" },
-  { icon: "mdi:percent-circle", label: "20-22% Gross Margin Guaranteed" },
-  { icon: "mdi:check-decagram", label: "Proven Business Model" },
-  { icon: "mdi:headset", label: "End-to-End Support" },
-  { icon: "mdi:cog-sync", label: "Technology-Driven Operations" },
-  { icon: "mdi:shield-star", label: "Strong Brand Recognition" },
+  { icon: "mdi:map-marker-check", label: "Location Support" },
+  { icon: "mdi:store-check", label: "Turnkey Interior" },
+  { icon: "mdi:account-group", label: "Staff Hiring & Training" },
+  { icon: "mdi:cog-sync", label: "Zoho Technology" },
+  { icon: "mdi:package-variant-closed", label: "Automated Inventory" },
+  { icon: "mdi:hospital-building", label: "Hospital-Driven Marketing" },
 ];
 
 // Animation variants
@@ -80,13 +80,13 @@ const FeaturesSection = () => {
   const { openLeadDrawer } = useModal();
 
   const handleEnrollNow = () => {
-    openLeadDrawer("enroll-now");
+    openLeadDrawer("apply-now");
   };
 
   const activeCategory = benefitsData.find((c) => c.id === activeTab) || benefitsData[0];
 
   return (
-    <section className={styles.benefitsSection} id="benefits" ref={ref}>
+    <section className={styles.benefitsSection} id="support" ref={ref}>
       <Container maxWidth="xl">
         <motion.div
           variants={containerVariants}
@@ -107,8 +107,8 @@ const FeaturesSection = () => {
                 lineHeight: 1.2,
               }}
             >
-              Why Join{" "}
-              <span className={styles.accentText}>GNRC Medishop</span>
+              Complete Business{" "}
+              <span className={styles.accentText}>Ecosystem</span>
             </Typography>
             <Typography
               className={styles.sectionSubtitle}
@@ -120,7 +120,7 @@ const FeaturesSection = () => {
                 marginTop: "0.75rem",
               }}
             >
-              A complete ecosystem designed for your franchise success
+              We don't just offer a franchise — we build your success from day one
             </Typography>
           </motion.div>
 
@@ -268,7 +268,7 @@ const FeaturesSection = () => {
                 marginBottom: "1rem",
               }}
             >
-              Ready to own your franchise?
+              Ready to become a Retailpreneur?
             </Typography>
             <Button
               variant="contained"
@@ -293,7 +293,7 @@ const FeaturesSection = () => {
                 },
               }}
             >
-              Enroll Now
+              Apply Now →
             </Button>
           </motion.div>
         </motion.div>

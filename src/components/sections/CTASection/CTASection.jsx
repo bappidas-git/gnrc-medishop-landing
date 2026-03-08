@@ -51,13 +51,14 @@ const CTASection = () => {
   };
 
   const handleEnrollNow = () => {
-    openLeadDrawer("enroll-now");
+    openLeadDrawer("apply-now");
   };
 
   const stats = [
-    { value: "50+", label: "Stores", icon: "mdi:store" },
-    { value: "50K+", label: "Products", icon: "mdi:package-variant-closed" },
-    { value: "22%", label: "Gross Margin", icon: "mdi:percent-circle" },
+    { value: "20+", label: "Years", icon: "mdi:trophy-award" },
+    { value: "₹80Cr", label: "Turnover", icon: "mdi:currency-inr" },
+    { value: "22%", label: "Margin", icon: "mdi:percent-circle" },
+    { value: "30%", label: "ROI", icon: "mdi:chart-line" },
   ];
 
   return (
@@ -77,8 +78,8 @@ const CTASection = () => {
           {/* Headline */}
           <motion.div variants={itemVariants}>
             <Typography variant="h3" className={styles.title}>
-              Your Dream Franchise is{" "}
-              <span className={styles.highlight}>One Step Away</span>
+              Join the GNRC Medishop{" "}
+              <span className={styles.highlight}>Success Story</span>
             </Typography>
           </motion.div>
 
@@ -89,8 +90,7 @@ const CTASection = () => {
               className={styles.description}
               sx={{ color: "#fff" }}
             >
-              Join our growing network of successful franchise partners across North East India.
-              Limited franchise territories available.
+              Partner with NE India's most trusted pharma-grocery retail franchise. Proven profitable model. Complete support. Limited franchise territories available.
             </Typography>
           </motion.div>
 
@@ -122,7 +122,7 @@ const CTASection = () => {
                 onClick={handleEnrollNow}
                 className={styles.primaryBtn}
               >
-                Enroll Now — Limited Seats!
+                Apply for Franchise Now
               </Button>
             </motion.div>
 
