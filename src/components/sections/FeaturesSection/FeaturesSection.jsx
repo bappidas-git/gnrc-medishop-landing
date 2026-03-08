@@ -79,7 +79,7 @@ const FeaturesSection = () => {
   const [activeTab, setActiveTab] = useState(benefitsData[0]?.id ?? 1);
   const { openLeadDrawer } = useModal();
 
-  const handleEnrollNow = () => {
+  const handleApplyNow = () => {
     openLeadDrawer("apply-now");
   };
 
@@ -273,7 +273,7 @@ const FeaturesSection = () => {
             <Button
               variant="contained"
               className={styles.ctaButton}
-              onClick={handleEnrollNow}
+              onClick={handleApplyNow}
               endIcon={<Icon icon="mdi:arrow-right" />}
               sx={{
                 background:

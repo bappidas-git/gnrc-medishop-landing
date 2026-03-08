@@ -20,12 +20,12 @@ const DUMMY_MODE = true;
 /**
  * Submit lead data to Pabbly webhook or dummy endpoint
  * @param {Object} leadData - The form data to submit
- * @param {string} leadData.name - Student's full name
+ * @param {string} leadData.name - Applicant's full name
  * @param {string} leadData.mobile - Mobile number
  * @param {string} leadData.email - Email address
- * @param {string} leadData.course_interest - Selected course
- * @param {string} leadData.student_class - Student's current class
- * @param {string} leadData.source - Form source identifier (e.g., 'hero-form', 'drawer-enroll-now', 'foundation-form')
+ * @param {string} leadData.investment_interest - Selected investment plan
+ * @param {string} leadData.current_occupation - Applicant's current occupation
+ * @param {string} leadData.source - Form source identifier (e.g., 'hero-form', 'apply-now', 'contact-form')
  * @param {Object} [leadData.metadata] - Additional metadata
  * @returns {Promise<{success: boolean, message: string}>}
  */

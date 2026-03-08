@@ -31,24 +31,21 @@ import {
 } from '../../../utils/validators';
 import styles from './LeadForm.module.css';
 
-// Course interest options
+// Investment interest options
 const COURSE_OPTIONS = [
-  "Two-Year Classroom Programme (TYCP)",
-  "Apex/Spark Integrated Programme",
-  "One-Year Classroom Programme (OYCP)",
-  "Repeater/Dropper Programme",
-  "Foundation Course (Class 8-10)",
-  "Not Sure - Need Guidance",
+  "500 Sq.Ft. Store (~₹22L)",
+  "700 Sq.Ft. Store (~₹28L)",
+  "1000 Sq.Ft. Store (~₹38L)",
+  "Not Sure — Need Guidance",
 ];
 
-// Occupation options
+// Current occupation options
 const CLASS_OPTIONS = [
-  "Class 8",
-  "Class 9",
-  "Class 10",
-  "Class 11",
-  "Class 12",
-  "XII Passed (Dropper)",
+  "Business Owner",
+  "Salaried Professional",
+  "Retired / Looking for New Venture",
+  "First-Time Entrepreneur",
+  "Investor / Partner",
 ];
 
 // Initial form state
@@ -56,8 +53,8 @@ const initialFormState = {
   name: '',
   mobile: '',
   email: '',
-  course_interest: '',
-  student_class: '',
+  investment_interest: '',
+  current_occupation: '',
 };
 
 // Initial error state
@@ -65,8 +62,8 @@ const initialErrorState = {
   name: '',
   mobile: '',
   email: '',
-  course_interest: '',
-  student_class: '',
+  investment_interest: '',
+  current_occupation: '',
 };
 
 const LeadForm = ({
@@ -146,14 +143,14 @@ const LeadForm = ({
       case 'email':
         errorMessage = getEmailErrorMessage(formData.email);
         break;
-      case 'course_interest':
-        if (showCourseFields && !formData.course_interest) {
-          errorMessage = 'Please select a course';
+      case 'investment_interest':
+        if (showCourseFields && !formData.investment_interest) {
+          errorMessage = 'Please select an investment plan';
         }
         break;
-      case 'student_class':
-        if (showCourseFields && !formData.student_class) {
-          errorMessage = 'Please select your class';
+      case 'current_occupation':
+        if (showCourseFields && !formData.current_occupation) {
+          errorMessage = 'Please select your occupation';
         }
         break;
       default:
@@ -172,13 +169,13 @@ const LeadForm = ({
       name: getNameErrorMessage(formData.name),
       mobile: getMobileErrorMessage(formData.mobile),
       email: getEmailErrorMessage(formData.email),
-      course_interest:
-        showCourseFields && !formData.course_interest
-          ? 'Please select a course'
+      investment_interest:
+        showCourseFields && !formData.investment_interest
+          ? 'Please select an investment plan'
           : '',
-      student_class:
-        showCourseFields && !formData.student_class
-          ? 'Please select your class'
+      current_occupation:
+        showCourseFields && !formData.current_occupation
+          ? 'Please select your occupation'
           : '',
     };
 
@@ -187,8 +184,8 @@ const LeadForm = ({
       name: true,
       mobile: true,
       email: true,
-      course_interest: true,
-      student_class: true,
+      investment_interest: true,
+      current_occupation: true,
     });
 
     return Object.values(newErrors).every((error) => !error);
@@ -229,8 +226,8 @@ const LeadForm = ({
           name: formData.name,
           email: formData.email,
           mobile: formData.mobile,
-          course_interest: formData.course_interest || '',
-          student_class: formData.student_class || '',
+          investment_interest: formData.investment_interest || '',
+          current_occupation: formData.current_occupation || '',
           source: 'website',
         }),
       });
@@ -276,7 +273,7 @@ const LeadForm = ({
       // Show success message with SweetAlert2
       await showAlert({
         icon: 'success',
-        title: 'Enrollment Request Received!',
+        title: 'Franchise Enquiry Received!',
         text: 'Thank you for your interest in GNRC Medishop franchise! Our franchise team will contact you within 24 hours.',
         confirmButtonColor: '#2D3561',
         confirmButtonText: 'Great!',
@@ -492,20 +489,20 @@ const LeadForm = ({
           <motion.div variants={fieldVariants}>
             <FormControl
               fullWidth
-              error={touched.course_interest && !!errors.course_interest}
+              error={touched.investment_interest && !!errors.investment_interest}
               className={styles.textField}
             >
               <Select
                 ref={courseRef}
                 displayEmpty
-                value={formData.course_interest}
-                onChange={handleChange('course_interest')}
-                onBlur={handleBlur('course_interest')}
+                value={formData.investment_interest}
+                onChange={handleChange('investment_interest')}
+                onBlur={handleBlur('investment_interest')}
                 disabled={isSubmitting}
                 startAdornment={
                   <InputAdornment position="start">
                     <Icon
-                      icon="mdi:book-education-outline"
+                      icon="mdi:store-outline"
                       className={styles.inputIcon}
                       style={variant === 'dark' ? { color: '#FFFFFF99' } : undefined}
                     />
@@ -515,7 +512,7 @@ const LeadForm = ({
                   if (!selected) {
                     return (
                       <span style={{ color: variant === 'dark' ? '#FFFFFF80' : undefined, opacity: variant === 'dark' ? 1 : 0.5 }}>
-                        Select Course Interest
+                        Select Investment Plan
                       </span>
                     );
                   }
@@ -525,7 +522,7 @@ const LeadForm = ({
                   root: styles.inputRoot,
                 }}
                 inputProps={{
-                  'aria-label': 'Course interest',
+                  'aria-label': 'Investment interest',
                 }}
                 sx={
                   variant === 'dark'
@@ -539,8 +536,8 @@ const LeadForm = ({
                   </MenuItem>
                 ))}
               </Select>
-              {touched.course_interest && errors.course_interest && (
-                <FormHelperText>{errors.course_interest}</FormHelperText>
+              {touched.investment_interest && errors.investment_interest && (
+                <FormHelperText>{errors.investment_interest}</FormHelperText>
               )}
             </FormControl>
           </motion.div>
@@ -551,20 +548,20 @@ const LeadForm = ({
           <motion.div variants={fieldVariants}>
             <FormControl
               fullWidth
-              error={touched.student_class && !!errors.student_class}
+              error={touched.current_occupation && !!errors.current_occupation}
               className={styles.textField}
             >
               <Select
                 ref={classRef}
                 displayEmpty
-                value={formData.student_class}
-                onChange={handleChange('student_class')}
-                onBlur={handleBlur('student_class')}
+                value={formData.current_occupation}
+                onChange={handleChange('current_occupation')}
+                onBlur={handleBlur('current_occupation')}
                 disabled={isSubmitting}
                 startAdornment={
                   <InputAdornment position="start">
                     <Icon
-                      icon="mdi:school-outline"
+                      icon="mdi:briefcase-outline"
                       className={styles.inputIcon}
                       style={variant === 'dark' ? { color: '#FFFFFF99' } : undefined}
                     />
@@ -598,8 +595,8 @@ const LeadForm = ({
                   </MenuItem>
                 ))}
               </Select>
-              {touched.student_class && errors.student_class && (
-                <FormHelperText>{errors.student_class}</FormHelperText>
+              {touched.current_occupation && errors.current_occupation && (
+                <FormHelperText>{errors.current_occupation}</FormHelperText>
               )}
             </FormControl>
           </motion.div>
