@@ -1,5 +1,5 @@
 /* ============================================
-   CoursesSection Styles - Narayana IIT-JEE
+   ServicesSection Styles - GNRC Medishop
    Programme cards with comparison table
    ============================================ */
 
@@ -30,7 +30,7 @@
   width: 100%;
   height: 100%;
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(26, 35, 126, 0.02) 1px, transparent 0);
+    radial-gradient(circle at 1px 1px, rgba(45, 53, 97, 0.02) 1px, transparent 0);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
@@ -51,7 +51,7 @@
 }
 
 .accentText {
-  color: #FF6D00;
+  color: #2EC4B6;
   font-style: italic;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .swiperContainer :global(.swiper-pagination-bullet-active) {
-  background: #FF6D00;
+  background: #2EC4B6;
   width: 24px;
   border-radius: 4px;
 }
@@ -119,7 +119,7 @@
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  background: linear-gradient(135deg, #FF6D00 0%, #FF9100 100%);
+  background: linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%);
   color: #FFFFFF;
   z-index: 2;
 }
@@ -129,7 +129,7 @@
 }
 
 .premiumBadge {
-  background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+  background: linear-gradient(135deg, #2D3561 0%, #4A5888 100%);
   color: #FFFFFF;
 }
 
@@ -140,14 +140,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(26, 35, 126, 0.08);
+  background: rgba(45, 53, 97, 0.08);
   border-radius: 14px;
   margin-bottom: 1rem;
 }
 
 .courseIcon {
   font-size: 26px;
-  color: #1A237E;
+  color: #2D3561;
 }
 
 /* ========== Course Name ========== */
@@ -155,7 +155,7 @@
   font-family: 'Poppins', sans-serif !important;
   font-size: 1.0625rem !important;
   font-weight: 700 !important;
-  color: #1A237E !important;
+  color: #2D3561 !important;
   line-height: 1.3 !important;
   margin-bottom: 0.75rem !important;
   min-height: 2.75rem;
@@ -180,7 +180,7 @@
 
 .metaItem svg {
   font-size: 15px;
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 /* ========== Course Description ========== */
@@ -234,7 +234,7 @@
 
 .courseFrequency svg {
   font-size: 15px;
-  color: #1A237E;
+  color: #2D3561;
   flex-shrink: 0;
 }
 
@@ -246,7 +246,7 @@
   gap: 0.5rem;
   width: 100%;
   padding: 11px 20px;
-  background: linear-gradient(135deg, #FF6D00 0%, #FF9100 100%);
+  background: linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%);
   border: none;
   border-radius: 10px;
   color: #FFFFFF;
@@ -258,7 +258,7 @@
 }
 
 .courseCtaBtn:hover {
-  box-shadow: 0 6px 20px rgba(255, 109, 0, 0.35);
+  box-shadow: 0 6px 20px rgba(46, 196, 182, 0.35);
 }
 
 .courseCtaBtn svg {
@@ -279,13 +279,13 @@
   font-family: 'Poppins', sans-serif !important;
   font-size: 1.125rem !important;
   font-weight: 600 !important;
-  color: #1A237E !important;
+  color: #2D3561 !important;
   margin-bottom: 1rem !important;
 }
 
 .comparisonTitle svg {
   font-size: 22px;
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 .comparisonTableWrapper {
@@ -316,7 +316,7 @@
 }
 
 .comparisonTable thead {
-  background: linear-gradient(135deg, #1A237E 0%, #283593 100%);
+  background: linear-gradient(135deg, #2D3561 0%, #2D3561 100%);
 }
 
 .comparisonTable th {
@@ -357,7 +357,7 @@
 
 .comparisonLabel {
   font-weight: 600 !important;
-  color: #1A237E !important;
+  color: #2D3561 !important;
 }
 
 .comparisonYes {
@@ -393,7 +393,7 @@
   justify-content: space-between;
   gap: 1.5rem;
   padding: 1.25rem 1.75rem;
-  background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+  background: linear-gradient(135deg, #2D3561 0%, #4A5888 100%);
   border-radius: 14px;
 }
 
@@ -405,7 +405,7 @@
 
 .ctaIcon {
   font-size: 28px;
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 .ctaText {
@@ -429,7 +429,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 11px 22px;
-  background: linear-gradient(135deg, #FF6D00 0%, #FF9100 100%);
+  background: linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%);
   border: none;
   border-radius: 10px;
   color: #FFFFFF;
@@ -442,7 +442,7 @@
 
 .ctaBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(255, 109, 0, 0.4);
+  box-shadow: 0 6px 16px rgba(46, 196, 182, 0.4);
 }
 
 .ctaBtn svg {
@@ -616,7 +616,7 @@
 /* ========== Hover Effects (Pointer Devices) ========== */
 @media (hover: hover) {
   .courseCard:hover {
-    border-color: rgba(26, 35, 126, 0.15);
+    border-color: rgba(45, 53, 97, 0.15);
   }
 }
 
@@ -637,7 +637,7 @@
 /* ========== Focus Styles for Accessibility ========== */
 .courseCtaBtn:focus-visible,
 .ctaBtn:focus-visible {
-  outline: 2px solid #FF6D00;
+  outline: 2px solid #2EC4B6;
   outline-offset: 2px;
 }
 
@@ -673,7 +673,7 @@
   }
 
   .accentText {
-    color: #1A237E !important;
+    color: #2D3561 !important;
   }
 }
 

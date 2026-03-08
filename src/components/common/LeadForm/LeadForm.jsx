@@ -41,7 +41,7 @@ const COURSE_OPTIONS = [
   "Not Sure - Need Guidance",
 ];
 
-// Student class options
+// Occupation options
 const CLASS_OPTIONS = [
   "Class 8",
   "Class 9",
@@ -71,7 +71,7 @@ const initialErrorState = {
 
 const LeadForm = ({
   variant = 'default', // 'default', 'compact', 'dark', 'card'
-  title = 'Enroll Now',
+  title = 'Apply Now',
   subtitle = '',
   submitButtonText = 'Submit',
   showTitle = true,
@@ -380,7 +380,7 @@ const LeadForm = ({
           <TextField
             inputRef={nameRef}
             fullWidth
-            placeholder="Student's Full Name"
+            placeholder="Full Name"
             variant="outlined"
             value={formData.name}
             onChange={handleChange('name')}
@@ -417,7 +417,7 @@ const LeadForm = ({
           <TextField
             inputRef={mobileRef}
             fullWidth
-            placeholder="Parent's / Student's Mobile"
+            placeholder="Mobile Number"
             variant="outlined"
             value={formData.mobile}
             onChange={handleChange('mobile')}
@@ -546,7 +546,7 @@ const LeadForm = ({
           </motion.div>
         )}
 
-        {/* Student Class Field */}
+        {/* Occupation Field */}
         {showCourseFields && (
           <motion.div variants={fieldVariants}>
             <FormControl
@@ -574,7 +574,7 @@ const LeadForm = ({
                   if (!selected) {
                     return (
                       <span style={{ color: variant === 'dark' ? '#FFFFFF80' : undefined, opacity: variant === 'dark' ? 1 : 0.5 }}>
-                        Select Student's Class
+                        Select Current Occupation
                       </span>
                     );
                   }
@@ -584,7 +584,7 @@ const LeadForm = ({
                   root: styles.inputRoot,
                 }}
                 inputProps={{
-                  'aria-label': 'Student class',
+                  'aria-label': 'Current occupation',
                 }}
                 sx={
                   variant === 'dark'

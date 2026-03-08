@@ -12,7 +12,7 @@
 
 /* Backdrop */
 .backdrop {
-  background-color: rgba(26, 35, 126, 0.6) !important;
+  background-color: rgba(45, 53, 97, 0.6) !important;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
@@ -73,9 +73,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #FF6D00 0%, #FF9100 100%);
+  background: linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 109, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(46, 196, 182, 0.3);
 }
 
 .logoText {
@@ -143,17 +143,17 @@
 }
 
 .menuButton:hover {
-  background-color: rgba(255, 109, 0, 0.08) !important;
+  background-color: rgba(46, 196, 182, 0.08) !important;
 }
 
 .menuButton:active {
-  background-color: rgba(255, 109, 0, 0.12) !important;
+  background-color: rgba(46, 196, 182, 0.12) !important;
   transform: scale(0.98);
 }
 
 /* Active Menu Item */
 .activeItem {
-  background-color: rgba(255, 109, 0, 0.1) !important;
+  background-color: rgba(46, 196, 182, 0.1) !important;
 }
 
 .activeItem::before {
@@ -192,7 +192,7 @@
   background: var(--accent-gold);
   border-radius: 50%;
   margin-left: auto;
-  box-shadow: 0 0 8px rgba(255, 109, 0, 0.6);
+  box-shadow: 0 0 8px rgba(46, 196, 182, 0.6);
 }
 
 /* Drawer Footer */
@@ -247,7 +247,7 @@
   background: var(--accent-gold);
   color: var(--primary-dark);
   border-color: var(--accent-gold);
-  box-shadow: 0 4px 12px rgba(255, 109, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(46, 196, 182, 0.3);
 }
 
 .contactLinkWhatsapp {
@@ -347,7 +347,7 @@
   }
 
   .menuButton:active {
-    background-color: rgba(255, 109, 0, 0.12) !important;
+    background-color: rgba(46, 196, 182, 0.12) !important;
   }
 
   .closeButton:hover {

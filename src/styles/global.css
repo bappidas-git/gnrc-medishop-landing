@@ -1,6 +1,6 @@
 /* ============================================
-   Global Styles - Narayana Coaching Centers
-   IIT-JEE Landing Page
+   Global Styles - GNRC Medishop
+   Franchise Landing Page
    ============================================ */
 
 /* ========== CSS Reset & Base Styles ========== */
@@ -913,7 +913,7 @@ table {
 /* ========== High Contrast Mode ========== */
 @media (prefers-contrast: high) {
   :root {
-    --accent-gold: #E65100;
+    --accent-gold: #1FA89B;
     --primary-dark: #000000;
     --border-gray: #000000;
   }

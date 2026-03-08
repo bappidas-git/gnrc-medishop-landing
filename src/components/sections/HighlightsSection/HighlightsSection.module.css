@@ -22,13 +22,13 @@
 .sectionBadge {
   display: inline-block;
   padding: 0.3rem 1rem;
-  background: rgba(26, 35, 126, 0.1);
-  color: #1A237E;
+  background: rgba(45, 53, 97, 0.1);
+  color: #2D3561;
   font-weight: 700;
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   border-radius: 16px;
-  border: 1px solid rgba(26, 35, 126, 0.2);
+  border: 1px solid rgba(45, 53, 97, 0.2);
 }
 
 .sectionTitle {
@@ -36,7 +36,7 @@
 }
 
 .highlightText {
-  color: #FF6D00;
+  color: #2EC4B6;
   font-style: italic;
 }
 
@@ -49,7 +49,7 @@
 .underlineBar {
   width: 50px;
   height: 3px;
-  background: linear-gradient(135deg, #FF6D00 0%, #FF9100 100%);
+  background: linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%);
   border-radius: 3px;
 }
 
@@ -73,7 +73,7 @@
   border-radius: 16px;
   padding: 2rem 1.5rem;
   text-align: center;
-  border: 1px solid rgba(26, 35, 126, 0.08);
+  border: 1px solid rgba(45, 53, 97, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   display: flex;
@@ -82,7 +82,7 @@
 }
 
 .resultCard:hover {
-  box-shadow: 0 12px 40px rgba(26, 35, 126, 0.12);
+  box-shadow: 0 12px 40px rgba(45, 53, 97, 0.12);
 }
 
 .resultCardIcon {
@@ -91,7 +91,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(26, 35, 126, 0.06);
+  background: rgba(45, 53, 97, 0.06);
   border-radius: 50%;
   margin-bottom: 1rem;
 }
@@ -104,7 +104,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #1A237E;
+  color: #2D3561;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
@@ -124,14 +124,14 @@
 .subStatsRow {
   margin-top: 0.75rem;
   padding-top: 0.75rem;
-  border-top: 1px solid rgba(26, 35, 126, 0.08);
+  border-top: 1px solid rgba(45, 53, 97, 0.08);
   width: 100%;
 }
 
 .subStatText {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #FF6D00;
+  color: #2EC4B6;
   letter-spacing: 0.02em;
 }
 
@@ -157,13 +157,13 @@
   padding: 1.25rem;
   background: #FFFFFF;
   border-radius: 12px;
-  border: 1px solid rgba(26, 35, 126, 0.06);
+  border: 1px solid rgba(45, 53, 97, 0.06);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .testTypeCard:hover {
-  box-shadow: 0 8px 28px rgba(26, 35, 126, 0.1);
+  box-shadow: 0 8px 28px rgba(45, 53, 97, 0.1);
 }
 
 .testTypeIcon {
@@ -173,7 +173,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1A237E 0%, #283593 100%);
+  background: linear-gradient(135deg, #2D3561 0%, #2D3561 100%);
   border-radius: 10px;
 }
 
@@ -199,14 +199,14 @@
   font-family: 'Poppins', sans-serif;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #1A237E;
+  color: #2D3561;
 }
 
 .testTypeTag {
   display: inline-block;
   padding: 0.1rem 0.5rem;
-  background: rgba(255, 109, 0, 0.12);
-  color: #FF6D00;
+  background: rgba(46, 196, 182, 0.12);
+  color: #2EC4B6;
   font-size: 0.65rem;
   font-weight: 700;
   border-radius: 10px;
@@ -219,13 +219,13 @@
   line-height: 1.4;
 }
 
-/* ========== NACST Scholarship Banner ========== */
+/* ========== Products NACST Scholarship Banner Brands Banner ========== */
 .scholarshipBanner {
   margin-bottom: 2.5rem;
   border-radius: 16px;
   overflow: hidden;
-  background: linear-gradient(135deg, #1A237E 0%, #283593 100%);
-  box-shadow: 0 8px 32px rgba(26, 35, 126, 0.25);
+  background: linear-gradient(135deg, #2D3561 0%, #2D3561 100%);
+  box-shadow: 0 8px 32px rgba(45, 53, 97, 0.25);
 }
 
 .scholarshipContent {
@@ -274,7 +274,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
-  background: linear-gradient(135deg, #FF6D00 0%, #FF9100 100%);
+  background: linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%);
   border: none;
   border-radius: 50px;
   font-size: 0.9rem;
@@ -283,12 +283,12 @@
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 109, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(46, 196, 182, 0.4);
 }
 
 .scholarshipCta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(255, 109, 0, 0.55);
+  box-shadow: 0 6px 22px rgba(46, 196, 182, 0.55);
 }
 
 .scholarshipCta svg {
@@ -314,7 +314,7 @@
   align-items: center;
   gap: 0.625rem;
   padding: 0.875rem 2rem;
-  background: #1A237E;
+  background: #2D3561;
   border: none;
   border-radius: 50px;
   font-size: 0.95rem;
@@ -322,13 +322,13 @@
   color: #FFFFFF;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(26, 35, 126, 0.25);
+  box-shadow: 0 4px 16px rgba(45, 53, 97, 0.25);
 }
 
 .brochureBtn:hover {
-  background: #283593;
+  background: #2D3561;
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(26, 35, 126, 0.35);
+  box-shadow: 0 6px 24px rgba(45, 53, 97, 0.35);
 }
 
 .brochureBtn svg {
@@ -606,7 +606,7 @@
 /* ========== Focus Styles for Accessibility ========== */
 .scholarshipCta:focus-visible,
 .brochureBtn:focus-visible {
-  outline: 2px solid #FF6D00;
+  outline: 2px solid #2EC4B6;
   outline-offset: 2px;
 }
 
@@ -636,7 +636,7 @@
 
   .scholarshipHeading,
   .scholarshipDesc {
-    color: #1A237E !important;
+    color: #2D3561 !important;
   }
 
   .bottomCta {

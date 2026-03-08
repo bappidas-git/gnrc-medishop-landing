@@ -1,5 +1,5 @@
 /* ============================================
-   CTASection Styles - Narayana IIT-JEE
+   CTASection Styles - GNRC Medishop
    Dark indigo gradient CTA section
    ============================================ */
 
@@ -7,7 +7,7 @@
 .section {
   position: relative;
   padding: var(--space-16) 0;
-  background: linear-gradient(135deg, #1a237e 0%, #0d1754 100%);
+  background: linear-gradient(135deg, #2D3561 0%, #1E2440 100%);
   overflow: hidden;
 }
 
@@ -144,11 +144,11 @@
 
 .primaryBtn {
   min-width: 260px;
-  box-shadow: 0 8px 25px rgba(255, 109, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(46, 196, 182, 0.4);
 }
 
 .primaryBtn:hover {
-  box-shadow: 0 12px 35px rgba(255, 109, 0, 0.5);
+  box-shadow: 0 12px 35px rgba(46, 196, 182, 0.5);
 }
 
 .secondaryBtn {
@@ -186,7 +186,7 @@
   height: 200px;
   background: linear-gradient(
     315deg,
-    rgba(255, 109, 0, 0.1) 0%,
+    rgba(46, 196, 182, 0.1) 0%,
     transparent 70%
   );
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
@@ -325,7 +325,7 @@
   .description,
   .statValue,
   .statLabel {
-    color: #1a237e !important;
+    color: #2D3561 !important;
   }
 
   .ctaButtons {

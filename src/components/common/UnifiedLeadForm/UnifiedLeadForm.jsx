@@ -461,8 +461,8 @@ const PrivacyPolicyModal = ({ isOpen, onClose }) => {
 
 const UnifiedLeadForm = ({
   variant = "default", // 'default', 'dark', 'hero', 'drawer'
-  title = "Enroll Now",
-  subtitle = "Fill in your details and our academic counsellors will assist you",
+  title = "Apply Now",
+  subtitle = "Fill in your details and our franchise team will assist you",
   submitButtonText = "Submit Enquiry",
   showTitle = true,
   showSubtitle = true,
@@ -983,7 +983,7 @@ const UnifiedLeadForm = ({
           </motion.div>
         )}
 
-        {/* Student Class Field */}
+        {/* Occupation Field */}
         {showCourseFields && (
           <motion.div
             custom={4}
@@ -1034,7 +1034,7 @@ const UnifiedLeadForm = ({
                   style: { zIndex: 99999 },
                 }}
                 inputProps={{
-                  "aria-label": "Student class",
+                  "aria-label": "Current occupation",
                 }}
                 sx={
                   variant === "dark" || variant === "drawer"

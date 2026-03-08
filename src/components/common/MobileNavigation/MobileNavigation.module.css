@@ -74,11 +74,11 @@
 }
 
 .navButton:hover {
-  background: rgba(255, 109, 0, 0.08);
+  background: rgba(46, 196, 182, 0.08);
 }
 
 .navButton:active {
-  background: rgba(255, 109, 0, 0.15);
+  background: rgba(46, 196, 182, 0.15);
 }
 
 /* Navigation Icon */
@@ -160,15 +160,15 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   .mobileNav {
-    background: rgba(26, 35, 126, 0.95);
+    background: rgba(45, 53, 97, 0.95);
   }
 
   .safeAreaBackground {
-    background: rgba(26, 35, 126, 0.95);
+    background: rgba(45, 53, 97, 0.95);
   }
 
   .navButton:hover {
-    background: rgba(255, 109, 0, 0.15);
+    background: rgba(46, 196, 182, 0.15);
   }
 }
 
@@ -225,7 +225,7 @@
   left: 50%;
   width: 0;
   height: 0;
-  background: radial-gradient(circle, rgba(255, 109, 0, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(46, 196, 182, 0.3) 0%, transparent 70%);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: width 0.3s ease, height 0.3s ease;
@@ -255,7 +255,7 @@
   }
 
   .navButton:active {
-    background: rgba(255, 109, 0, 0.15);
+    background: rgba(46, 196, 182, 0.15);
   }
 }
 

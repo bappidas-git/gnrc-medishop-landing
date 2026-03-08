@@ -396,7 +396,7 @@ const SecondaryCTASection = () => {
                 noValidate
                 autoComplete="off"
               >
-                {/* Student Name */}
+                {/* Applicant Name */}
                 <TextField
                   inputRef={nameRef}
                   fullWidth

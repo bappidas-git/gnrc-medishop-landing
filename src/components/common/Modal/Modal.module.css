@@ -1,5 +1,5 @@
 /* ============================================
-   Modal Component Styles - Narayana IIT-JEE
+   Modal Component Styles - GNRC Medishop
    ============================================ */
 
 /* Backdrop */
@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--space-4);
-  background: rgba(26, 35, 126, 0.7);
+  background: rgba(45, 53, 97, 0.7);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }

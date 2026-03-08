@@ -23,7 +23,7 @@ const navItems = [
     id: "call",
     label: "Call",
     icon: "ic:baseline-phone",
-    color: "#2EC4B6",
+    color: "#FF6B35",
     action: "call",
     href: "tel:+917086036887",
   },

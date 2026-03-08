@@ -5,7 +5,7 @@
 
 .thankYouPage {
   min-height: 100vh;
-  background: linear-gradient(180deg, #1A237E 0%, #283593 50%, #1A237E 100%);
+  background: linear-gradient(180deg, #2D3561 0%, #2D3561 50%, #2D3561 100%);
   position: relative;
   overflow: hidden;
   padding: 60px 0 80px;
@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(rgba(255, 109, 0, 0.03) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(46, 196, 182, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
 }
@@ -29,7 +29,7 @@
   left: -200px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 109, 0, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(46, 196, 182, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -40,7 +40,7 @@
   right: -150px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(255, 109, 0, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(46, 196, 182, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -136,8 +136,8 @@
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  background: linear-gradient(135deg, rgba(255, 109, 0, 0.15) 0%, rgba(255, 109, 0, 0.08) 100%);
-  border: 1px solid rgba(255, 109, 0, 0.3);
+  background: linear-gradient(135deg, rgba(46, 196, 182, 0.15) 0%, rgba(46, 196, 182, 0.08) 100%);
+  border: 1px solid rgba(46, 196, 182, 0.3);
   border-radius: 20px;
   padding: 24px 28px;
   margin: 0 auto 40px;
@@ -149,7 +149,7 @@
   flex-shrink: 0;
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #FF6D00 0%, #FF9100 100%);
+  background: linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 100%);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -158,7 +158,7 @@
 
 .noticeIcon svg {
   font-size: 26px;
-  color: #1A237E;
+  color: #2D3561;
 }
 
 .noticeContent {
@@ -168,7 +168,7 @@
 .noticeTitle {
   font-size: 1.0625rem !important;
   font-weight: 600 !important;
-  color: #FF6D00 !important;
+  color: #2EC4B6 !important;
   margin-bottom: 6px !important;
 }
 
@@ -251,14 +251,14 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 109, 0, 0.15);
-  border: 1px solid rgba(255, 109, 0, 0.3);
+  background: rgba(46, 196, 182, 0.15);
+  border: 1px solid rgba(46, 196, 182, 0.3);
   border-radius: 20px;
   padding: 8px 16px;
   margin-bottom: 12px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #FF6D00;
+  color: #2EC4B6;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -292,7 +292,7 @@
   flex-shrink: 0;
   width: 48px;
   height: 48px;
-  background: rgba(255, 109, 0, 0.12);
+  background: rgba(46, 196, 182, 0.12);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -301,7 +301,7 @@
 
 .contactIconWrapper svg {
   font-size: 24px;
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 .contactDetails {
@@ -327,7 +327,7 @@
 }
 
 .contactValue:hover {
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 .contactValueAlt {
@@ -338,7 +338,7 @@
 }
 
 .contactValueAlt:hover {
-  color: #FF6D00;
+  color: #2EC4B6;
 }
 
 /* Quick Links Section */
@@ -357,11 +357,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 109, 0, 0.1);
-  border: 1px solid rgba(255, 109, 0, 0.25);
+  background: rgba(46, 196, 182, 0.1);
+  border: 1px solid rgba(46, 196, 182, 0.25);
   border-radius: 12px;
   padding: 14px 24px;
-  color: #FF6D00;
+  color: #2EC4B6;
   font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
@@ -369,8 +369,8 @@
 }
 
 .quickLinkCard:hover {
-  background: rgba(255, 109, 0, 0.2);
-  border-color: rgba(255, 109, 0, 0.4);
+  background: rgba(46, 196, 182, 0.2);
+  border-color: rgba(46, 196, 182, 0.4);
 }
 
 .quickLinkIcon {

@@ -1,11 +1,11 @@
 /* ============================================
-   Footer Component Styles - Narayana Coaching Centers
+   Footer Component Styles - GNRC Medishop
    Multi-column footer with dark theme
    ============================================ */
 
 /* Footer Base */
 .footer {
-  background: #0d1754;
+  background: #1E2440;
   color: var(--white);
   margin-top: auto;
 }
@@ -233,7 +233,7 @@ a.contactValue:hover {
 }
 
 .developerLink {
-  background: linear-gradient(135deg, #ff6d00 0%, #ff9100 50%, #ff6d00 100%);
+  background: linear-gradient(135deg, #2EC4B6 0%, #5DD9CE 50%, #2EC4B6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -285,7 +285,7 @@ a.contactValue:hover {
   align-items: center;
   justify-content: space-between;
   padding: var(--space-5) var(--space-6);
-  background: linear-gradient(135deg, #0d1754 0%, #1a237e 100%);
+  background: linear-gradient(135deg, #1E2440 0%, #2D3561 100%);
   border-bottom: 3px solid var(--accent-gold);
 }
 
