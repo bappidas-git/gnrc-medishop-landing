@@ -73,36 +73,36 @@ const LocationSection = () => {
 
   const connectivityHighlights = [
     {
-      icon: "mdi:map-marker-radius",
-      title: "Accessible from all parts of Guwahati",
+      icon: "mdi:truck-delivery",
+      title: "Own logistics network (GNRC Logistics) for last-mile delivery",
       color: "#FF9800",
     },
     {
-      icon: "mdi:train",
-      title: "Well-connected via Guwahati Railway Station & LGBI Airport",
+      icon: "mdi:warehouse",
+      title: "3 owned warehouses for seamless supply chain",
       color: "#2196F3",
     },
     {
       icon: "mdi:earth",
-      title: "Franchise opportunities across North-East India",
+      title: "Franchise territories available across all NE states",
       color: "#9C27B0",
     },
     {
-      icon: "mdi:home-city",
-      title: "Complete franchise setup support for all locations",
+      icon: "mdi:rocket-launch",
+      title: "Rapid store launch — 30-45 days from agreement",
       color: "#4CAF50",
     },
   ];
 
   return (
-    <section id="centre" className={styles.section}>
+    <section id="stores" className={styles.section}>
       <Container maxWidth="xl">
         {/* Section Title */}
         <SectionTitle
-          badge="OUR STORES"
-          title="GNRC Medishop Stores in"
-          highlight="Guwahati"
-          subtitle="Serving North East India with quality pharmacy & essentials retail"
+          badge="STORE NETWORK"
+          title="GNRC Medishop"
+          highlight="Store Network"
+          subtitle="9 profitable company-owned stores — now expanding via franchise across NE India"
           align="center"
           variant="light"
           badgeVariant="gold"
@@ -258,7 +258,7 @@ const LocationSection = () => {
               className={styles.areasTitle}
               sx={{ marginBottom: "1.5rem" }}
             >
-              Now Serving Customers From
+              Franchise Expansion Areas
             </Typography>
           </motion.div>
           <motion.div variants={itemVariants} className={styles.areasGrid}>
@@ -331,7 +331,7 @@ const LocationSection = () => {
               className={styles.ctaTitle}
               sx={{ color: "#fff", marginBottom: "2rem" }}
             >
-              Visit our Guwahati store today!
+              Want to open a GNRC Medishop in your city?
             </Typography>
           </motion.div>
           <motion.div variants={itemVariants} className={styles.ctaButtons}>
@@ -341,15 +341,15 @@ const LocationSection = () => {
               startIcon="mdi:directions"
               onClick={handleGetDirections}
             >
-              Get Directions
+              Check Availability
             </Button>
             <Button
               variant="outline"
               size="large"
-              startIcon="mdi:calendar-check"
-              onClick={handleBookDemo}
+              startIcon="mdi:phone"
+              href="tel:+917086036887"
             >
-              Book Free Demo
+              Call 7086036887
             </Button>
           </motion.div>
         </motion.div>

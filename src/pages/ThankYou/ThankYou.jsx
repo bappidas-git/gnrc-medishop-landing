@@ -14,9 +14,9 @@ import styles from './ThankYou.module.css';
 // Programme highlights for display
 const projectHighlights = [
   { icon: 'mdi:store-check-outline', label: 'Proven Business Model', color: '#2EC4B6' },
-  { icon: 'mdi:trophy-award', label: 'Top JEE Results', color: '#4CAF50' },
-  { icon: 'mdi:book-open-page-variant', label: 'Comprehensive Study Material', color: '#2196F3' },
-  { icon: 'mdi:account-group', label: 'Small Batch Sizes', color: '#9C27B0' },
+  { icon: 'mdi:percent-circle', label: '20-22% Gross Margin', color: '#4CAF50' },
+  { icon: 'mdi:package-variant-closed', label: '50K+ Products', color: '#2196F3' },
+  { icon: 'mdi:account-group', label: '1,200+ Brand Partners', color: '#9C27B0' },
 ];
 
 // Contact details
@@ -32,10 +32,10 @@ const contactInfo = {
 
 // Quick links
 const quickLinks = [
-  { icon: 'mdi:book-education', label: 'Programmes', href: '/#courses' },
-  { icon: 'mdi:trophy-award', label: 'Results', href: '/#results' },
-  { icon: 'mdi:map-marker', label: 'Centre', href: '/#centre' },
-  { icon: 'mdi:star-circle', label: 'Benefits', href: '/#benefits' },
+  { icon: 'mdi:currency-inr', label: 'Investment', href: '/#investment' },
+  { icon: 'mdi:star-circle', label: 'Why GNRC', href: '/#why-gnrc' },
+  { icon: 'mdi:store', label: 'Stores', href: '/#stores' },
+  { icon: 'mdi:headset', label: 'Support', href: '/#support' },
 ];
 
 const ThankYou = () => {
@@ -186,10 +186,10 @@ const ThankYou = () => {
           {/* Thank You Message */}
           <motion.div variants={itemVariants} className={styles.thankYouMessage}>
             <Typography variant="h2" className={styles.title}>
-              Thank You for Your Interest! 🎓
+              Thank You for Your Interest! 🏪
             </Typography>
             <Typography className={styles.subtitle} sx={{ color: '#FFFFFFB3 !important' }}>
-              Your franchise enquiry has been received. Our franchise team from GNRC Medishop will contact you within 24 hours.
+              Your franchise enquiry has been received. Our business development team from GNRC Medishop will contact you within 24 hours to discuss the opportunity in detail.
             </Typography>
           </motion.div>
 

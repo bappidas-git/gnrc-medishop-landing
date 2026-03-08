@@ -3,7 +3,7 @@
    Franchise opportunity hero section with animations
    ============================================ */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Container, Typography, Grid, Chip, useMediaQuery, useTheme, Button } from '@mui/material';
 import { Icon } from '@iconify/react';
@@ -11,23 +11,13 @@ import UnifiedLeadForm from '../../common/UnifiedLeadForm/UnifiedLeadForm';
 import { useModal } from '../../../context/ModalContext';
 import styles from './HeroSection.module.css';
 
-// Video URLs
-const HERO_VIDEOS = {
-  desktop: 'https://video.gumlet.io/688f392c0f894537edc335ad/69aada2806a15537d045fcfa/download.mp4',
-  mobile: 'https://video.gumlet.io/688f392c0f894537edc335ad/69aada2806a15537d045fcf8/download.mp4',
-};
-
-// Unsplash hero images with fallbacks
+// Unsplash hero images with fallbacks (no video for GNRC)
 const HERO_IMAGES = {
   desktop: [
-    'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&h=800&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&h=800&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1920&h=800&fit=crop&q=80',
+    'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=1920&h=800&fit=crop&q=80',
   ],
   mobile: [
-    'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=768&h=1000&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=768&h=1000&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=768&h=1000&fit=crop&q=80',
+    'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=768&h=1000&fit=crop&q=80',
   ],
 };
 
@@ -81,12 +71,11 @@ const buttonVariants = {
 
 // Trust indicators data
 const trustIndicators = [
-  { icon: 'mdi:trophy-outline', text: '20+ Years Legacy' },
-  { icon: 'mdi:currency-inr', text: '₹80Cr+ Turnover' },
-  { icon: 'mdi:store-outline', text: '9 Stores & Growing' },
-  { icon: 'mdi:package-variant-closed', text: '50,000+ Products' },
-  { icon: 'mdi:tag-outline', text: '1,200+ Brands' },
-  { icon: 'mdi:percent-outline', text: '20-22% Gross Margin' },
+  { icon: 'mdi:trophy-outline', text: '20+ Years' },
+  { icon: 'mdi:currency-inr', text: '₹80 Cr Turnover' },
+  { icon: 'mdi:package-variant-closed', text: '50K+ Products' },
+  { icon: 'mdi:tag-outline', text: '1200+ Brands' },
+  { icon: 'mdi:percent-outline', text: '22% Margin' },
 ];
 
 const HeroSection = () => {
@@ -99,45 +88,8 @@ const HeroSection = () => {
   const [heroImageUrl, setHeroImageUrl] = useState('');
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  // Video state
-  const videoRef = useRef(null);
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const [videoError, setVideoError] = useState(false);
-
-  const videoSrc = isMobile ? HERO_VIDEOS.mobile : HERO_VIDEOS.desktop;
-
-  const handleVideoCanPlay = () => {
-    setVideoLoaded(true);
-  };
-
-  const handleVideoError = () => {
-    setVideoError(true);
-    console.warn('Hero video failed to load, using image fallback');
-  };
-
-  // Ensure video plays (some browsers block autoplay even with muted)
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const playVideo = async () => {
-      try {
-        await video.play();
-      } catch (err) {
-        console.warn('Video autoplay blocked:', err.message);
-      }
-    };
-
-    if (video.readyState >= 3) {
-      playVideo();
-    } else {
-      video.addEventListener('canplay', playVideo, { once: true });
-    }
-
-    return () => {
-      video.removeEventListener('canplay', playVideo);
-    };
-  }, [videoSrc]);
+  // Video disabled for GNRC — use gradient + image only
+  const videoError = true;
 
   // Try loading fallback images in order
   useEffect(() => {
@@ -177,28 +129,11 @@ const HeroSection = () => {
       {/* === Background Layer 1: Gradient fallback (always present) === */}
       <div className={styles.heroBgGradient} />
 
-      {/* === Background Layer 2: Fallback image (shows while video loads or if video fails) === */}
+      {/* === Background Layer 2: Fallback image === */}
       {imageLoaded && (
         <div
-          className={`${styles.heroBgImage} ${videoLoaded && !videoError ? styles.heroBgImageHidden : ''}`}
+          className={styles.heroBgImage}
           style={{ backgroundImage: `url('${heroImageUrl}')` }}
-        />
-      )}
-
-      {/* === Background Layer 3: Video (fades in when loaded) === */}
-      {!videoError && (
-        <video
-          ref={videoRef}
-          className={`${styles.heroVideo} ${videoLoaded ? styles.heroVideoVisible : ''}`}
-          src={videoSrc}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          onCanPlay={handleVideoCanPlay}
-          onError={handleVideoError}
-          aria-hidden="true"
         />
       )}
 
@@ -223,7 +158,7 @@ const HeroSection = () => {
               <motion.div variants={badgeVariants}>
                 <Chip
                   icon={<span className={styles.pulseDot} />}
-                  label="🏪 North East India's #1 Pharmacy Chain"
+                  label="🏪 NE India's #1 Pharma-Grocery Retail Franchise"
                   className={styles.launchBadge}
                   sx={{
                     backgroundColor: '#2EC4B6',
@@ -272,7 +207,7 @@ const HeroSection = () => {
                     lineHeight: 1.6,
                   }}
                 >
-                  20+ Years Legacy | ₹80 Cr Turnover | 9 Stores | 50,000+ Products | 20-22% Gross Margin
+                  20+ Years Legacy | ₹80 Cr Turnover | 20-22% Gross Margin | 1,200+ Brand Partners | 9 Profitable Stores | Turnkey Setup from ₹22 Lakhs
                 </Typography>
               </motion.div>
 
@@ -282,9 +217,9 @@ const HeroSection = () => {
                   variant="contained"
                   size="large"
                   className={styles.primaryCta}
-                  onClick={() => openLeadDrawer('enroll-now')}
+                  onClick={() => openLeadDrawer('apply-now')}
                   sx={{
-                    backgroundColor: '#2EC4B6',
+                    backgroundColor: '#FF6B35',
                     color: '#FFFFFF',
                     fontWeight: 700,
                     fontSize: '1rem',
@@ -292,10 +227,10 @@ const HeroSection = () => {
                     borderRadius: '12px',
                     textTransform: 'none',
                     fontFamily: "'Poppins', sans-serif",
-                    boxShadow: '0 4px 20px rgba(46, 196, 182, 0.4)',
+                    boxShadow: '0 4px 20px rgba(255, 107, 53, 0.4)',
                     '&:hover': {
-                      backgroundColor: '#5DD9CE',
-                      boxShadow: '0 6px 24px rgba(46, 196, 182, 0.5)',
+                      backgroundColor: '#FF8C5A',
+                      boxShadow: '0 6px 24px rgba(255, 107, 53, 0.5)',
                       transform: 'translateY(-2px)',
                     },
                     transition: 'all 0.3s ease',
@@ -307,7 +242,7 @@ const HeroSection = () => {
                   variant="outlined"
                   size="large"
                   className={styles.secondaryCta}
-                  onClick={() => openLeadDrawer('book-free-demo')}
+                  onClick={() => openLeadDrawer('download-brochure')}
                   sx={{
                     borderColor: 'rgba(255, 255, 255, 0.6)',
                     color: '#FFFFFF',
@@ -319,14 +254,14 @@ const HeroSection = () => {
                     fontFamily: "'Poppins', sans-serif",
                     borderWidth: '2px',
                     '&:hover': {
-                      borderColor: '#5DD9CE',
-                      backgroundColor: 'rgba(255, 145, 0, 0.1)',
+                      borderColor: '#FFFFFF',
+                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
                       borderWidth: '2px',
                     },
                     transition: 'all 0.3s ease',
                   }}
                 >
-                  Download Franchise Kit
+                  Download Prospectus
                 </Button>
               </motion.div>
 
@@ -363,7 +298,7 @@ const HeroSection = () => {
                         fontSize: '1.25rem',
                       }}
                     >
-                      Apply for Franchise
+                      Franchise Enquiry
                     </Typography>
                     <Typography
                       variant="body2"
@@ -374,7 +309,7 @@ const HeroSection = () => {
                         fontSize: '0.875rem',
                       }}
                     >
-                      Fill in your details & get a free consultation
+                      Get complete investment details
                     </Typography>
                   </div>
                   <div className={styles.formBody}>

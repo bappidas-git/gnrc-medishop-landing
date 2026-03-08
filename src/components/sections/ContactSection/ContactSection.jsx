@@ -112,7 +112,7 @@ const ContactSection = () => {
               Get in <span className={styles.highlight}>Touch</span>
             </Typography>
             <Typography variant="body1" className={styles.sectionSubtitle}>
-              Have questions? Our franchise team is here to help
+              Have questions about the franchise? Our team is ready to help
             </Typography>
           </motion.div>
 
@@ -204,7 +204,7 @@ const ContactSection = () => {
                 {/* Form Header */}
                 <div className={styles.formHeader}>
                   <Typography variant="h5" className={styles.formTitle}>
-                    Send Us Your Query
+                    Franchise Enquiry
                   </Typography>
                   <Typography variant="body2" className={styles.formSubtitle}>
                     Fill in your details and we'll get back to you

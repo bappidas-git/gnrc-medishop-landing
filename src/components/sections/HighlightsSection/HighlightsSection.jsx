@@ -39,73 +39,73 @@ const itemVariants = {
 const resultsData = [
   {
     id: 1,
-    icon: "mdi:trophy-award",
+    icon: "mdi:cart-outline",
     iconColor: "#FFD700",
-    title: "Business Performance",
-    stat: 50,
-    statSuffix: "+",
-    statLabel: "Franchise stores across North East India",
-    subStats: "Growing network with proven profitability",
+    title: "Multi-Category Revenue",
+    stat: null,
+    statLabel:
+      "Pharmacy + FMCG + Grocery + Personal Care = Multiple revenue streams from day one",
+    subStats: null,
   },
   {
     id: 2,
-    icon: "mdi:store",
+    icon: "mdi:chart-line",
     iconColor: "#42A5F5",
-    title: "Product Range",
+    title: "Proven & Profitable",
     stat: null,
     statLabel:
-      "50,000+ products across pharmacy, wellness, FMCG, and daily essentials categories",
+      "9 company-owned stores, all consistently profitable. ₹80 Cr annual turnover proves the model.",
     subStats: null,
   },
   {
     id: 3,
-    icon: "mdi:account-group",
+    icon: "mdi:hospital-building",
     iconColor: "#66BB6A",
-    title: "Franchise Partners",
+    title: "Hospital Network Advantage",
     stat: null,
     statLabel:
-      "Successful franchise partners earning 20-22% gross margins consistently",
+      "Built-in customer base through GNRC Hospital's 1.6M+ patient community across NE India",
     subStats: null,
   },
 ];
 
-// Test types data
+// Product categories data
 const testTypes = [
   {
-    icon: "mdi:point-of-sale",
-    name: "POS System",
-    tag: "Tech",
-    description: "Advanced point-of-sale system for seamless billing and inventory",
+    icon: "mdi:pill",
+    name: "Pharmacy & Healthcare",
+    tag: null,
+    description: "Medicines, OTC, Surgical",
   },
   {
-    icon: "mdi:truck-delivery",
-    name: "Supply Chain",
+    icon: "mdi:cart-outline",
+    name: "Grocery & FMCG",
     tag: null,
-    description: "Centralized procurement and logistics for consistent stock availability",
+    description: "Daily staples, branded products",
   },
   {
-    icon: "mdi:bullhorn",
-    name: "Marketing Support",
+    icon: "mdi:spray-bottle",
+    name: "Personal & Home Care",
     tag: null,
-    description: "Brand-level marketing campaigns and local area promotion",
+    description: "Toiletries, cleaning supplies",
   },
   {
-    icon: "mdi:school-outline",
-    name: "Training Programme",
+    icon: "mdi:baby-carriage",
+    name: "Baby & Child Care",
     tag: null,
-    description: "Comprehensive training for store staff and franchise owners",
+    description: "Nutrition, diapers, toys",
   },
   {
-    icon: "mdi:chart-line",
-    name: "Business Analytics",
+    icon: "mdi:lipstick",
+    name: "Beauty Products",
     tag: null,
-    description: "Real-time dashboard for sales, inventory, and profit tracking",
+    description: "Cosmetics, skincare",
   },
   {
-    icon: "mdi:headset",
-    name: "Dedicated Support",
+    icon: "mdi:cup-water",
+    name: "Beverages & Frozen Foods",
     tag: null,
-    description: "On-ground and remote support from the GNRC Medishop team",
+    description: "Drinks, dairy, snacks",
   },
 ];
 
@@ -115,7 +115,7 @@ const HighlightsSection = () => {
   const { openLeadDrawer } = useModal();
 
   const handleScholarshipClick = () => {
-    openLeadDrawer("scholarship-test");
+    openLeadDrawer("get-details");
   };
 
   const handleBrochureClick = () => {
@@ -123,7 +123,7 @@ const HighlightsSection = () => {
   };
 
   return (
-    <section className={styles.resultsSection} id="results" ref={ref}>
+    <section className={styles.resultsSection} id="why-gnrc" ref={ref}>
       <Container maxWidth="xl">
         <motion.div
           variants={containerVariants}
@@ -132,7 +132,7 @@ const HighlightsSection = () => {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className={styles.sectionHeader}>
-            <span className={styles.sectionBadge}>PERFORMANCE & SUPPORT</span>
+            <span className={styles.sectionBadge}>WHY GNRC MEDISHOP</span>
             <Typography
               variant="h2"
               className={styles.sectionTitle}
@@ -146,14 +146,14 @@ const HighlightsSection = () => {
                 lineHeight: 1.2,
               }}
             >
-              Our Results Speak for{" "}
-              <span className={styles.highlightText}>Themselves</span>
+              Why Partner With{" "}
+              <span className={styles.highlightText}>GNRC?</span>
             </Typography>
             <div className={styles.titleUnderline}>
               <span className={styles.underlineBar} />
             </div>
             <Typography className={styles.sectionSubtitle}>
-              GNRC Medishop's Proven Track Record
+              A complete franchise ecosystem designed for your success
             </Typography>
           </motion.div>
 
@@ -216,7 +216,7 @@ const HighlightsSection = () => {
                 marginBottom: "1.5rem",
               }}
             >
-              Our Comprehensive Franchise Support System
+              Product Categories
             </Typography>
             <div className={styles.testTypesGrid}>
               {testTypes.map((test, index) => (
@@ -265,15 +265,13 @@ const HighlightsSection = () => {
                   className={styles.scholarshipHeading}
                   sx={{ color: "#fff", fontWeight: "bold" }}
                 >
-                  Start Your Own GNRC Medishop Today!
+                  20-22% Gross Margin | 30% Expected ROI
                 </Typography>
                 <Typography
                   className={styles.scholarshipDesc}
                   sx={{ color: "#fff" }}
                 >
-                  Investment starting from ₹12 Lakh. Get a turnkey pharmacy &
-                  essentials retail store with complete setup, training, and
-                  ongoing support from GNRC Medishop.
+                  With unified online-offline pricing, high-margin GNRC-branded staples, and zero-waste inventory management, every franchise partner can expect healthy, predictable returns.
                 </Typography>
               </div>
               <motion.button
@@ -282,7 +280,7 @@ const HighlightsSection = () => {
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <span>Apply for Franchise</span>
+                <span>Get Detailed P&L Projection →</span>
                 <Icon icon="mdi:arrow-right" />
               </motion.button>
             </div>
@@ -291,7 +289,7 @@ const HighlightsSection = () => {
           {/* Bottom CTA */}
           <motion.div variants={itemVariants} className={styles.bottomCta}>
             <Typography className={styles.bottomCtaText}>
-              Want to know more about our franchise opportunity?
+              1,200+ Brand Partnerships — Access India's most trusted brands through our established distribution network
             </Typography>
             <motion.button
               className={styles.brochureBtn}

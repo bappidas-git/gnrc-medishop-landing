@@ -64,23 +64,32 @@ const cardVariants = {
 
 // Comparison data
 const comparisonData = {
-  headers: ["Feature", "2-Year (TYCP)", "1-Year (OYCP)", "Repeater"],
+  headers: ["Component", "500 SQFT", "700 SQFT", "1000 SQFT"],
   rows: [
     {
-      label: "Duration",
-      values: ["2 Years", "1 Year", "1 Year"],
+      label: "Franchise Fee",
+      values: ["₹2.95L", "₹2.95L", "₹2.95L"],
     },
     {
-      label: "Target",
-      values: ["Class 11", "Class 11→12", "XII Passed"],
+      label: "Interior (₹1,550/sqft)",
+      values: ["₹7.75L", "₹10.85L", "₹15.50L"],
     },
     {
-      label: "Board Coverage",
-      values: ["Yes", "Yes", "No"],
+      label: "Stock (₹1,650/sqft)",
+      values: ["₹8.25L", "₹11.55L", "₹16.50L"],
     },
     {
-      label: "Frequency",
-      values: ["3-4 days/week", "3-4 days/week", "3-4 days/week"],
+      label: "Software + License",
+      values: ["₹1.12L", "₹1.12L", "₹1.12L"],
+    },
+    {
+      label: "Security Deposit",
+      values: ["₹2L", "₹2L", "₹2L"],
+    },
+    {
+      label: "Grand Total",
+      values: ["₹22.07L", "₹28.47L", "₹38.07L"],
+      isBold: true,
     },
   ],
 };
@@ -182,7 +191,7 @@ const ServicesSection = () => {
   );
 
   return (
-    <section className={styles.coursesSection} id="courses" ref={ref}>
+    <section className={styles.coursesSection} id="investment" ref={ref}>
       {/* Background */}
       <div className={styles.bgOverlay} />
       <div className={styles.bgPattern} />
@@ -196,7 +205,7 @@ const ServicesSection = () => {
           {/* Section Header */}
           <motion.div variants={itemVariants} className={styles.sectionHeader}>
             <Chip
-              label="FRANCHISE PLANS"
+              label="INVESTMENT PLANS"
               sx={{
                 backgroundColor: "rgba(46, 196, 182, 0.12)",
                 color: "#2EC4B6",
@@ -221,8 +230,8 @@ const ServicesSection = () => {
                 lineHeight: 1.2,
               }}
             >
-              Our Franchise{" "}
-              <span className={styles.accentText}>Plans</span>
+              Choose Your{" "}
+              <span className={styles.accentText}>Store Size</span>
             </Typography>
             <Typography
               className={styles.sectionSubtitle}
@@ -234,7 +243,7 @@ const ServicesSection = () => {
                 maxWidth: "480px",
               }}
             >
-              Choose the right investment plan for your franchise
+              Transparent investment structure — every rupee carefully planned
             </Typography>
           </motion.div>
 
@@ -282,23 +291,11 @@ const ServicesSection = () => {
                 </thead>
                 <tbody>
                   {comparisonData.rows.map((row, rowIdx) => (
-                    <tr key={rowIdx}>
-                      <td className={styles.comparisonLabel}>{row.label}</td>
+                    <tr key={rowIdx} style={row.isBold ? { fontWeight: 700 } : undefined}>
+                      <td className={styles.comparisonLabel} style={row.isBold ? { fontWeight: 700 } : undefined}>{row.label}</td>
                       {row.values.map((value, valIdx) => (
-                        <td key={valIdx}>
-                          {value === "Yes" ? (
-                            <span className={styles.comparisonYes}>
-                              <Icon icon="mdi:check-circle" />
-                              Yes
-                            </span>
-                          ) : value === "No" ? (
-                            <span className={styles.comparisonNo}>
-                              <Icon icon="mdi:close-circle" />
-                              No
-                            </span>
-                          ) : (
-                            value
-                          )}
+                        <td key={valIdx} style={row.isBold ? { fontWeight: 700 } : undefined}>
+                          {value}
                         </td>
                       ))}
                     </tr>
@@ -314,10 +311,10 @@ const ServicesSection = () => {
               <Icon icon="mdi:headset" className={styles.ctaIcon} />
               <div className={styles.ctaText}>
                 <span className={styles.ctaTitle}>
-                  Not sure which programme to choose?
+                  Not sure which store size is right for you?
                 </span>
                 <span className={styles.ctaSubtitle}>
-                  Our academic counsellors will help you pick the right programme
+                  Our franchise team will help you choose the best plan
                 </span>
               </div>
             </div>
@@ -327,7 +324,7 @@ const ServicesSection = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span>Talk to Academic Counsellor</span>
+              <span>Talk to Franchise Team →</span>
               <Icon icon="mdi:arrow-right" />
             </motion.button>
           </motion.div>
@@ -363,7 +360,7 @@ const ServicesSection = () => {
                     flexShrink: 0,
                   }}
                 >
-                  <Icon icon="mdi:school-outline" style={{ fontSize: 28, color: '#FFF' }} />
+                  <Icon icon="mdi:account-tie" style={{ fontSize: 28, color: '#FFF' }} />
                 </Box>
                 <Box>
                   <Typography
@@ -374,7 +371,7 @@ const ServicesSection = () => {
                       fontFamily: 'Poppins, sans-serif',
                     }}
                   >
-                    Franchise Investment Plans
+                    A Message from Our Founder
                   </Typography>
                   <Typography
                     sx={{
@@ -382,16 +379,16 @@ const ServicesSection = () => {
                       mt: 0.5,
                     }}
                   >
-                    Flexible plans to suit your investment capacity and location
+                    Every family in Assam and the North East should have access to trustworthy essentials at honest prices, close to their home. — Dr. Nomal Chandra Borah, Founder, GNRC Group
                   </Typography>
                 </Box>
               </Box>
               <Button
                 onClick={() => {
-                  const foundationSection = document.getElementById('foundation');
-                  if (foundationSection) {
+                  const aboutSection = document.getElementById('about');
+                  if (aboutSection) {
                     const headerOffset = 80;
-                    const elementPosition = foundationSection.getBoundingClientRect().top;
+                    const elementPosition = aboutSection.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                     window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                   }
@@ -412,7 +409,7 @@ const ServicesSection = () => {
                   },
                 }}
               >
-                Explore Franchise Plans →
+                Learn More About Our Vision →
               </Button>
             </Box>
           </motion.div>
