@@ -1,5 +1,5 @@
 /* ============================================
-   Theme Context - Narayana NEET
+   Theme Context - GNRC Medishop
    Handles theme preferences (light/dark mode)
    ============================================ */
 
@@ -50,7 +50,7 @@ export const ThemeProvider = ({ children }) => {
     if (metaThemeColor) {
       metaThemeColor.setAttribute(
         'content',
-        resolvedTheme === THEMES.DARK ? '#1A237E' : '#FFFFFF'
+        resolvedTheme === THEMES.DARK ? '#2D3561' : '#FFFFFF'
       );
     }
 

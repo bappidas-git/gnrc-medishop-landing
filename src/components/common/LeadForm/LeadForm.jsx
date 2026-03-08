@@ -277,8 +277,8 @@ const LeadForm = ({
       await showAlert({
         icon: 'success',
         title: 'Enrollment Request Received!',
-        text: 'Thank you for your interest in Narayana Coaching Centers! Our academic counsellor will contact you within 24 hours.',
-        confirmButtonColor: '#1A237E',
+        text: 'Thank you for your interest in GNRC Medishop franchise! Our franchise team will contact you within 24 hours.',
+        confirmButtonColor: '#2D3561',
         confirmButtonText: 'Great!',
         timer: 3000,
         timerProgressBar: true,

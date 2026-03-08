@@ -1,6 +1,6 @@
 /* ============================================
-   MUI Theme Configuration - Narayana Coaching Centers
-   NEET Coaching Landing Page
+   MUI Theme Configuration - GNRC Medishop Franchise
+   Landing Page
    ============================================ */
 
 import { createTheme, alpha } from '@mui/material/styles';
@@ -8,46 +8,46 @@ import { createTheme, alpha } from '@mui/material/styles';
 // Color palette matching CSS variables
 const colors = {
   primary: {
-    main: '#1A237E',
-    light: '#3949AB',
-    dark: '#0D1754',
+    main: '#2D3561',
+    light: '#4A5888',
+    dark: '#1E2440',
     contrastText: '#FFFFFF',
   },
   secondary: {
-    main: '#FF6D00',
-    light: '#FF9100',
-    dark: '#E65100',
+    main: '#2EC4B6',
+    light: '#5DD9CE',
+    dark: '#1FA89B',
     contrastText: '#FFFFFF',
   },
   orange: {
-    main: '#FF6D00',
-    light: '#FF9100',
-    dark: '#E65100',
+    main: '#FF6B35',
+    light: '#FF8F66',
+    dark: '#E55A25',
     50: '#FFF3E0',
     100: '#FFE0B2',
     200: '#FFCC80',
     300: '#FFB74D',
-    400: '#FF9100',
-    500: '#FF6D00',
-    600: '#E65100',
+    400: '#FF8F66',
+    500: '#FF6B35',
+    600: '#E55A25',
     700: '#BF360C',
     800: '#9E2A00',
     900: '#7F1D00',
   },
   navy: {
-    main: '#1A237E',
-    light: '#3949AB',
-    dark: '#0D1754',
-    50: '#E8EAF6',
+    main: '#2D3561',
+    light: '#4A5888',
+    dark: '#1E2440',
+    50: '#ECEEF5',
     100: '#C5CAE9',
     200: '#9FA8DA',
     300: '#7986CB',
-    400: '#5C6BC0',
-    500: '#3F51B5',
-    600: '#3949AB',
-    700: '#283593',
-    800: '#1A237E',
-    900: '#0D1754',
+    400: '#6B7AB0',
+    500: '#4A5888',
+    600: '#3A4578',
+    700: '#2D3561',
+    800: '#2D3561',
+    900: '#1E2440',
   },
   success: {
     main: '#2E7D32',
@@ -56,8 +56,8 @@ const colors = {
     contrastText: '#FFFFFF',
   },
   warning: {
-    main: '#FF6D00',
-    light: '#FF9100',
+    main: '#F57C00',
+    light: '#FFB74D',
     dark: '#E65100',
     contrastText: '#FFFFFF',
   },
@@ -88,18 +88,18 @@ const colors = {
   background: {
     default: '#FFFFFF',
     paper: '#FFFFFF',
-    dark: '#1A237E',
-    light: '#F5F7FA',
+    dark: '#2D3561',
+    light: '#F8FAFC',
   },
   text: {
-    primary: '#1A237E',
+    primary: '#1B2A4A',
     secondary: '#546E7A',
     disabled: '#90A4AE',
-    dark: '#1A237E',
+    dark: '#1B2A4A',
     light: '#FFFFFF',
   },
   iconColors: {
-    gold: '#FF6D00',
+    gold: '#2EC4B6',
     green: '#4CAF50',
     purple: '#9C27B0',
     orange: '#FF9800',
@@ -267,9 +267,9 @@ const shadows = [
   '0 40px 152px rgba(0, 0, 0, 0.28)',
 ];
 
-// Orange shadow for buttons and highlights
-const orangeShadow = '0 4px 15px rgba(255, 109, 0, 0.4)';
-const orangeShadowHover = '0 6px 20px rgba(255, 109, 0, 0.5)';
+// Teal shadow for buttons and highlights
+const orangeShadow = '0 4px 14px rgba(46, 196, 182, 0.25)';
+const orangeShadowHover = '0 6px 20px rgba(46, 196, 182, 0.35)';
 
 // Create theme
 const theme = createTheme({

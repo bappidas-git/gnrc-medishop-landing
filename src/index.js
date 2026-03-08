@@ -1,6 +1,6 @@
 /* ============================================
-   Entry Point - Narayana Coaching Centers
-   NEET Coaching Landing Page
+   Entry Point - GNRC Medishop
+   Franchise Landing Page
 
    Performance optimized with:
    - React 18 concurrent features
@@ -133,7 +133,7 @@ reportWebVitals(handleWebVitals);
 
 if (process.env.NODE_ENV === 'development') {
   // Log when app is ready
-  console.log('%c Narayana NEET Coaching - Guwahati ', 'background: #1A237E; color: #FF6D00; padding: 10px 20px; font-size: 14px; font-weight: bold; border-radius: 4px;');
+  console.log('%c GNRC Medishop - Franchise Opportunity ', 'background: #2D3561; color: #2EC4B6; padding: 10px 20px; font-size: 14px; font-weight: bold; border-radius: 4px;');
   console.log('%c Development Mode ', 'background: #4CAF50; color: white; padding: 5px 10px; font-size: 12px; border-radius: 4px;');
 }
 

@@ -1,5 +1,5 @@
 /* ============================================
-   Formatters - Narayana NEET Coaching
+   Formatters - GNRC Medishop
    Utility functions for formatting data
    ============================================ */
 

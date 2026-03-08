@@ -1,5 +1,5 @@
 /* ============================================
-   Modal Context - Narayana NEET Coaching
+   Modal Context - GNRC Medishop
    Handles modal state management across the app
    ============================================ */
 
@@ -23,37 +23,33 @@ export const MODAL_TYPES = {
 
 // Drawer title mapping based on source/context
 export const DRAWER_TITLES = {
-  'enroll-now': {
-    title: 'Enroll Now',
-    subtitle: 'Start your NEET journey with Narayana Coaching Centers',
+  'apply-now': {
+    title: 'Apply for Franchise',
+    subtitle: 'Start your journey as a GNRC Medishop franchise partner',
   },
-  'get-course-details': {
-    title: 'Get Course Details',
-    subtitle: 'Get complete information about our NEET programmes',
+  'get-details': {
+    title: 'Get Franchise Details',
+    subtitle: 'Receive complete franchise prospectus and investment details',
   },
-  'book-free-demo': {
-    title: 'Book a Free Demo Class',
-    subtitle: 'Experience Narayana\'s NEET teaching methodology firsthand',
+  'book-meeting': {
+    title: 'Book a Meeting',
+    subtitle: 'Meet our franchise development team for a detailed discussion',
   },
   'download-brochure': {
-    title: 'Download Brochure',
-    subtitle: 'Get the complete NEET course brochure with all details',
+    title: 'Download Prospectus',
+    subtitle: 'Get the complete GNRC Medishop franchise prospectus',
   },
   'request-callback': {
     title: 'Request a Callback',
-    subtitle: 'Our academic counsellors will reach out within 24 hours',
+    subtitle: 'Our franchise team will reach out within 24 hours',
   },
-  'scholarship-test': {
-    title: 'Register for NACST / NSAT',
-    subtitle: 'Take the scholarship test & get up to 90% scholarship on course fees',
-  },
-  'foundation-enroll': {
-    title: 'Enroll in Foundation Course',
-    subtitle: 'Start early preparation for NEET & IIT-JEE from Class 8/9/10',
+  'investment-plans': {
+    title: 'View Investment Plans',
+    subtitle: 'Explore store sizes and investment options',
   },
   'default': {
-    title: 'Get Expert Guidance',
-    subtitle: 'Fill the form and our academic counsellors will assist you',
+    title: 'Franchise Enquiry',
+    subtitle: 'Fill the form and our franchise team will assist you',
   },
 };
 

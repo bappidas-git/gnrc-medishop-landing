@@ -1,5 +1,5 @@
 /* ============================================
-   Validators - Narayana NEET
+   Validators - GNRC Medishop
    Form validation utilities
    ============================================ */
 

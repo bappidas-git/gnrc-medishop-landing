@@ -1,32 +1,32 @@
 export const benefitsData = [
   {
     id: 1,
-    category: 'Academic Excellence',
+    category: 'Setup & Launch Support',
     items: [
-      { icon: 'mdi:book-education', title: 'Scientifically Researched Study Material', description: 'Developed by NEET-expert faculty' },
-      { icon: 'mdi:clipboard-text-clock', title: 'Micro-Schedule & Test Planners', description: 'Hourly planning for efficient preparation' },
-      { icon: 'mdi:chart-line', title: 'All India Common Analysis', description: 'Know your rank potential at All India level' },
-      { icon: 'mdi:file-document-check', title: 'Systematic Testing Ecosystem', description: 'Weekly CPT, Fortnightly, Term Exams, Grand Tests' },
+      { icon: 'mdi:map-marker-check', title: 'Location & License Support', description: 'Expert analysis for high-potential retail locations + trade & drug license assistance' },
+      { icon: 'mdi:palette', title: 'Complete Branding', description: 'Full brand identity, store design docket within 5 days, visual merchandising' },
+      { icon: 'mdi:tools', title: 'Turnkey Interior Setup', description: 'False ceiling, modular fittings, AC, electrical, counter setup — all at ₹1,550/sqft' },
+      { icon: 'mdi:account-multiple-plus', title: 'Hiring & Training', description: 'Comprehensive staff recruitment, screening, and operational training support' },
     ],
   },
   {
     id: 2,
-    category: 'Student Support',
+    category: 'Operations & Technology',
     items: [
-      { icon: 'mdi:account-question', title: 'Doubt Clearing Sessions', description: 'Regular doubt resolution with expert faculty' },
-      { icon: 'mdi:whatsapp', title: 'WhatsApp Query Resolution (WQRS)', description: 'Instant doubt resolution via WhatsApp' },
-      { icon: 'mdi:account-group', title: 'Ideal Student-Faculty Ratio', description: 'Personalized attention for every student' },
-      { icon: 'mdi:clipboard-list', title: 'Error List & Feedback', description: 'Personalized error tracking after each exam' },
+      { icon: 'mdi:laptop', title: 'Zoho Technology Platform', description: 'Complete ordering, inventory, and billing through Zoho with 7-day IT support' },
+      { icon: 'mdi:truck-delivery', title: 'Swift Logistics Network', description: 'Stock delivery costs fully borne by GNRC — reliable delivery across NE India' },
+      { icon: 'mdi:package-variant-closed', title: 'Automated Inventory', description: 'Auto-replenishment, stock rotation, expiry management via predictive algorithms' },
+      { icon: 'mdi:ticket-confirmation', title: 'B2B Ticketing System', description: 'Dedicated support platform for rapid issue resolution and transparent tracking' },
     ],
   },
   {
     id: 3,
-    category: 'Beyond Academics',
+    category: 'Marketing & Growth',
     items: [
-      { icon: 'mdi:meditation', title: 'Stress-Busting Sessions', description: 'Mental wellness and time management strategies' },
-      { icon: 'mdi:microphone-variant', title: 'Motivational Sessions', description: 'Regular sessions to inspire and motivate students' },
-      { icon: 'mdi:account-tie', title: 'Individual Counselling', description: 'One-on-one guidance for academic and career planning' },
-      { icon: 'mdi:message-reply-text', title: 'Regular Parent Updates', description: 'Performance and attendance updates for parents' },
+      { icon: 'mdi:hospital-building', title: 'Hospital-Driven Marketing', description: 'High awareness through GNRC Hospital network reaching target demographics' },
+      { icon: 'mdi:facebook', title: 'Digital Promotion', description: 'Facebook & Instagram marketing campaigns managed by GNRC' },
+      { icon: 'mdi:billboard', title: 'Offline Marketing', description: 'Banners, standees, pamphlets, auto-rickshaw branding, SMS & email campaigns' },
+      { icon: 'mdi:shield-check', title: 'Good Stock Return Policy', description: '100% CTC refund on medicines (before 3-month expiry), 60-70% on grocery' },
     ],
   },
 ];

@@ -1,5 +1,5 @@
 /* ============================================
-   useMediaQuery Hook - Narayana NEET
+   useMediaQuery Hook - GNRC Medishop
    Custom hook for responsive design
    ============================================ */
 

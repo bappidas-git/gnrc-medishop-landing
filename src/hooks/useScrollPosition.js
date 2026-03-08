@@ -1,5 +1,5 @@
 /* ============================================
-   useScrollPosition Hook - Narayana NEET
+   useScrollPosition Hook - GNRC Medishop
    Custom hook for tracking scroll position
    ============================================ */
 

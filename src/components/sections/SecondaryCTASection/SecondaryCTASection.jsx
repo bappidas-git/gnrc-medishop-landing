@@ -1,7 +1,7 @@
 /* ============================================
-   SecondaryCTASection Component - Narayana NEET
-   Foundation Course CTA with inline lead form
-   Placed before footer for Class 8-10 students
+   SecondaryCTASection Component - GNRC Medishop
+   Franchise CTA with inline lead form
+   Placed before footer for prospective franchise partners
    ============================================ */
 
 import React, { useState, useCallback, useRef } from "react";
@@ -34,13 +34,13 @@ import {
 } from "../../../utils/validators";
 import styles from "./SecondaryCTASection.module.css";
 
-const LEADS_STORAGE_KEY = "narayana_neet_submitted_leads";
+const LEADS_STORAGE_KEY = "gnrc_franchise_submitted_leads";
 
-const CLASS_OPTIONS = ["Class 7", "Class 8", "Class 9", "Class 10"];
+const CLASS_OPTIONS = ["Pharmacy", "General Store", "Wellness & Health", "Multi-Category"];
 const PROGRAMME_OPTIONS = [
-  "1-Year Foundation",
-  "2-Year Foundation",
-  "3-Year Foundation",
+  "Standard Franchise",
+  "Premium Franchise",
+  "Master Franchise",
 ];
 
 const initialFormState = {
@@ -61,43 +61,43 @@ const initialErrorState = {
 
 const courseCards = [
   {
-    title: "1-Year Foundation",
-    eligibility: "Class IX/X Students",
-    hours: "300 Hours",
-    frequency: "2-3 Days/Week",
-    startDate: "March / April",
-    icon: "mdi:rocket-launch",
+    title: "Standard Franchise",
+    eligibility: "Investment from ₹12 Lakh",
+    hours: "200-400 sq ft",
+    frequency: "Full Setup Support",
+    startDate: "Within 30 Days",
+    icon: "mdi:store",
   },
   {
-    title: "2-Year Foundation",
-    eligibility: "Class VIII/IX Students",
-    hours: "600 Hours",
-    frequency: "2-3 Days/Week",
-    startDate: "April / May",
-    icon: "mdi:trending-up",
+    title: "Premium Franchise",
+    eligibility: "Investment from ₹18 Lakh",
+    hours: "400-800 sq ft",
+    frequency: "Full Setup Support",
+    startDate: "Within 45 Days",
+    icon: "mdi:store-plus",
   },
   {
-    title: "3-Year Foundation",
-    eligibility: "Class VII/VIII Students",
-    hours: "900 Hours",
-    frequency: "2-3 Days/Week",
-    startDate: "May",
+    title: "Master Franchise",
+    eligibility: "Investment from ₹25 Lakh",
+    hours: "800+ sq ft",
+    frequency: "Full Setup + Territory Rights",
+    startDate: "Within 60 Days",
     icon: "mdi:star-shooting",
   },
 ];
 
 const highlights = [
-  { text: "1, 2 & 3-Year Programmes", icon: "mdi:calendar-clock" },
-  { text: "Covers NEET + IIT-JEE + Olympiads", icon: "mdi:book-open-variant" },
-  { text: "NTSE & INSPIRE Preparation", icon: "mdi:medal" },
-  { text: "Scholarships via NSAT", icon: "mdi:school" },
+  { text: "Multiple Franchise Plans", icon: "mdi:calendar-clock" },
+  { text: "50,000+ Products Catalog", icon: "mdi:package-variant-closed" },
+  { text: "End-to-End Setup Support", icon: "mdi:headset" },
+  { text: "20-22% Gross Margin", icon: "mdi:percent-circle" },
 ];
 
 const whyStartEarly = [
-  "More time to build strong concepts",
-  "Less likely to get overwhelmed by competition",
-  "Prepares for Olympiads, NTSE, and INSPIRE simultaneously",
-  "Smoother transition to advanced NEET & IIT-JEE preparation",
+  "Proven business model with guaranteed margins",
+  "Complete supply chain and inventory management",
+  "Strong brand recognition in North East India",
+  "Technology-driven operations for franchise success",
 ];
 
 const SecondaryCTASection = () => {
@@ -204,7 +204,7 @@ const SecondaryCTASection = () => {
           break;
         case "current_class":
           if (!formData.current_class)
-            errorMessage = "Please select your class";
+            errorMessage = "Please select a store type";
           break;
         case "interested_programme":
           if (!formData.interested_programme)
@@ -223,7 +223,7 @@ const SecondaryCTASection = () => {
       name: getNameErrorMessage(formData.name),
       mobile: getMobileErrorMessage(formData.mobile),
       email: getEmailErrorMessage(formData.email),
-      current_class: !formData.current_class ? "Please select your class" : "",
+      current_class: !formData.current_class ? "Please select a store type" : "",
       interested_programme: !formData.interested_programme
         ? "Please select a programme"
         : "",
@@ -278,8 +278,8 @@ const SecondaryCTASection = () => {
         sessionStorage.setItem("lead_name", formData.name);
 
         await showSuccess(
-          "Foundation Course Enquiry Received!",
-          "Our counsellor will contact you soon.",
+          "Franchise Enquiry Received!",
+          "Our team will contact you soon.",
         );
 
         setFormData(initialFormState);
@@ -294,7 +294,7 @@ const SecondaryCTASection = () => {
       console.error("Form submission error:", error);
       await showError(
         "Something went wrong",
-        "Please try again or call us directly at +91-6002500672.",
+        "Please try again or call us directly at +91-7086036887.",
       );
     } finally {
       setIsSubmitting(false);
@@ -315,7 +315,7 @@ const SecondaryCTASection = () => {
         >
           {/* Badge */}
           <motion.div variants={itemVariants} className={styles.badgeWrapper}>
-            <span className={styles.badge}>🌟 Start Early, Stay Ahead</span>
+            <span className={styles.badge}>🌟 Start Your Business Journey</span>
           </motion.div>
 
           {/* Headline */}
@@ -325,7 +325,7 @@ const SecondaryCTASection = () => {
               className={styles.title}
               sx={{ color: "#fff" }}
             >
-              Foundation Courses for NEET & IIT-JEE
+              Start Your Franchise Journey
             </Typography>
           </motion.div>
 
@@ -336,9 +336,9 @@ const SecondaryCTASection = () => {
               className={styles.subtitle}
               sx={{ color: "#fff" }}
             >
-              For Students in Class 8, 9 & 10 — Build a strong foundation for
-              competitive exams with Narayana's expertly designed Foundation
-              Programme
+              Build a profitable business with GNRC Medishop's proven franchise
+              model — complete setup, training, and ongoing support for your
+              franchise success
             </Typography>
           </motion.div>
 
@@ -396,7 +396,7 @@ const SecondaryCTASection = () => {
                 <Icon icon="mdi:school" className={styles.formHeaderIcon} />
                 <div>
                   <h4 className={styles.formTitle}>
-                    Foundation Course Enquiry
+                    Franchise Enquiry
                   </h4>
                   <p className={styles.formSubtitle}>
                     Fill in your details to get started
@@ -414,7 +414,7 @@ const SecondaryCTASection = () => {
                 <TextField
                   inputRef={nameRef}
                   fullWidth
-                  placeholder="Student's Full Name"
+                  placeholder="Full Name"
                   variant="outlined"
                   value={formData.name}
                   onChange={handleChange("name")}
@@ -433,14 +433,14 @@ const SecondaryCTASection = () => {
                       </InputAdornment>
                     ),
                   }}
-                  inputProps={{ "aria-label": "Student name", maxLength: 50 }}
+                  inputProps={{ "aria-label": "Full name", maxLength: 50 }}
                 />
 
-                {/* Parent Mobile */}
+                {/* Mobile */}
                 <TextField
                   inputRef={mobileRef}
                   fullWidth
-                  placeholder="Parent's Mobile Number"
+                  placeholder="Mobile Number"
                   variant="outlined"
                   value={formData.mobile}
                   onChange={handleChange("mobile")}
@@ -520,12 +520,12 @@ const SecondaryCTASection = () => {
                     renderValue={(selected) => {
                       if (!selected) {
                         return (
-                          <span style={{ opacity: 0.5 }}>Current Class</span>
+                          <span style={{ opacity: 0.5 }}>Store Type</span>
                         );
                       }
                       return selected;
                     }}
-                    inputProps={{ "aria-label": "Current class" }}
+                    inputProps={{ "aria-label": "Store type" }}
                   >
                     {CLASS_OPTIONS.map((option) => (
                       <MenuItem key={option} value={option}>
@@ -565,13 +565,13 @@ const SecondaryCTASection = () => {
                       if (!selected) {
                         return (
                           <span style={{ opacity: 0.5 }}>
-                            Interested Programme
+                            Franchise Plan
                           </span>
                         );
                       }
                       return selected;
                     }}
-                    inputProps={{ "aria-label": "Interested programme" }}
+                    inputProps={{ "aria-label": "Franchise plan" }}
                   >
                     {PROGRAMME_OPTIONS.map((option) => (
                       <MenuItem key={option} value={option}>
@@ -612,7 +612,7 @@ const SecondaryCTASection = () => {
                         icon="mdi:send"
                         style={{ marginRight: 8, fontSize: "1.1rem" }}
                       />
-                      <span>Enroll in Foundation Course</span>
+                      <span>Apply for Franchise</span>
                     </>
                   )}
                 </Button>
@@ -623,7 +623,7 @@ const SecondaryCTASection = () => {
             <motion.div variants={itemVariants} className={styles.whyEarlyCard}>
               <h4 className={styles.whyEarlyTitle}>
                 <Icon icon="mdi:lightbulb-on" className={styles.whyEarlyIcon} />
-                Why Start Early?
+                Why GNRC Medishop?
               </h4>
               <ul className={styles.whyEarlyList}>
                 {whyStartEarly.map((point) => (

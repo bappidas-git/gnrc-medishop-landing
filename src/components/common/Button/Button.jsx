@@ -1,5 +1,5 @@
 /* ============================================
-   Button Component - Narayana NEET
+   Button Component - GNRC Medishop
    Reusable button with multiple variants and animations
    ============================================ */
 

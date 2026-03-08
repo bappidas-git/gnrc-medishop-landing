@@ -1,5 +1,5 @@
 /* ============================================
-   ContactSection Component - Narayana Coaching Centers
+   ContactSection Component - GNRC Medishop
    "Get in Touch" contact section with contact cards
    and embedded lead form
    ============================================ */
@@ -56,32 +56,32 @@ const ContactSection = () => {
     {
       icon: "mdi:phone-outline",
       title: "Phone",
-      content: "+91-6002500672",
-      href: "tel:+916002500672",
+      content: "+91-7086036887",
+      href: "tel:+917086036887",
     },
     {
       icon: "mdi:phone-in-talk",
-      title: "Toll Free",
-      content: "1800-102-3344",
-      href: "tel:18001023344",
+      title: "Alternate Phone",
+      content: "+91-8638604899",
+      href: "tel:+918638604899",
     },
     {
       icon: "mdi:email-outline",
       title: "Email",
-      content: "bm.guwahati@narayanagroup.com",
-      href: "mailto:bm.guwahati@narayanagroup.com",
+      content: "info@gnrcmedishop.com",
+      href: "mailto:info@gnrcmedishop.com",
     },
     {
       icon: "mdi:whatsapp",
       title: "WhatsApp",
       content: "Quick Chat",
-      href: "https://wa.me/916002500672?text=Hi,%20I%20am%20interested%20in%20Narayana%20NEET%20Coaching%20in%20Guwahati",
+      href: "https://wa.me/917086036887?text=Hi,%20I%20am%20interested%20in%20GNRC%20Medishop%20Franchise%20Opportunity",
       external: true,
     },
     {
       icon: "mdi:map-marker-outline",
       title: "Address",
-      content: "Narayana Coaching Center, Guwahati, Assam",
+      content: "GNRC Medishop Pvt. Ltd., Guwahati, Assam",
     },
     {
       icon: "mdi:clock-outline",
@@ -93,7 +93,7 @@ const ContactSection = () => {
   const handleRequestCallback = () => {
     openLeadDrawer("default", {
       title: "Request a Callback",
-      subtitle: "Fill in your details and our counsellors will call you back",
+      subtitle: "Fill in your details and our franchise team will call you back",
     });
   };
 
@@ -112,18 +112,18 @@ const ContactSection = () => {
               Get in <span className={styles.highlight}>Touch</span>
             </Typography>
             <Typography variant="body1" className={styles.sectionSubtitle}>
-              Have questions? Our academic counsellors are here to help
+              Have questions? Our franchise team is here to help
             </Typography>
           </motion.div>
 
           {/* Quick Action Buttons (mobile-first, visible on all) */}
           <motion.div variants={itemVariants} className={styles.quickActions}>
-            <a href="tel:+916002500672" className={styles.quickActionBtn}>
+            <a href="tel:+917086036887" className={styles.quickActionBtn}>
               <Icon icon="mdi:phone" className={styles.quickActionIcon} />
               <span>Call Now</span>
             </a>
             <a
-              href="https://wa.me/916002500672?text=Hi,%20I%20am%20interested%20in%20Narayana%20NEET%20Coaching%20in%20Guwahati"
+              href="https://wa.me/917086036887?text=Hi,%20I%20am%20interested%20in%20GNRC%20Medishop%20Franchise%20Opportunity"
               target="_blank"
               rel="noopener noreferrer"
               className={`${styles.quickActionBtn} ${styles.quickActionWhatsapp}`}

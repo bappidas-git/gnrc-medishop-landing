@@ -1,7 +1,7 @@
 {
-  "short_name": "Narayana NEET",
-  "name": "Narayana NEET Coaching - Guwahati",
-  "description": "Best NEET coaching center in Guwahati. Expert faculty, proven results, and comprehensive study material for NEET aspirants.",
+  "short_name": "GNRC Medishop",
+  "name": "GNRC Medishop - Franchise Opportunity",
+  "description": "Own a GNRC Medishop franchise — North East India's fastest-growing pharmacy & essentials retail chain. 20+ years legacy, 50,000+ products, 20-22% gross margin.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -24,9 +24,9 @@
   "start_url": ".",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "theme_color": "#1A237E",
+  "theme_color": "#2D3561",
   "background_color": "#FFFFFF",
-  "categories": ["education", "coaching", "NEET", "Narayana"],
+  "categories": ["business", "pharmacy", "franchise", "retail"],
   "lang": "en-IN",
   "dir": "ltr",
   "scope": "/",
