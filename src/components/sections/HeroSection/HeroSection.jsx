@@ -3,21 +3,29 @@
    Franchise opportunity hero section with animations
    ============================================ */
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Container, Typography, Grid, Chip, useMediaQuery, useTheme, Button } from '@mui/material';
-import { Icon } from '@iconify/react';
-import UnifiedLeadForm from '../../common/UnifiedLeadForm/UnifiedLeadForm';
-import { useModal } from '../../../context/ModalContext';
-import styles from './HeroSection.module.css';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  Container,
+  Typography,
+  Grid,
+  Chip,
+  useMediaQuery,
+  useTheme,
+  Button,
+} from "@mui/material";
+import { Icon } from "@iconify/react";
+import UnifiedLeadForm from "../../common/UnifiedLeadForm/UnifiedLeadForm";
+import { useModal } from "../../../context/ModalContext";
+import styles from "./HeroSection.module.css";
 
 // Unsplash hero images with fallbacks (no video for GNRC)
 const HERO_IMAGES = {
   desktop: [
-    'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=1920&h=800&fit=crop&q=80',
+    "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=1920&h=800&fit=crop&q=80",
   ],
   mobile: [
-    'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=768&h=1000&fit=crop&q=80',
+    "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=768&h=1000&fit=crop&q=80",
   ],
 };
 
@@ -52,7 +60,7 @@ const badgeVariants = {
     scale: 1,
     transition: {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
 };
@@ -64,28 +72,28 @@ const buttonVariants = {
     scale: 1,
     transition: {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
 };
 
 // Trust indicators data
 const trustIndicators = [
-  { icon: 'mdi:trophy-outline', text: '20+ Years' },
-  { icon: 'mdi:currency-inr', text: '₹80 Cr Turnover' },
-  { icon: 'mdi:package-variant-closed', text: '50K+ Products' },
-  { icon: 'mdi:tag-outline', text: '1200+ Brands' },
-  { icon: 'mdi:percent-outline', text: '22% Margin' },
+  { icon: "mdi:trophy-outline", text: "20+ Years" },
+  { icon: "mdi:currency-inr", text: "₹80 Cr Turnover" },
+  { icon: "mdi:package-variant-closed", text: "50K+ Products" },
+  { icon: "mdi:tag-outline", text: "1200+ Brands" },
+  { icon: "mdi:percent-outline", text: "22% Margin" },
 ];
 
 const HeroSection = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
   const { openLeadDrawer } = useModal();
 
   // Fallback image state
-  const [heroImageUrl, setHeroImageUrl] = useState('');
+  const [heroImageUrl, setHeroImageUrl] = useState("");
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // Video disabled for GNRC — use gradient + image only
@@ -116,16 +124,17 @@ const HeroSection = () => {
           continue;
         }
       }
-      console.warn('All hero images failed to load, using gradient fallback');
+      console.warn("All hero images failed to load, using gradient fallback");
     };
 
     tryLoadImage();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [isMobile]);
 
   return (
     <section className={styles.heroSection} id="home">
-
       {/* === Background Layer 1: Gradient fallback (always present) === */}
       <div className={styles.heroBgGradient} />
 
@@ -158,17 +167,17 @@ const HeroSection = () => {
               <motion.div variants={badgeVariants}>
                 <Chip
                   icon={<span className={styles.pulseDot} />}
-                  label="🏪 NE India's #1 Pharma-Grocery Retail Franchise"
+                  label="🏪 NE India's #1 Pharma-Grocer Retail Franchise"
                   className={styles.launchBadge}
                   sx={{
-                    backgroundColor: '#2EC4B6',
-                    color: '#FFFFFF',
+                    backgroundColor: "#2EC4B6",
+                    color: "#FFFFFF",
                     fontWeight: 600,
-                    fontSize: '0.875rem',
-                    height: '36px',
-                    borderRadius: '20px',
-                    '& .MuiChip-icon': {
-                      marginLeft: '8px',
+                    fontSize: "0.875rem",
+                    height: "36px",
+                    borderRadius: "20px",
+                    "& .MuiChip-icon": {
+                      marginLeft: "8px",
                     },
                   }}
                 />
@@ -180,16 +189,24 @@ const HeroSection = () => {
                   variant="h1"
                   className={styles.heroTitle}
                   sx={{
-                    color: '#FFFFFF',
+                    color: "#FFFFFF",
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: 700,
-                    fontSize: { xs: '2.25rem', sm: '2.75rem', md: '3.25rem', lg: '3.5rem' },
+                    fontSize: {
+                      xs: "2.25rem",
+                      sm: "2.75rem",
+                      md: "3.25rem",
+                      lg: "3.5rem",
+                    },
                     lineHeight: 1.1,
-                    marginTop: '1.5rem',
+                    marginTop: "1.5rem",
                   }}
                 >
                   Own a
-                  <span className={styles.orangeText}> GNRC Medishop Franchise</span>
+                  <span className={styles.orangeText}>
+                    {" "}
+                    GNRC Medishop Franchise
+                  </span>
                 </Typography>
               </motion.div>
 
@@ -199,41 +216,46 @@ const HeroSection = () => {
                   variant="h6"
                   className={styles.heroSubtitle}
                   sx={{
-                    color: 'rgba(255, 255, 255, 0.85)',
+                    color: "rgba(255, 255, 255, 0.85)",
                     fontWeight: 400,
-                    fontSize: { xs: '0.95rem', md: '1.125rem' },
-                    marginTop: '1rem',
-                    maxWidth: '600px',
+                    fontSize: { xs: "0.95rem", md: "1.125rem" },
+                    marginTop: "1rem",
+                    maxWidth: "600px",
                     lineHeight: 1.6,
                   }}
                 >
-                  20+ Years Legacy | ₹80 Cr Turnover | 20-22% Gross Margin | 1,200+ Brand Partners | 9 Profitable Stores | Turnkey Setup from ₹22 Lakhs
+                  20+ Years Legacy | ₹80 Cr Turnover | 20-22% Gross Margin |
+                  1,200+ Brand Partners | 9 Profitable Stores | Turnkey Setup
+                  from ₹22 Lakhs
                 </Typography>
               </motion.div>
 
               {/* CTA Buttons */}
-              <motion.div variants={buttonVariants} className={styles.ctaButtons}>
+              <motion.div
+                variants={buttonVariants}
+                className={styles.ctaButtons}
+              >
                 <Button
                   variant="contained"
                   size="large"
                   className={styles.primaryCta}
-                  onClick={() => openLeadDrawer('apply-now')}
+                  onClick={() => openLeadDrawer("apply-now")}
                   sx={{
-                    backgroundColor: '#FF6B35',
-                    color: '#FFFFFF',
+                    backgroundColor: "#FF6B35",
+                    color: "#FFFFFF",
                     fontWeight: 700,
-                    fontSize: '1rem',
-                    padding: '0.875rem 2rem',
-                    borderRadius: '12px',
-                    textTransform: 'none',
+                    fontSize: "1rem",
+                    padding: "0.875rem 2rem",
+                    borderRadius: "12px",
+                    textTransform: "none",
                     fontFamily: "'Poppins', sans-serif",
-                    boxShadow: '0 4px 20px rgba(255, 107, 53, 0.4)',
-                    '&:hover': {
-                      backgroundColor: '#FF8C5A',
-                      boxShadow: '0 6px 24px rgba(255, 107, 53, 0.5)',
-                      transform: 'translateY(-2px)',
+                    boxShadow: "0 4px 20px rgba(255, 107, 53, 0.4)",
+                    "&:hover": {
+                      backgroundColor: "#FF8C5A",
+                      boxShadow: "0 6px 24px rgba(255, 107, 53, 0.5)",
+                      transform: "translateY(-2px)",
                     },
-                    transition: 'all 0.3s ease',
+                    transition: "all 0.3s ease",
                   }}
                 >
                   Apply for Franchise →
@@ -242,23 +264,23 @@ const HeroSection = () => {
                   variant="outlined"
                   size="large"
                   className={styles.secondaryCta}
-                  onClick={() => openLeadDrawer('download-brochure')}
+                  onClick={() => openLeadDrawer("download-brochure")}
                   sx={{
-                    borderColor: 'rgba(255, 255, 255, 0.6)',
-                    color: '#FFFFFF',
+                    borderColor: "rgba(255, 255, 255, 0.6)",
+                    color: "#FFFFFF",
                     fontWeight: 600,
-                    fontSize: '1rem',
-                    padding: '0.875rem 2rem',
-                    borderRadius: '12px',
-                    textTransform: 'none',
+                    fontSize: "1rem",
+                    padding: "0.875rem 2rem",
+                    borderRadius: "12px",
+                    textTransform: "none",
                     fontFamily: "'Poppins', sans-serif",
-                    borderWidth: '2px',
-                    '&:hover': {
-                      borderColor: '#FFFFFF',
-                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                      borderWidth: '2px',
+                    borderWidth: "2px",
+                    "&:hover": {
+                      borderColor: "#FFFFFF",
+                      backgroundColor: "rgba(255, 255, 255, 0.1)",
+                      borderWidth: "2px",
                     },
-                    transition: 'all 0.3s ease',
+                    transition: "all 0.3s ease",
                   }}
                 >
                   Download Prospectus
@@ -266,7 +288,10 @@ const HeroSection = () => {
               </motion.div>
 
               {/* Trust Indicators */}
-              <motion.div variants={itemVariants} className={styles.trustIndicators}>
+              <motion.div
+                variants={itemVariants}
+                className={styles.trustIndicators}
+              >
                 {trustIndicators.map((indicator, index) => (
                   <div key={index} className={styles.trustIndicator}>
                     <Icon icon={indicator.icon} className={styles.trustIcon} />
@@ -284,18 +309,18 @@ const HeroSection = () => {
                 className={styles.formWrapper}
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' }}
+                transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
               >
                 <div className={styles.formCard}>
                   <div className={styles.formHeader}>
                     <Typography
                       variant="h5"
                       sx={{
-                        color: '#FFFFFF',
+                        color: "#FFFFFF",
                         fontWeight: 700,
                         fontFamily: "'Poppins', sans-serif",
-                        textAlign: 'center',
-                        fontSize: '1.25rem',
+                        textAlign: "center",
+                        fontSize: "1.25rem",
                       }}
                     >
                       Franchise Enquiry
@@ -303,10 +328,10 @@ const HeroSection = () => {
                     <Typography
                       variant="body2"
                       sx={{
-                        color: 'rgba(255, 255, 255, 0.8)',
-                        textAlign: 'center',
-                        marginTop: '0.25rem',
-                        fontSize: '0.875rem',
+                        color: "rgba(255, 255, 255, 0.8)",
+                        textAlign: "center",
+                        marginTop: "0.25rem",
+                        fontSize: "0.875rem",
                       }}
                     >
                       Get complete investment details
@@ -341,7 +366,7 @@ const HeroSection = () => {
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
           <Icon icon="mdi:chevron-double-down" className={styles.scrollIcon} />
         </motion.div>

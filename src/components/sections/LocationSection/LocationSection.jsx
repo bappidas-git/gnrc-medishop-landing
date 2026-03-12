@@ -161,28 +161,6 @@ const LocationSection = () => {
 
                   <div className={styles.contactItem}>
                     <div className={styles.contactIcon}>
-                      <Icon icon="mdi:phone-in-talk" />
-                    </div>
-                    <div>
-                      <Typography
-                        variant="caption"
-                        className={styles.contactLabel}
-                      >
-                        Alternate Phone
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        className={styles.contactValue}
-                      >
-                        <a href={`tel:${centreData.tollFree}`}>
-                          {centreData.tollFree}
-                        </a>
-                      </Typography>
-                    </div>
-                  </div>
-
-                  <div className={styles.contactItem}>
-                    <div className={styles.contactIcon}>
                       <Icon icon="mdi:email-outline" />
                     </div>
                     <div>

@@ -90,7 +90,9 @@ const CTASection = () => {
               className={styles.description}
               sx={{ color: "#fff" }}
             >
-              Partner with NE India's most trusted pharma-grocery retail franchise. Proven profitable model. Complete support. Limited franchise territories available.
+              Partner with NE India's most trusted pharma-grocer retail
+              franchise. Proven profitable model. Complete support. Limited
+              franchise territories available.
             </Typography>
           </motion.div>
 

@@ -79,7 +79,7 @@ const MobileDrawer = ({ open, onClose, onOpen, activeSection = "home" }) => {
         onClose();
       }
     },
-    [onClose]
+    [onClose],
   );
 
   useEffect(() => {
@@ -192,9 +192,9 @@ const MobileDrawer = ({ open, onClose, onOpen, activeSection = "home" }) => {
       <Box className={styles.drawerHeader}>
         <Box className={styles.logoSection}>
           <img
-            src="https://www.gnrcmedishop.com/images/img_logo.png"
+            src="https://res.cloudinary.com/dn9gyaiik/image/upload/v1773293282/logo_ashuyz.png"
             alt="GNRC Medishop"
-            style={{ height: '28px', width: 'auto' }}
+            style={{ height: "28px", width: "auto" }}
           />
         </Box>
         <IconButton

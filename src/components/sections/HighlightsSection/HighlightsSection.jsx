@@ -44,7 +44,7 @@ const resultsData = [
     title: "Multi-Category Revenue",
     stat: null,
     statLabel:
-      "Pharmacy + FMCG + Grocery + Personal Care = Multiple revenue streams from day one",
+      "Pharmacy + Grocery + Household Essentials = Multiple revenue streams from day one",
     subStats: null,
   },
   {
@@ -79,7 +79,7 @@ const testTypes = [
   },
   {
     icon: "mdi:cart-outline",
-    name: "Grocery & FMCG",
+    name: "Grocery & Household Essentials",
     tag: null,
     description: "Daily staples, branded products",
   },
@@ -271,7 +271,9 @@ const HighlightsSection = () => {
                   className={styles.scholarshipDesc}
                   sx={{ color: "#fff" }}
                 >
-                  With unified online-offline pricing, high-margin GNRC-branded staples, and zero-waste inventory management, every franchise partner can expect healthy, predictable returns.
+                  With unified online-offline pricing, high-margin GNRC-branded
+                  staples, and zero-waste inventory management, every franchise
+                  partner can expect healthy, predictable returns.
                 </Typography>
               </div>
               <motion.button
@@ -289,7 +291,8 @@ const HighlightsSection = () => {
           {/* Bottom CTA */}
           <motion.div variants={itemVariants} className={styles.bottomCta}>
             <Typography className={styles.bottomCtaText}>
-              1,200+ Brand Partnerships — Access India's most trusted brands through our established distribution network
+              1,200+ Brand Partnerships — Access India's most trusted brands
+              through our established distribution network
             </Typography>
             <motion.button
               className={styles.brochureBtn}

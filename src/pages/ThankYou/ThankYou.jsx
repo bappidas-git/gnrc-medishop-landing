@@ -3,64 +3,79 @@
    Post lead submission confirmation page
    ============================================ */
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Container, Typography, Box, Grid } from '@mui/material';
-import { motion } from 'framer-motion';
-import { Icon } from '@iconify/react';
-import confetti from 'canvas-confetti';
-import styles from './ThankYou.module.css';
+import React, { useEffect, useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+import { Container, Typography, Box, Grid } from "@mui/material";
+import { motion } from "framer-motion";
+import { Icon } from "@iconify/react";
+import confetti from "canvas-confetti";
+import styles from "./ThankYou.module.css";
 
 // Programme highlights for display
 const projectHighlights = [
-  { icon: 'mdi:store-check-outline', label: 'Proven Business Model', color: '#2EC4B6' },
-  { icon: 'mdi:percent-circle', label: '20-22% Gross Margin', color: '#4CAF50' },
-  { icon: 'mdi:package-variant-closed', label: '50K+ Products', color: '#2196F3' },
-  { icon: 'mdi:account-group', label: '1,200+ Brand Partners', color: '#9C27B0' },
+  {
+    icon: "mdi:store-check-outline",
+    label: "Proven Business Model",
+    color: "#2EC4B6",
+  },
+  {
+    icon: "mdi:percent-circle",
+    label: "20-22% Gross Margin",
+    color: "#4CAF50",
+  },
+  {
+    icon: "mdi:package-variant-closed",
+    label: "50K+ Products",
+    color: "#2196F3",
+  },
+  {
+    icon: "mdi:account-group",
+    label: "1,200+ Brand Partners",
+    color: "#9C27B0",
+  },
 ];
 
 // Contact details
 const contactInfo = {
-  companyName: 'GNRC Medishop Pvt. Ltd.',
-  designation: 'Franchise Excellence',
-  phone: '+91-7086036887',
-  altPhone: '+91-8638604899',
-  email: 'info@gnrcmedishop.com',
-  address: 'Guwahati Centre, Assam',
-  workingHours: 'Mon - Sat: 8:00 AM - 7:00 PM',
+  companyName: "GNRC Medishop Pvt. Ltd.",
+  designation: "Franchise Excellence",
+  phone: "+91-7086036887",
+  email: "info@gnrcmedishop.com",
+  address: "Guwahati Centre, Assam",
+  workingHours: "Mon - Sat: 8:00 AM - 7:00 PM",
 };
 
 // Quick links
 const quickLinks = [
-  { icon: 'mdi:currency-inr', label: 'Investment', href: '/#investment' },
-  { icon: 'mdi:star-circle', label: 'Why GNRC', href: '/#why-gnrc' },
-  { icon: 'mdi:store', label: 'Stores', href: '/#stores' },
-  { icon: 'mdi:headset', label: 'Support', href: '/#support' },
+  { icon: "mdi:currency-inr", label: "Investment", href: "/#investment" },
+  { icon: "mdi:star-circle", label: "Why GNRC", href: "/#why-gnrc" },
+  { icon: "mdi:store", label: "Stores", href: "/#stores" },
+  { icon: "mdi:headset", label: "Support", href: "/#support" },
 ];
 
 const ThankYou = () => {
   const navigate = useNavigate();
-  const [userName, setUserName] = useState('');
+  const [userName, setUserName] = useState("");
   const [isAuthorized, setIsAuthorized] = useState(false);
 
   // Check if user is authorized to view this page
   useEffect(() => {
-    const leadSubmitted = sessionStorage.getItem('lead_submitted');
-    const name = sessionStorage.getItem('lead_name');
+    const leadSubmitted = sessionStorage.getItem("lead_submitted");
+    const name = sessionStorage.getItem("lead_name");
 
     if (!leadSubmitted) {
       // Redirect to home if accessed directly
-      navigate('/', { replace: true });
+      navigate("/", { replace: true });
       return;
     }
 
     setIsAuthorized(true);
-    setUserName(name || 'there');
+    setUserName(name || "there");
 
     // Clear the session flag after some time to prevent re-access
     const timeout = setTimeout(() => {
-      sessionStorage.removeItem('lead_submitted');
-      sessionStorage.removeItem('lead_name');
+      sessionStorage.removeItem("lead_submitted");
+      sessionStorage.removeItem("lead_name");
     }, 300000); // 5 minutes
 
     return () => clearTimeout(timeout);
@@ -70,7 +85,12 @@ const ThankYou = () => {
   const fireConfetti = useCallback(() => {
     const duration = 3000;
     const animationEnd = Date.now() + duration;
-    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 10000 };
+    const defaults = {
+      startVelocity: 30,
+      spread: 360,
+      ticks: 60,
+      zIndex: 10000,
+    };
 
     function randomInRange(min, max) {
       return Math.random() * (max - min) + min;
@@ -91,7 +111,7 @@ const ThankYou = () => {
         ...defaults,
         particleCount,
         origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-        colors: ['#2EC4B6', '#5DD9CE', '#FFD700', '#FFA500'],
+        colors: ["#2EC4B6", "#5DD9CE", "#FFD700", "#FFA500"],
       });
 
       // Right side confetti
@@ -99,7 +119,7 @@ const ThankYou = () => {
         ...defaults,
         particleCount,
         origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-        colors: ['#2EC4B6', '#5DD9CE', '#FFD700', '#FFA500'],
+        colors: ["#2EC4B6", "#5DD9CE", "#FFD700", "#FFA500"],
       });
     }, 250);
 
@@ -108,7 +128,7 @@ const ThankYou = () => {
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 },
-      colors: ['#2EC4B6', '#5DD9CE', '#FFD700', '#4CAF50', '#2196F3'],
+      colors: ["#2EC4B6", "#5DD9CE", "#FFD700", "#4CAF50", "#2196F3"],
     });
   }, []);
 
@@ -184,12 +204,20 @@ const ThankYou = () => {
           </motion.div>
 
           {/* Thank You Message */}
-          <motion.div variants={itemVariants} className={styles.thankYouMessage}>
+          <motion.div
+            variants={itemVariants}
+            className={styles.thankYouMessage}
+          >
             <Typography variant="h2" className={styles.title}>
               Thank You for Your Interest! 🏪
             </Typography>
-            <Typography className={styles.subtitle} sx={{ color: '#FFFFFFB3 !important' }}>
-              Your franchise enquiry has been received. Our business development team from GNRC Medishop will contact you within 24 hours to discuss the opportunity in detail.
+            <Typography
+              className={styles.subtitle}
+              sx={{ color: "#FFFFFFB3 !important" }}
+            >
+              Your franchise enquiry has been received. Our business development
+              team from GNRC Medishop will contact you within 24 hours to
+              discuss the opportunity in detail.
             </Typography>
           </motion.div>
 
@@ -202,15 +230,27 @@ const ThankYou = () => {
               <Typography className={styles.noticeTitle}>
                 What happens next?
               </Typography>
-              <Typography className={styles.noticeDesc} sx={{ color: '#FFFFFFA6 !important' }}>
-                Our franchise team will reach out to discuss the best investment plan for you
+              <Typography
+                className={styles.noticeDesc}
+                sx={{ color: "#FFFFFFA6 !important" }}
+              >
+                Our franchise team will reach out to discuss the best investment
+                plan for you
               </Typography>
             </div>
           </motion.div>
 
           {/* Project Highlights */}
-          <motion.div variants={itemVariants} className={styles.highlightsSection}>
-            <Typography className={styles.sectionLabel} sx={{ color: '#FFFFFF80 !important' }}>Why GNRC Medishop?</Typography>
+          <motion.div
+            variants={itemVariants}
+            className={styles.highlightsSection}
+          >
+            <Typography
+              className={styles.sectionLabel}
+              sx={{ color: "#FFFFFF80 !important" }}
+            >
+              Why GNRC Medishop?
+            </Typography>
             <div className={styles.highlightsGrid}>
               {projectHighlights.map((item, index) => (
                 <motion.div
@@ -223,7 +263,10 @@ const ThankYou = () => {
                 >
                   <div
                     className={styles.highlightIcon}
-                    style={{ backgroundColor: `${item.color}15`, color: item.color }}
+                    style={{
+                      backgroundColor: `${item.color}15`,
+                      color: item.color,
+                    }}
                   >
                     <Icon icon={item.icon} />
                   </div>
@@ -253,12 +296,17 @@ const ThankYou = () => {
                     <Icon icon="mdi:phone" />
                   </div>
                   <div className={styles.contactDetails}>
-                    <span className={styles.contactLabel} style={{ color: '#FFFFFF80' }}>Call Us</span>
-                    <a href={`tel:${contactInfo.phone}`} className={styles.contactValue}>
+                    <span
+                      className={styles.contactLabel}
+                      style={{ color: "#FFFFFF80" }}
+                    >
+                      Call Us
+                    </span>
+                    <a
+                      href={`tel:${contactInfo.phone}`}
+                      className={styles.contactValue}
+                    >
                       {contactInfo.phone}
-                    </a>
-                    <a href={`tel:${contactInfo.altPhone}`} className={styles.contactValueAlt} style={{ color: '#FFFFFFB3' }}>
-                      {contactInfo.altPhone}
                     </a>
                   </div>
                 </div>
@@ -271,8 +319,16 @@ const ThankYou = () => {
                     <Icon icon="mdi:email" />
                   </div>
                   <div className={styles.contactDetails}>
-                    <span className={styles.contactLabel} style={{ color: '#FFFFFF80' }}>Email Us</span>
-                    <a href={`mailto:${contactInfo.email}`} className={styles.contactValue}>
+                    <span
+                      className={styles.contactLabel}
+                      style={{ color: "#FFFFFF80" }}
+                    >
+                      Email Us
+                    </span>
+                    <a
+                      href={`mailto:${contactInfo.email}`}
+                      className={styles.contactValue}
+                    >
                       {contactInfo.email}
                     </a>
                   </div>
@@ -286,8 +342,15 @@ const ThankYou = () => {
                     <Icon icon="mdi:clock-outline" />
                   </div>
                   <div className={styles.contactDetails}>
-                    <span className={styles.contactLabel} style={{ color: '#FFFFFF80' }}>Working Hours</span>
-                    <span className={styles.contactValue}>{contactInfo.workingHours}</span>
+                    <span
+                      className={styles.contactLabel}
+                      style={{ color: "#FFFFFF80" }}
+                    >
+                      Working Hours
+                    </span>
+                    <span className={styles.contactValue}>
+                      {contactInfo.workingHours}
+                    </span>
                   </div>
                 </div>
               </Grid>
@@ -299,8 +362,15 @@ const ThankYou = () => {
                     <Icon icon="mdi:map-marker" />
                   </div>
                   <div className={styles.contactDetails}>
-                    <span className={styles.contactLabel} style={{ color: '#FFFFFF80' }}>Visit Us</span>
-                    <span className={styles.contactValue}>{contactInfo.address}</span>
+                    <span
+                      className={styles.contactLabel}
+                      style={{ color: "#FFFFFF80" }}
+                    >
+                      Visit Us
+                    </span>
+                    <span className={styles.contactValue}>
+                      {contactInfo.address}
+                    </span>
                   </div>
                 </div>
               </Grid>
@@ -308,8 +378,16 @@ const ThankYou = () => {
           </motion.div>
 
           {/* Quick Links */}
-          <motion.div variants={itemVariants} className={styles.quickLinksSection}>
-            <Typography className={styles.sectionLabel} sx={{ color: '#FFFFFF80 !important' }}>Explore More</Typography>
+          <motion.div
+            variants={itemVariants}
+            className={styles.quickLinksSection}
+          >
+            <Typography
+              className={styles.sectionLabel}
+              sx={{ color: "#FFFFFF80 !important" }}
+            >
+              Explore More
+            </Typography>
             <div className={styles.quickLinksGrid}>
               {quickLinks.map((link, index) => (
                 <motion.a
@@ -330,11 +408,14 @@ const ThankYou = () => {
           </motion.div>
 
           {/* Back to Home Button */}
-          <motion.div variants={itemVariants} className={styles.backHomeWrapper}>
+          <motion.div
+            variants={itemVariants}
+            className={styles.backHomeWrapper}
+          >
             <motion.a
               href="/"
               className={styles.backHomeBtn}
-              style={{ color: '#FFFFFFB3' }}
+              style={{ color: "#FFFFFFB3" }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

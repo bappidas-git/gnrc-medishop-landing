@@ -60,10 +60,11 @@ const ContactSection = () => {
       href: "tel:+917086036887",
     },
     {
-      icon: "mdi:phone-in-talk",
-      title: "Alternate Phone",
-      content: "+91-8638604899",
-      href: "tel:+918638604899",
+      icon: "mdi:whatsapp",
+      title: "WhatsApp",
+      content: "Quick Chat",
+      href: "https://wa.me/917086036887?text=Hi,%20I%20am%20interested%20in%20GNRC%20Medishop%20Franchise%20Opportunity",
+      external: true,
     },
     {
       icon: "mdi:email-outline",
@@ -71,13 +72,7 @@ const ContactSection = () => {
       content: "info@gnrcmedishop.com",
       href: "mailto:info@gnrcmedishop.com",
     },
-    {
-      icon: "mdi:whatsapp",
-      title: "WhatsApp",
-      content: "Quick Chat",
-      href: "https://wa.me/917086036887?text=Hi,%20I%20am%20interested%20in%20GNRC%20Medishop%20Franchise%20Opportunity",
-      external: true,
-    },
+
     {
       icon: "mdi:map-marker-outline",
       title: "Address",
@@ -93,7 +88,8 @@ const ContactSection = () => {
   const handleRequestCallback = () => {
     openLeadDrawer("default", {
       title: "Request a Callback",
-      subtitle: "Fill in your details and our franchise team will call you back",
+      subtitle:
+        "Fill in your details and our franchise team will call you back",
     });
   };
 

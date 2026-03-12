@@ -17,8 +17,8 @@ const PrivacyPolicyContent = () => (
     <section className={styles.legalSection}>
       <h3>Introduction</h3>
       <p>
-        GNRC Medishop Pvt. Ltd. ("we," "our," or "us") respects your privacy
-        and is committed to protecting your personal data. This Privacy Policy
+        GNRC Medishop Pvt. Ltd. ("we," "our," or "us") respects your privacy and
+        is committed to protecting your personal data. This Privacy Policy
         explains how we collect, use, disclose, and safeguard your information
         when you visit our website or engage with our franchise services.
       </p>
@@ -55,7 +55,9 @@ const PrivacyPolicyContent = () => (
       <h3>How We Use Your Information</h3>
       <p>We use the collected information for the following purposes:</p>
       <ul>
-        <li>To respond to your franchise inquiries and provide investment details</li>
+        <li>
+          To respond to your franchise inquiries and provide investment details
+        </li>
         <li>To schedule business consultations and store visits</li>
         <li>
           To send relevant business updates and promotional communications (with
@@ -374,7 +376,7 @@ const Footer = () => {
               <div className={styles.footerBrand}>
                 <div className={styles.logoWrapper}>
                   <img
-                    src="https://www.gnrcmedishop.com/images/img_logo.png"
+                    src="https://res.cloudinary.com/dn9gyaiik/image/upload/v1773293282/logo_ashuyz.png"
                     alt="GNRC Medishop"
                     style={{
                       height: "36px",
@@ -465,7 +467,7 @@ const Footer = () => {
                       7086036887
                     </a>
                   </li>
-                  <li className={styles.contactItem}>
+                  {/* <li className={styles.contactItem}>
                     <div className={styles.contactLabelRow}>
                       <Icon
                         icon="mdi:phone-in-talk"
@@ -476,7 +478,7 @@ const Footer = () => {
                     <a href="tel:+918638604899" className={styles.contactValue}>
                       8638604899
                     </a>
-                  </li>
+                  </li> */}
                   <li className={styles.contactItem}>
                     <div className={styles.contactLabelRow}>
                       <Icon icon="mdi:email" className={styles.contactIcon} />

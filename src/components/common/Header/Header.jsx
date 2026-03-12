@@ -3,32 +3,39 @@
    Fixed header with scroll behavior and navigation
    ============================================ */
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Box, Container, IconButton, useMediaQuery, useTheme } from '@mui/material';
-import { Icon } from '@iconify/react';
-import styles from './Header.module.css';
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Box,
+  Container,
+  IconButton,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import { Icon } from "@iconify/react";
+import styles from "./Header.module.css";
 
 // GNRC Medishop logo URL
-const gnrcLogo = 'https://www.gnrcmedishop.com/images/img_logo.png';
+const gnrcLogo =
+  "https://res.cloudinary.com/dn9gyaiik/image/upload/v1773293282/logo_ashuyz.png";
 
 // Navigation items
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'About GNRC', href: '#about' },
-  { label: 'Investment', href: '#investment' },
-  { label: 'Why GNRC', href: '#why-gnrc' },
-  { label: 'Support', href: '#support' },
-  { label: 'Stores', href: '#stores' },
-  { label: 'Contact', href: '#contact' },
+  { label: "Home", href: "#home" },
+  { label: "About GNRC", href: "#about" },
+  { label: "Investment", href: "#investment" },
+  { label: "Why GNRC", href: "#why-gnrc" },
+  { label: "Support", href: "#support" },
+  { label: "Stores", href: "#stores" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Header = ({ forceCloseMenu = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 
   // Close mobile menu when bottom drawer opens
   useEffect(() => {
@@ -43,7 +50,7 @@ const Header = ({ forceCloseMenu = false }) => {
     setIsScrolled(scrollPosition > 50);
 
     // Determine active section
-    const sections = navItems.map(item => item.href.substring(1));
+    const sections = navItems.map((item) => item.href.substring(1));
     for (let i = sections.length - 1; i >= 0; i--) {
       const section = document.getElementById(sections[i]);
       if (section) {
@@ -57,8 +64,8 @@ const Header = ({ forceCloseMenu = false }) => {
   }, []);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
   // Smooth scroll to section (for desktop navigation)
@@ -70,11 +77,12 @@ const Header = ({ forceCloseMenu = false }) => {
     if (targetElement) {
       const headerOffset = 80;
       const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
 
@@ -100,11 +108,12 @@ const Header = ({ forceCloseMenu = false }) => {
       if (targetElement) {
         const headerOffset = 80;
         const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     }, 50);
@@ -116,8 +125,8 @@ const Header = ({ forceCloseMenu = false }) => {
     animate: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.5, ease: 'easeOut' }
-    }
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   const navItemVariants = {
@@ -125,8 +134,8 @@ const Header = ({ forceCloseMenu = false }) => {
     animate: (i) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.1, duration: 0.3 }
-    })
+      transition: { delay: i * 0.1, duration: 0.3 },
+    }),
   };
 
   const logoVariants = {
@@ -134,13 +143,13 @@ const Header = ({ forceCloseMenu = false }) => {
     animate: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, delay: 0.2 }
-    }
+      transition: { duration: 0.5, delay: 0.2 },
+    },
   };
 
   return (
     <motion.header
-      className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}
+      className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}
       variants={headerVariants}
       initial="initial"
       animate="animate"
@@ -153,16 +162,20 @@ const Header = ({ forceCloseMenu = false }) => {
           initial="initial"
           animate="animate"
         >
-          <a href="#home" onClick={(e) => scrollToSection(e, '#home')} className={styles.logoLink}>
+          <a
+            href="#home"
+            onClick={(e) => scrollToSection(e, "#home")}
+            className={styles.logoLink}
+          >
             <div className={styles.logoWrapper}>
               <img
                 src={gnrcLogo}
                 alt="GNRC Medishop"
                 className={styles.mainLogo}
                 style={{
-                  filter: isScrolled ? 'none' : 'brightness(0) invert(1)',
-                  height: '40px',
-                  width: 'auto',
+                  filter: isScrolled ? "none" : "brightness(0) invert(1)",
+                  height: "40px",
+                  width: "auto",
                 }}
               />
             </div>
@@ -184,7 +197,7 @@ const Header = ({ forceCloseMenu = false }) => {
                   <a
                     href={item.href}
                     onClick={(e) => scrollToSection(e, item.href)}
-                    className={`${styles.navLink} ${activeSection === item.href.substring(1) ? styles.active : ''}`}
+                    className={`${styles.navLink} ${activeSection === item.href.substring(1) ? styles.active : ""}`}
                   >
                     {item.label}
                   </a>
@@ -202,10 +215,7 @@ const Header = ({ forceCloseMenu = false }) => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.3 }}
             >
-              <a
-                href="tel:+917086036887"
-                className={styles.callButton}
-              >
+              <a href="tel:+917086036887" className={styles.callButton}>
                 <Icon icon="mdi:phone" className={styles.callButtonIcon} />
                 +91-7086036887
               </a>
@@ -220,7 +230,7 @@ const Header = ({ forceCloseMenu = false }) => {
               aria-label="Toggle menu"
             >
               <Icon
-                icon={isMobileMenuOpen ? 'mdi:close' : 'mdi:menu'}
+                icon={isMobileMenuOpen ? "mdi:close" : "mdi:menu"}
                 className={styles.menuIcon}
               />
             </IconButton>
@@ -234,7 +244,7 @@ const Header = ({ forceCloseMenu = false }) => {
           <motion.div
             className={styles.mobileNav}
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
@@ -250,9 +260,12 @@ const Header = ({ forceCloseMenu = false }) => {
                     <button
                       type="button"
                       onClick={(e) => handleMobileMenuClick(e, item.href)}
-                      className={`${styles.mobileNavLink} ${activeSection === item.href.substring(1) ? styles.active : ''}`}
+                      className={`${styles.mobileNavLink} ${activeSection === item.href.substring(1) ? styles.active : ""}`}
                     >
-                      <Icon icon={getNavIcon(item.label)} className={styles.mobileNavIcon} />
+                      <Icon
+                        icon={getNavIcon(item.label)}
+                        className={styles.mobileNavIcon}
+                      />
                       {item.label}
                     </button>
                   </motion.li>
@@ -279,15 +292,15 @@ const Header = ({ forceCloseMenu = false }) => {
 // Helper function to get navigation icons
 const getNavIcon = (label) => {
   const icons = {
-    'Home': 'mdi:home-outline',
-    'About GNRC': 'mdi:information-outline',
-    'Investment': 'mdi:currency-inr',
-    'Why GNRC': 'mdi:star-outline',
-    'Support': 'mdi:check-decagram-outline',
-    'Stores': 'mdi:storefront-outline',
-    'Contact': 'mdi:phone-outline',
+    Home: "mdi:home-outline",
+    "About GNRC": "mdi:information-outline",
+    Investment: "mdi:currency-inr",
+    "Why GNRC": "mdi:star-outline",
+    Support: "mdi:check-decagram-outline",
+    Stores: "mdi:storefront-outline",
+    Contact: "mdi:phone-outline",
   };
-  return icons[label] || 'mdi:circle-outline';
+  return icons[label] || "mdi:circle-outline";
 };
 
 export default Header;
