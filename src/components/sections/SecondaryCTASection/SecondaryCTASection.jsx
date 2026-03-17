@@ -315,15 +315,25 @@ const SecondaryCTASection = () => {
             </Typography>
           </motion.div>
 
-          {/* Subtext */}
-          <motion.div variants={itemVariants}>
+          {/* Founder Quote with Image */}
+          <motion.div variants={itemVariants} className={styles.founderQuote}>
+            <Box
+              component="img"
+              src="https://res.cloudinary.com/dn9gyaiik/image/upload/v1773728399/founder-gnrc_rwdp8x.jpg"
+              alt="Dr. Nomal Chandra Borah, Founder, GNRC Group"
+              className={styles.founderImage}
+            />
             <Typography
               variant="body1"
               className={styles.subtitle}
               sx={{ color: "#fff" }}
             >
               "My dream has always been simple — every family in Assam and the North East should have access to trustworthy essentials at honest prices, close to their home. GNRC Medishop offers a platform where native entrepreneurs can become Retailpreneurs."
-              {" "}— Dr. Nomal Chandra Borah, Founder, GNRC Group
+            </Typography>
+            <Typography
+              className={styles.founderName}
+            >
+              — Dr. Nomal Chandra Borah, Founder, GNRC Group
             </Typography>
           </motion.div>
 
