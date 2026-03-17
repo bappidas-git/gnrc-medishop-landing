@@ -366,22 +366,19 @@ const ServicesSection = () => {
                 sx={{ display: "flex", alignItems: "center", gap: 2, flex: 1 }}
               >
                 <Box
+                  component="img"
+                  src="https://res.cloudinary.com/dn9gyaiik/image/upload/v1773728399/founder-gnrc_rwdp8x.jpg"
+                  alt="Dr. Nomal Chandra Borah, Founder, GNRC Group"
                   sx={{
-                    width: 56,
-                    height: 56,
-                    borderRadius: "14px",
-                    background: "linear-gradient(135deg, #2EC4B6, #5DD9CE)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    width: { xs: 56, md: 64 },
+                    height: { xs: 56, md: 64 },
+                    borderRadius: "50%",
+                    objectFit: "cover",
                     flexShrink: 0,
+                    border: "3px solid #2EC4B6",
+                    boxShadow: "0 4px 12px rgba(46, 196, 182, 0.25)",
                   }}
-                >
-                  <Icon
-                    icon="mdi:account-tie"
-                    style={{ fontSize: 28, color: "#FFF" }}
-                  />
-                </Box>
+                />
                 <Box>
                   <Typography
                     variant="h6"
