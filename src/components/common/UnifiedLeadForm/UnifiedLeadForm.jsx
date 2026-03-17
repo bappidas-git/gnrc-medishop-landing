@@ -664,6 +664,14 @@ const UnifiedLeadForm = ({
       const result = await submitLeadToWebhook(leadData);
 
       if (result.success) {
+        // Push lead form submission event to GTM dataLayer
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'lead_form_submission',
+          formSource: formId || 'general',
+          investmentInterest: formData.investment_interest,
+        });
+
         // Mark as submitted for duplicate prevention
         markLeadAsSubmitted(formData.mobile);
 
