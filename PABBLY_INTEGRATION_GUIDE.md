@@ -42,22 +42,24 @@ This guide explains how to connect the franchise enquiry forms to a live Pabbly 
    ```
 3. Verify Pabbly captures the response and shows all fields
 
-## Step 4: Update the Code
+## Step 4: Code Configuration (Already Live)
 
-Open `src/utils/webhookSubmit.js` and make these changes:
+The Pabbly webhook is already configured in `src/utils/webhookSubmit.js`:
 
 ```js
-// CHANGE 1: Replace the webhook URL with YOUR Pabbly URL
-const WEBHOOK_URL = 'https://connect.pabbly.com/workflow/sendwebhookdata/YOUR_ACTUAL_WEBHOOK_ID';
+// Webhook URL — currently pointing to the live Pabbly endpoint
+const WEBHOOK_URL = 'https://connect.pabbly.com/webhook-listener/webhook/...';
 
-// CHANGE 2: Enable Pabbly mode
+// Pabbly mode is enabled
 const USE_PABBLY = true;
 
-// CHANGE 3: Disable dummy mode
+// Dummy/test mode is disabled
 const DUMMY_MODE = false;
 ```
 
-That's it! The forms will now send data to Pabbly.
+**To switch to a different webhook URL**, update the `WEBHOOK_URL` constant in `src/utils/webhookSubmit.js`.
+
+**To re-enable test mode** (no data sent to Pabbly), set `DUMMY_MODE = true`. Test leads will be stored in `localStorage['gnrc_franchise_test_leads']`.
 
 ## Step 5: Set Up Actions in Pabbly
 
