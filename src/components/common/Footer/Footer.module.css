@@ -348,9 +348,23 @@ a.contactValue:hover {
   color: var(--text-gray);
 }
 
-.legalSection ul {
+.legalSection ul,
+.legalSection ol {
   margin: var(--space-3) 0;
   padding-left: var(--space-5);
+}
+
+.legalSection a {
+  color: var(--accent-gold-dark);
+  font-weight: var(--fw-medium);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-word;
+  transition: color var(--transition-fast);
+}
+
+.legalSection a:hover {
+  color: var(--primary-dark);
 }
 
 .legalSection li {
